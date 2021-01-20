@@ -70,11 +70,12 @@
     <div class="section" id="title">
       <div class="container project-title">
         <div class="row">
-          <div class="map-container">
-            <iframe width="560" height="280" src="https://www.youtube.com/embed/YRYG9r8gOxE" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         </div>
-          <h1>Visualization for Exoplanet Data</h1>
-        </div>
+            <div class="map-container">
+                <iframe width="560" height="280" src="https://www.youtube.com/embed/28UIyfrV3ZE" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+          <h1>SnapFX (Adobe Research)</h1>
+
+          </div>
         </div>
       </div>
     </div>
@@ -82,86 +83,132 @@
   <div class="section"  id="summary">
     <div class="container">
       <div class="row">
-        <div class="col s12 m9 l9">
-          <p>Final Frontier is a project I worked on with <a href="http://www.karanjani.com/" target="blank">Karan Jani</a>, an astrophysicist who went on to discover gravitational waves, along with Brianna Tomlinson and Vinai Suresh. My role was one of design and front-end development.</p>
-          <p>We had a set of exoplanet data from NASA which we wanted to visualize in some kind of novel, useful way. We used D3 and after several iterations, ultimately decided to go for a radial visualization that compiles all planets in to one orbit. Such a visualization could be useful to scientists who are searching for habitable exoplanets or trying to better understand them.</p>
+        <div class="col s12 m8 l8">
+          <p>SnapFX is a prototype application I designed and developed at Adobe Research the summer of 2019. As a long time fan of Adobe (started using Photoshop at age 12), it was a thrill to work with their R&D department inventing new technology.</p>
+          <p>SnapFX is a modular image editing system that makes sophisticated image editing far easier for novices. It leverages modularized sets of Photoshop commands (Actions) along with lego-like modular blocks that can be dragged and dropped on an intuitive touch interface. My manager and I established a modular system and I designed and prototyped the application with HTML / CSS / JS. It leverages a "headless" Photoshop server for the effects while all of the interactive functionality is handled client-side.</p>
         </div>
-        <div class="col s12 m3 l3">
-          <h5>PROTOTYPE</h5>
-          <ul>
-            <a href="http://blakewilliford.com/finalfrontier/" target="blank"><li class="">Prototype</li></a>
-          </ul>  
-          <div class="clear-20"></div>
-          <h5>COLLABORATORS</h5>
-          <ul>
-            <li class="collab">Karan Jani</li>
-            <li class="collab">Brianna Tomlinson</li>
-            <li class="collab">Vinai Suresh</li>
-          </ul>
-          <div class="clear-20"></div>
-          <h5>MY ROLE</h5>
+          <div class="col s12 m4 l4">
+            <h5>COLLABORATORS</h5>
             <ul>
-              <li>UI Design</li>
-              <li>UX Design</li>
-              <li>HTML / CSS / JS</li>
-              <li>D3</li>
+              <a href="https://research.adobe.com/person/holger-winnemoeller/" target="blank"><li class="collab">Holger Winnemöller</li></a>
             </ul>
+            <div class="clear-20"></div>
+            <h5>MY ROLE</h5>
+                <ul>
+                <li>User Research</li>
+                <li>UX Design</li>
+                <li>UI Design</li>
+                <li>Visual Design</li>
+                <li>Prototyping</li>
+                <li>Innovation</li>
+                </ul>
+          </div>
         </div>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <h5>OBJECTIVES</h5>
+                <ul>
+                    <li class="okr">Create a taxonomy for how sophisticated image effect macros (Actions) are done in Photoshop</li>
+                    <li class="okr">Understand how novice users think about image effects and modularity</li>
+                    <li class="okr">Prototype and test a novice-friendly modular image editing application for creating sophisticated image effects</li>
+                </ul>            
+            </div>
+            <div class="col s12 m4 l4">
+                <h5>KEY RESULTS</h5>
+                <ul>
+                    <li class="okr">US Patent</li>
+                    <li class="okr">Still under development at Adobe (underlying technology may be implemented in multiple products serving 12+ million customers)</li>
+                </ul>
+              </div>
+            </row>
       </div>
-    </div>
   </div>
 
   <div class="section"  id="process">
     <div class="container">
       <div class="row">
-        <h1>INITIAL CONCEPTS</h1>
-        <div class="col s12 m6 l4">
-         <img src="../images/portfolio/finalfrontier/uiconcept1.jpg" class="materialboxed"></img>
+        <h1>RESEARCH</h1>
+        <div class="col s12 m6 l6">
+          <p>Let's face it - Photoshop is a BEAST. It is a powerful tool, but has an outdated WIMP interface that is highly complex and riddled with toolbars, panels, and dropdowns. This makes the software notoriously difficult to master. Much of Adobe Research efforts are in making these tools more accessible to novices and easier to learn.</p>
+      </div>
+      <div class="col s12 m6 l6">
+          <img src="../images/portfolio/snapfx/photoshop.jpg" class="materialboxed"></img>
+      </div>
+
+      <div id="clear-60"></div>
+      <div class="col s12 m6 l6">
+        <p>I began by analyzing around 40 "actions", which are sophisticated image effects created my experts. These actions record specific Photoshop commands making it easy for even novices to produce very sophisticated effects on their images. Our goal was to see if we could modularize these actions.</p>
+        <p>A taxonomy was established and includes:</p>
+        <p><em>Effects, Textures, Cutouts, Brushes, Tweaks</em></p>
+    </div>
+      <div class="col s12 m6 l6">
+        <img src="../images/portfolio/snapfx/actions.jpg" class="materialboxed"></img>
+    </div>
+ 
+
+    <div id="clear-60"></div>
+
+        <div class="col s12 m6 l6">
+            <p>In an effort to better understand the mental model of novice users I conducted a short paper prototype study with 10 participants. In this experiment, the participants were asked to put modules together in a way that felt most logical to them in order to turn one image in to another image. We gained the following insights:</p>
+            <p><strong>Insight 1:</strong> Most participants were able to correctly choose the modules necessary for the image effect. This implies our taxonomy is logical and easily understood by novices.</p>
+            <p><strong>Insight 2:</strong> Most participants tended to think of image operations flows as being horizontal, left to right.</p>
+            <p><strong>Insight 3:</strong> Participants who had used Photoshop before were more inclined to stack modules vertically like layers, but still thought of operations as being horizontal.
+            <p><strong>Insight 4:</strong> “Cutout” was a more quickly understood term for novices than “selection mask”</p>
         </div>
-         <div class="col s12 m6 l4">
-          <img src="../images/portfolio/finalfrontier/uiconcept2.jpg" class="materialboxed"></img>
-        </div>
-        <div class="col s12 m6 l4">
-          <img src="../images/portfolio/finalfrontier/uiconcept3.jpg" class="materialboxed"></img>
+        <div class="col s12 m6 l6">
+            <img src="../images/portfolio/snapfx/snapfx1.png" class="materialboxed"></img>
         </div>
       </div>
+
+      <div id="clear-60"></div>
+
       <div class="row">
-        <h1>PROTOTYPE</h1>
-        <p></p>
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/finalfrontier/wires.jpg" class="materialboxed"></img>
-        </div>
+          <p>The established modular system mirrors Photoshop in that layers are stacked vertically and can be rearranged, while operations/effects are a horizontal stack.</p>
+
+      </div>
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/finalfrontier/olddesign.jpg" class="materialboxed"></img>
+            <img src="../images/portfolio/snapfx/snapfx2.png" class="materialboxed"></img>
         </div>
-    </div>
+       
+      </div>
+
+      <div class="row">
+        <h1>ADOBE XD DESIGN + PROTOTYPE</h1>
+        <div class="col s12 m12 l12">
+            <img src="../images/portfolio/snapfx/snapfx3.png" class="materialboxed"></img>
+       </div>
     </div>
   </div>
 
   <div class="section"  id="final">
       <div class="container">
         <div class="row">
-            <h1>FINAL DESIGN</h1>
-            <p></p>
-            <div class="col s12 m12 l12">
-              
-              <a href="http://blakewilliford.com/finalfrontier/" target="blank"><img src="../images/portfolio/finalfrontier/finaldesign.jpg"></img></a>
-          </div>
+            <h1>IMPLEMENTED PROTOTYPE</h1>
+            <div class="col s12 m6 l6">
+                <img src="../images/portfolio/snapfx/snapfx1.jpg" class="materialboxed"></img>
+                <img src="../images/portfolio/snapfx/snapfx3.jpg" class="materialboxed"></img>
+            </div>
+            <div class="col s12 m6 l6">
+                <img src="../images/portfolio/snapfx/snapfx2.jpg" class="materialboxed"></img>
+                <img src="../images/portfolio/snapfx/snapfx4.jpg" class="materialboxed"></img>
+            </div>
         </div>
+     </div>
   </div>
 
   <div class="section"  id="project-nav">
     <div class="container">
       <div class="project-nav-container">
-        <a href="sketchtivity.html" class="prev-project"></a>
-        <a href="zensketch.html" class="next-project"></a>
+        <a href="../index.html#design" class="prev-project"></a>
+        <a href="mechanix.html" class="next-project"></a>
       </div>
     </div>
   </div>
 
 
     <div class="footer">
-        &copy; 2018 BLAKE WILLIFORD  <span class="love">CODED WITH &#x2764;</span>
+        &copy; 2020 BLAKE WILLIFORD  <span class="love">CODED WITH &#x2764;</span>
         <a class="grey-text text-lighten-4 right" href="#!">VERSION 4.0 <em>SIZZLE</em></a>
     </div>
 
