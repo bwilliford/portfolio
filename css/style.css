@@ -307,7 +307,7 @@ nav .button-collapse:hover {
     }
 
     nav ul a.active {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 0px solid #ddd;
         opacity: 1;
     }
 
