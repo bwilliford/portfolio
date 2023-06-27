@@ -2,6 +2,7 @@
 
 html {
   cursor: url('../images/icons/cursor.png'), auto;
+  scroll-behavior: smooth;
 }
 
 body {
