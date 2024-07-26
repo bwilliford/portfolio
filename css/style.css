@@ -71,13 +71,17 @@ p {
 }
 
 .img-container {
- max-width: 600px;
+  max-width: 600px;
 }
 
 .img-container img {
- width: 100%;
+  width: 100%;
 }
 
+.showcase {
+  transition-duration: 0.1s;
+  height: 50%; 
+}
 
 .button-collapse img{
   width: 50px;
@@ -368,6 +372,10 @@ nav .button-collapse:hover {
     margin-top: 34px;
   }
 
+  .down {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width: 601px){
@@ -617,6 +625,10 @@ nav .button-collapse {
   nav .brand-logo {
     left: 0;
     transform: translateX(0%);
+  }
+
+  .showcase {
+    height: 30%;
   }
 }
 

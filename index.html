@@ -85,6 +85,12 @@
         </div>
     </div>
 
+    <div class="section" id="showcase" style="overflow: hidden;">
+        <img id="showcase1" class="showcase" src="images/showcase1.png"/>
+        <img id="showcase2" class="showcase" src="images/showcase2.png"/>
+        <img id="showcase3" class="showcase" src="images/showcase3.png"/>
+    </div>
+
 
     <div class="section" id="design">
         <div class="container">
@@ -638,6 +644,14 @@
             edge: 'right'
         });
 
+
+        //Scrollbar
+        let winTop = window.scrollY;
+        let docHeight = document.body.scrollHeight;
+        let winHeight = window.innerHeight;
+        let initialScroll = Math.floor((winHeight/docHeight)*100);
+        document.getElementById('main-progressbar').style.height = initialScroll+'%';
+
         $(document).ready(function() {
             window.setInterval(function() {
                 toggleBioTerms();
@@ -645,12 +659,38 @@
 
             $(window).scroll(function() {
                 //Update progress bar
-                var winTop = $(window).scrollTop();
-                var docHeight = $('body').height();
-                var winHeight = $(window).height();
-                var totalScroll = Math.floor((winTop / docHeight) * 100);
-                document.getElementById('main-progressbar').style.height = totalScroll + '%';
+                winTop = window.scrollY;
+                totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
+                document.getElementById('main-progressbar').style.height = totalScroll+'%';
+
+                document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
+                document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
+                document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
             });
+        });
+        
+        //UI Showcase
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+        function doSomething(scrollPos) {
+            // Do something with the scroll position
+            //Move elements
+            // var winTop = $(window).scrollTop();
+            // var docHeight = $('body').height();
+            // var winHeight = $(window).height();
+            // var totalScroll = Math.floor((winTop / docHeight) * 100);
+            // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
+        }
+        document.addEventListener("scroll", (event) => {
+            lastKnownScrollPosition = window.scrollY;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    doSomething(lastKnownScrollPosition);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
 
         //Update nav
