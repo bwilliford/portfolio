@@ -30,6 +30,7 @@ span {
 .brand-logo:hover {
   opacity: 0.7;
   transition-duration: 0.5s;
+  cursor: url('../images/icons/cursor-active.png'), auto;
 }
 
 #bioterm-1 {
@@ -68,7 +69,7 @@ span {
 p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #b7b7b7;
+  color: rgba(255,255,255,0.6)
 }
 
 .accomplishments li {
@@ -95,6 +96,10 @@ p {
 
 .img-container img {
   width: 100%;
+}
+
+.rounded {
+  border-radius: 12px;
 }
 
 .showcase {
@@ -165,6 +170,18 @@ p {
   border-radius: 16px;
 }
 
+.portfolioSkills li{
+  display: block;
+  background-color: #7227fd30;
+  /* border: 1px solid #777; */
+  padding: 0 16px;
+  font-size: 14px;
+  width: fit-content;
+  margin: 0px 4px 8px 0px;
+  line-height: 32px;
+  border-radius: 16px;
+}
+
 #clients {
   background-color: #7227fd10;
   backdrop-filter: blur(20px);
@@ -180,13 +197,12 @@ p {
 }
 
 .portfolioTeaser {
-  width: 100%;
-  transform: perspective(400px) rotateY(10deg);
+  width: 90%;
   transition-duration: 0.5s;
 }
 
 .portfolioTeaser:hover {
-  transform: perspective(400px) rotateY(20deg);
+  transform: perspective(400px) rotateY(10deg);
   transition-duration: 0.5s;
 }
 
@@ -266,13 +282,11 @@ p {
 
 #summary ul li {
   line-height: 30px;
-  color: #eee;
-  background-color: #7227fd30;
+  color: rgba(255,255,255,0.6);
   border-radius: 15px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  padding-left: 15px;
+  margin-bottom: 16px;
   font-size: 1.2em;
+  line-height: 1.4em;
   font-weight: 300;
 }
 
@@ -288,6 +302,7 @@ p {
   background-image: url('../images/icons/skill.png');
   background-position: 0px 6px;
   background-repeat: no-repeat;
+  color: rgba(255,255,255,0.6);
 }
 
 .okr {
@@ -297,6 +312,7 @@ p {
   background-image: url('../images/icons/skill.png');
   background-position: 0px 6px;
   background-repeat: no-repeat;
+  color: rgba(255,255,255,0.6);
 }
 
 #process img{
@@ -310,7 +326,7 @@ p {
 
 #final img{
   width: 100%;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 #final .row .col {
@@ -916,6 +932,7 @@ nav .button-collapse {
 h2 {
   font-size: 1.8em;
   text-align: center;
+  font-weight: 200;
 }
 
 h3 {
@@ -925,8 +942,8 @@ h3 {
 
 .persona {
   border-radius: 50%;
-  height: 250px !important;
-  width: 250px !important;
+  height: 200px !important;
+  width: 200px !important;
   margin: 0 auto;
   display: block;
 }
