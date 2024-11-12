@@ -947,3 +947,83 @@ h3 {
   margin: 0 auto;
   display: block;
 }
+
+#loaderAnimation {
+  width: 200px;
+  margin: 0 calc(50% - 100px);
+  margin-top: 100px;
+  display: block;
+}
+
+.loaderPart {
+  fill: #02E0C0;
+  opacity: 1;
+  animation-name: fader;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: both;
+}
+
+@keyframes fader {
+  0% {opacity: 1;}
+  100% {opacity: 0}
+}
+
+#loaderPart1 {
+  -webkit-animation-delay: 25ms;
+}
+#loaderPart2 {
+  -webkit-animation-delay: 50ms;
+}
+#loaderPart3 {
+  -webkit-animation-delay: 75ms;
+}
+#loaderPart4 {
+  -webkit-animation-delay: 100ms;
+}
+#loaderPart5 {
+  -webkit-animation-delay: 125ms;
+}
+#loaderPart6 {
+  -webkit-animation-delay: 150ms;
+}
+#loaderPart7 {
+  -webkit-animation-delay: 175ms;
+}
+#loaderPart8 {
+  -webkit-animation-delay: 200ms;
+}
+#loaderPart9 {
+  -webkit-animation-delay: 225ms;
+}
+#loaderPart10 {
+  -webkit-animation-delay: 250ms;
+}
+#loaderPart11 {
+  -webkit-animation-delay: 275ms;
+}
+#loaderPart12 {
+  -webkit-animation-delay: 300ms;
+}
+#loaderPart13 {
+  -webkit-animation-delay: 325ms;
+}
+#loaderPart14 {
+  -webkit-animation-delay: 350ms;
+}
+#loaderPart15{
+  -webkit-animation-delay: 375ms;
+}
+#loaderPart16 {
+  -webkit-animation-delay: 400ms;
+}
+#loaderPart17 {
+  -webkit-animation-delay: 425ms;
+}
+#loaderPart18 {
+  -webkit-animation-delay: 450ms;
+}
+#loaderPart19 {
+  -webkit-animation-delay: 475ms;
+}
