@@ -628,7 +628,7 @@
           //circle = new Path.Circle(points[i], 1);
           //circle.fillColor = '#fff';
           //var line = new Path.Line(point, points[i]);
-          //line.strokeColor = 'rgba(255,255,255,0.2)';
+          //line.strokeColor = 'rgba(255,255,255,0.1)';
           //lines.push(line);
           tempPoints.push(points[i]);
         }
@@ -636,7 +636,7 @@
       for (i=0; i < tempPoints.length-1; i++) {
         for (j=1; j < tempPoints.length-1; j++) {
           var line = new Path.Line(tempPoints[i], tempPoints[j]);
-          line.strokeColor = 'rgba(150,150,150,0.1)';
+          line.strokeColor = 'rgba(150,150,250,0.02)';
           removeLines(line);
         }
       }
