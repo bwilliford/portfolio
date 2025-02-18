@@ -102,6 +102,10 @@ p {
   border-radius: 12px;
 }
 
+.roundedBig {
+  border-radius: 30px;
+}
+
 .showcase {
   transition-duration: 0.1s;
   height: 20vw; 
