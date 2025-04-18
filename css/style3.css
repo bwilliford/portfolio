@@ -1,5 +1,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
+:root { 
+  --brand-color: #813dff;
+}
+
 html {
   cursor: url('../images/icons/cursor.png'), auto;
   scroll-behavior: smooth;
@@ -15,7 +19,7 @@ body {
 }
 
 a {
-  color: #7227fd;
+  color: var(--brand-color);
 }
 
 a:hover {
@@ -23,7 +27,7 @@ a:hover {
 }
 
 span {
-  color: #7227fd;
+  color: var(--brand-color);
   transition-duration: 1s;
 }
 
@@ -69,7 +73,7 @@ span {
 p {
   font-size: 1.2rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.6)
+  color: rgba(255,255,255,0.7)
 }
 
 .accomplishments li {
@@ -164,7 +168,7 @@ p {
 
 #design ul li.collab {
   display: inline-block;
-  background-color: #7227fd30;
+  background-color: var(--brand-color)30;
   /* border: 1px solid #777; */
   padding: 0 16px;
   font-size: 14px;
@@ -176,7 +180,7 @@ p {
 
 .portfolioSkills li{
   display: block;
-  background-color: #7227fd30;
+  background-color: var(--brand-color)30;
   /* border: 1px solid #777; */
   padding: 0 16px;
   font-size: 14px;
@@ -187,14 +191,14 @@ p {
 }
 
 #clients {
-  background-color: #7227fd10;
+  background-color: var(--brand-color)10;
   backdrop-filter: blur(20px);
   margin: 60px 0;
   padding: 20px;
 }
 
 .pricing {
-  background-color: #7227fd10;
+  background-color: var(--brand-color)10;
   backdrop-filter: blur(20px);
   padding: 20px;
   margin-bottom: 20px;
@@ -236,7 +240,7 @@ p {
   width: fit-content;
   padding: 0 50px 0 20px;
   line-height: 46px;
-  background: #7227fd url('../images/icons/arrow-right.png') no-repeat 90% 50%;
+  background: var(--brand-color) url('../images/icons/arrow-right.png') no-repeat 90% 50%;
   color: #ffffff;
 }
 
@@ -251,7 +255,7 @@ p {
 }
 
 #cv h4{
-  color: #7227fd;
+  color: var(--brand-color);
 }
 
 #cv .row .col {
@@ -421,7 +425,7 @@ nav .button-collapse:hover {
 
 .down:hover {
   opacity: 1;
-  background-color: #7227fd;
+  background-color: var(--brand-color);
   transition-duration: 0.5s;
 }
 
@@ -452,7 +456,7 @@ nav .button-collapse:hover {
     }
 
     nav ul a:hover {
-        background-color: #7227fd;
+        background-color: var(--brand-color);
         color: #eee;
         opacity: 1;
     }
@@ -476,7 +480,7 @@ nav .button-collapse:hover {
     #main-progressbar {
       width: 2px;
       height: 0%;
-      background-color: #7227fd;
+      background-color: var(--brand-color);
       -webkit-transition: height .5s ease;
       -o-transition: height .5s ease;
       transition: height .5s ease;
@@ -679,7 +683,7 @@ nav .button-collapse {
 }
 
 .side-nav {
-  background-color: #7227fd99;
+  background-color: var(--brand-color)99;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   width: 100vw;
@@ -729,7 +733,7 @@ nav .button-collapse {
 .publication:hover {
   opacity: 1;
   transition-duration: 0.5s;
-  border-left: 1px solid #7227fd;
+  border-left: 1px solid var(--brand-color);
 }
 
 .education {
@@ -785,7 +789,7 @@ nav .button-collapse {
 }
 
 .email:hover {
-  background-color: #7227fd;
+  background-color: var(--brand-color);
   transition-duration: 0.5s;
   height: 60px;
   width: 310px;
@@ -882,7 +886,7 @@ nav .button-collapse {
 
 .prev-project:hover {
   opacity: 1;
-  background-color: #7227fd;
+  background-color: var(--brand-color);
   transition-duration: 0.5s;
 }
 
@@ -898,7 +902,7 @@ nav .button-collapse {
 
 .next-project:hover {
   opacity: 1;
-  background-color: #7227fd;
+  background-color: var(--brand-color);
   transition-duration: 0.5s;
 }
 
@@ -953,7 +957,7 @@ nav .button-collapse {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #7227fd;
+  background-color: var(--brand-color);
   height: 0px;
   width: 3px;
 }
