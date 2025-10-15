@@ -393,7 +393,52 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" class="testimonials">
+        <div class="leftArrow" onclick="swipeLeft()"></div>
+        <div class="rightArrow" onclick="swipeRight()"></div>
+        <div id="slide" class=" slide activeSlide">
+            <div class="container">
+                <div class="row">
+                        <h4 class="center-align">"Not only is Blake a creative thinker and talented designer, but he delivers, and gets things done. We've done some of our best product work building on the foundation of Blake's ideas. His passion and enthusiasm are infectious, and everything is more dynamic when he's around."</h4>
+                        <div class="clear-20"></div>
+                        <h5 class="center-align"><span><b>KATE MIGLIAZZO</b></span></h5>
+                        <h6 class="center-align"><b>DIRECTOR OF PRODUCT, CHALKCAST</b></h6>
+                </div>
+            </div>
+        </div>
+        <div id="slide2" class="slide rightSlide">
+            <div class="container">
+                <div class="row">
+                    <h4 class="center-align">"Blake is the best freelance designer I've ever worked with. He regularly learns more and more cutting edge techniques to make your business stand out from the rest."</h4>
+                    <div class="clear-20"></div>
+                    <h5 class="center-align"><span><b>FRANK WALL</b></span></h5>
+                    <h6 class="center-align"><b>PERSONAL TRAINER (CLIENT)</b></h6>
+                </div>
+            </div>
+        </div>
+        <div id="slide3" class="slide rightSlide">
+            <div class="container">
+                <div class="row">
+                    <h4 class="center-align">"Blake possess a powerful combination of aesthetic/visual skills and the ability to craft a seamless and enjoyable user journey. His attention to detail is impeccable, and he approaches each task with a user-centric mindset, ensuring that every design decision is purposeful."</h4>
+                    <div class="clear-20"></div>
+                    <h5 class="center-align"><span><b>RUSHIL KHURANA</b></span></h5>
+                    <h6 class="center-align"><b>CO-FOUNDER AND CEO, RADIEN</b></h6>
+                </div>
+            </div>
+        </div>
+        <div id="slide4" class="slide leftSlide">
+            <div class="container">
+                <div class="row">
+                    <h4 class="center-align">"Blake frequently prototypes his own work in code, which makes his designs practical and also speeds up the delivery process for developers who implement his designs / integrate his prototypes."</h4>
+                    <div class="clear-20"></div>
+                    <h5 class="center-align"><span><b>AUSTIN THERIOT</b></span></h5>
+                    <h6 class="center-align"><b>SENIOR SOFTWARE ENGINEER</b></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
         <div class="container">
             <h1>TESTIMONIALS</h1>
             <div class="row">
@@ -423,7 +468,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="section" id="cv">
         <div class="container">
@@ -772,100 +817,229 @@
         // });
         
         //UI Showcase
-        let lastKnownScrollPosition = 0;
-        let ticking = false;
-        function doSomething(scrollPos) {
-            // Do something with the scroll position
-            //Move elements
-            // var winTop = $(window).scrollTop();
-            // var docHeight = $('body').height();
-            // var winHeight = $(window).height();
-            // var totalScroll = Math.floor((winTop / docHeight) * 100);
-            // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
-        }
-        document.addEventListener("scroll", (event) => {
-            lastKnownScrollPosition = window.scrollY;
+        // let lastKnownScrollPosition = 0;
+        // let ticking = false;
+        // function doSomething(scrollPos) {
+        //     // Do something with the scroll position
+        //     //Move elements
+        //     // var winTop = $(window).scrollTop();
+        //     // var docHeight = $('body').height();
+        //     // var winHeight = $(window).height();
+        //     // var totalScroll = Math.floor((winTop / docHeight) * 100);
+        //     // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
+        // }
+        // document.addEventListener("scroll", (event) => {
+        //     lastKnownScrollPosition = window.scrollY;
 
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    doSomething(lastKnownScrollPosition);
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+        //     if (!ticking) {
+        //         window.requestAnimationFrame(() => {
+        //             doSomething(lastKnownScrollPosition);
+        //             ticking = false;
+        //         });
+        //         ticking = true;
+        //     }
+        // });
 
         //Update nav
-        var links = document.getElementById('nav').childNodes;
+        // var links = document.getElementById('nav').childNodes;
 
-        var waypoint1 = new Waypoint({
-            element: document.getElementById('design'),
-            handler: function() {
-                document.getElementById('nav-design').className = "active";
-                document.getElementById('nav-art').className = "";
-                document.getElementById('nav-bio').className = "";
-                document.getElementById('nav-cv').className = "";
-                document.getElementById('nav-contact').className = "";
-            }
-        });
-        var waypoint2 = new Waypoint({
-            element: document.getElementById('art'),
-            handler: function() {
-                document.getElementById('nav-design').className = "";
-                document.getElementById('nav-art').className = "active";
-                document.getElementById('nav-bio').className = "";
-                document.getElementById('nav-cv').className = "";
-                document.getElementById('nav-contact').className = "";
-            }
-        });
-        var waypoint3 = new Waypoint({
-            element: document.getElementById('bio'),
-            handler: function() {
-                document.getElementById('nav-design').className = "";
-                document.getElementById('nav-art').className = "";
-                document.getElementById('nav-bio').className = "active";
-                document.getElementById('nav-cv').className = "";
-                document.getElementById('nav-contact').className = "";
-            }
-        });
-        var waypoint4 = new Waypoint({
-            element: document.getElementById('cv'),
-            handler: function() {
-                document.getElementById('nav-design').className = "";
-                document.getElementById('nav-art').className = "";
-                document.getElementById('nav-bio').className = "";
-                document.getElementById('nav-cv').className = "active";
-                document.getElementById('nav-contact').className = "";
-            }
-        });
-        var waypoint5 = new Waypoint({
-            element: document.getElementById('contact'),
-            handler: function() {
-                document.getElementById('nav-design').className = "";
-                document.getElementById('nav-art').className = "";
-                document.getElementById('nav-bio').className = "";
-                document.getElementById('nav-cv').className = "";
-                document.getElementById('nav-contact').className = "active";
-            }
-        });
+        // var waypoint1 = new Waypoint({
+        //     element: document.getElementById('design'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "active";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint2 = new Waypoint({
+        //     element: document.getElementById('art'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "active";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint3 = new Waypoint({
+        //     element: document.getElementById('bio'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "active";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint4 = new Waypoint({
+        //     element: document.getElementById('cv'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "active";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint5 = new Waypoint({
+        //     element: document.getElementById('contact'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "active";
+        //     }
+        // });
 
-        function toggleBioTerms() {
-            var term1 = document.getElementById('bioterm-1').innerHTML;
-            var term2 = document.getElementById('bioterm-2').innerHTML;
-            if (term1 == "DESIGN") {
-                document.getElementById('bioterm-1').innerHTML = "ART"
-                document.getElementById('bioterm-2').innerHTML = "SCIENCE"
-            } else {
-                document.getElementById('bioterm-1').innerHTML = "DESIGN"
-                document.getElementById('bioterm-2').innerHTML = "ENGINEERING"
-            }
-        }
+        // function toggleBioTerms() {
+        //     var term1 = document.getElementById('bioterm-1').innerHTML;
+        //     var term2 = document.getElementById('bioterm-2').innerHTML;
+        //     if (term1 == "DESIGN") {
+        //         document.getElementById('bioterm-1').innerHTML = "ART"
+        //         document.getElementById('bioterm-2').innerHTML = "SCIENCE"
+        //     } else {
+        //         document.getElementById('bioterm-1').innerHTML = "DESIGN"
+        //         document.getElementById('bioterm-2').innerHTML = "ENGINEERING"
+        //     }
+        // }
 
         function copyToClipboard() {
             document.getElementById('my-email').select();
             document.execCommand("Copy");
             alert("Copied the text: bwilliford@gmail.com");
         }
+
+        class SwipeDetector {
+        constructor(element, threshold = 50) {
+            this.element = element;
+            this.startX = 0;
+            this.startY = 0;
+            this.threshold = threshold;
+            this.swiping = false;
+    
+            element.addEventListener('mousedown', this.handleTouchStart.bind(this));
+            element.addEventListener('touchstart', this.handleTouchStart.bind(this));
+            element.addEventListener('mouseup', this.handleTouchEnd.bind(this));
+            element.addEventListener('touchend', this.handleTouchEnd.bind(this));
+            element.addEventListener('mousemove', this.handleTouchMove.bind(this));
+            element.addEventListener('touchmove', this.handleTouchMove.bind(this));
+        }
+    
+        handleTouchStart(event) {
+            this.swiping = true;
+            this.startX = event.type.startsWith('mouse') ? event.clientX : event.touches[0].clientX;
+            this.startY = event.type.startsWith('mouse') ? event.clientY : event.touches[0].clientY;
+        }
+    
+        handleTouchMove(event) {
+            if (!this.swiping) return;
+            const currentX = event.type.startsWith('mouse') ? event.clientX : event.touches[0].clientX;
+            const currentY = event.type.startsWith('mouse') ? event.clientY : event.touches[0].clientY;
+    
+            const diffX = currentX - this.startX;
+            const diffY = currentY - this.startY;
+    
+            if (Math.abs(diffX) > this.threshold || Math.abs(diffY) > this.threshold) {
+                this.swiping = false;
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    this.onSwipe(diffX > 0 ? 'right' : 'left');
+                } else {
+                    this.onSwipe(diffY > 0 ? 'down' : 'up');
+                }
+            }
+        }
+    
+        handleTouchEnd() {
+            this.swiping = false;
+        }
+    
+        onSwipe(direction) {
+            console.log(`Swiped ${direction}`);
+            if (direction == "left") {
+                swipeRight();
+                
+            }
+            else if (direction == "right") {
+                swipeLeft();
+            }
+        }
+    }
+    
+    const element = document.getElementById('slide');
+    const element2 = document.getElementById('slide2');
+    const element3 = document.getElementById('slide3');
+    const element4 = document.getElementById('slide4');
+    const swipeDetector = new SwipeDetector(element);
+    const swipeDetector2 = new SwipeDetector(element2);
+    const swipeDetector3 = new SwipeDetector(element3);
+    const swipeDetector4 = new SwipeDetector(element4);
+
+    let slide = 1;
+    
+    function swipeLeft() {
+        if (slide == 1) {
+            document.getElementById('slide').className = "slide leftSlide";
+            document.getElementById('slide2').className = "slide activeSlide";
+            document.getElementById('slide3').className = "slide rightSlide";
+            document.getElementById('slide4').className = "slide rightSlide";
+            slide = 2;
+        }
+        else if (slide == 2) {
+            document.getElementById('slide2').className = "slide leftSlide";
+            document.getElementById('slide3').className = "slide activeSlide";
+            document.getElementById('slide4').className = "slide rightSlide";
+            document.getElementById('slide').className = "slide rightSlide";
+            slide = 3;
+        }
+        else if (slide == 3) {
+            document.getElementById('slide3').className = "slide leftSlide";
+            document.getElementById('slide4').className = "slide activeSlide";
+            document.getElementById('slide').className = "slide rightSlide";
+            document.getElementById('slide2').className = "slide rightSlide";
+            slide = 4;
+        }
+        else {
+            document.getElementById('slide4').className = "slide leftSlide";
+            document.getElementById('slide').className = "slide activeSlide";
+            document.getElementById('slide2').className = "slide rightSlide";
+            document.getElementById('slide3').className = "slide rightSlide";
+            slide = 1;
+        }
+    }
+    
+    function swipeRight() {
+        if (slide == 1) {
+            document.getElementById('slide').className = "slide rightSlide";
+            document.getElementById('slide4').className = "slide activeSlide";
+            document.getElementById('slide3').className = "slide leftSlide";
+            document.getElementById('slide2').className = "slide leftSlide";
+            slide = 4;
+        }
+        else if (slide == 4) {
+            document.getElementById('slide4').className = "slide rightSlide";
+            document.getElementById('slide3').className = "slide activeSlide";
+            document.getElementById('slide2').className = "slide leftSlide";
+            document.getElementById('slide').className = "slide leftSlide";
+            slide = 3;
+        }
+        else if (slide == 3) {
+            document.getElementById('slide3').className = "slide rightSlide";
+            document.getElementById('slide2').className = "slide activeSlide";
+            document.getElementById('slide').className = "slide leftSlide";
+            document.getElementById('slide4').className = "slide leftSlide";
+            slide = 2;
+        }
+        else {
+            document.getElementById('slide2').className = "slide rightSlide";
+            document.getElementById('slide').className = "slide activeSlide";
+            document.getElementById('slide4').className = "slide leftSlide";
+            document.getElementById('slide3').className = "slide leftSlide";
+            slide = 1;
+        }
+    }
     </script>
 
 <script type="text/paperscript" canvas="home">
