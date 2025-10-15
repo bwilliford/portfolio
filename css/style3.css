@@ -354,7 +354,7 @@ p {
 
 .home-wrap {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0) 55%), linear-gradient(225deg, rgba(0, 0, 255, .2), rgba(0, 0, 255, 0) 55%);
+  background: linear-gradient(135deg, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0) 65%), linear-gradient(225deg, rgba(0, 0, 255, .2), rgba(0, 0, 255, 0) 35%);
 }
 
 .btn {
@@ -475,6 +475,7 @@ nav .button-collapse:hover {
       background-color: rgba(255,255,255,0.4);
       display: block;
       overflow: hidden;
+      display: none;
     }
 
     #main-progressbar {
@@ -492,6 +493,7 @@ nav .button-collapse:hover {
       top: 175;
       width: 40px;
       height: 400px;
+      display: none;
     }
 
     #project-progressbar-container a {

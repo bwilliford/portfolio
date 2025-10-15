@@ -75,10 +75,10 @@
     </div>
 
 
-    <div id="main-progressbar-container">
+    <!-- <div id="main-progressbar-container">
         <div id="main-progressbar">
         </div>
-    </div>
+    </div> -->
 
     <a href="#design"><div class="down"></div>
     </a>
@@ -88,17 +88,33 @@
         <div class="section">
             <div class="container">
                 <h1 style="font-size: 2.8rem; margin-top: 15vh; text-align: left">I'M A <span>PRODUCT DESIGNER</span> AND <span> INNOVATOR</span></h1>
-                <h4>I design and build world-class UI for clients like Adobe, Microsoft, and USAA. I have extensive experience in startups and 0-1 product design.</h4>
-
+                <h4>I design and build world-class UI for companies like Adobe, Microsoft, and USAA. I have extensive experience in startups and 0-1 product design.</h4>
+                <div class="row hide-on-med-and-down">
+                    <div class="col s3 m2 l2">
+                        <img src="images/clients/adobe.png" style="width: 100%; margin-top: 30px;"></img>
+                    </div>
+                    <div class="col s3 m2 l2">
+                        <img src="images/clients/mfst.png" style="width: 100%"></img>
+                    </div>
+                    <div class="col s3 m2 l2">
+                        <img src="images/clients/usaa.png" style="width: 100%"></img>
+                    </div>
+                    <div class="col s3 m2 l2">
+                        <img src="images/clients/stubhub.png" style="width: 100%"></img>
+                    </div>
+                    <div class="col s3 m2 l2">
+                        <img src="images/clients/celebrity.png" style="width: 100%"></img>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="section" id="showcase" style="overflow: hidden;">
+    <!-- <div class="section" id="showcase" style="overflow: hidden;">
         <img id="showcase1" class="showcase" src="images/showcase1.png"/>
         <img id="showcase2" class="showcase" src="images/showcase2.png"/>
         <img id="showcase3" class="showcase" src="images/showcase3.png"/>
-    </div>
+    </div> -->
 
 
     <div class="section" id="design">
@@ -114,6 +130,8 @@
                     <img class="portfolioLogo" src="images/clients/chalkcast.png"></img>
                     <h4>Virtual Classroom</h4>
                     <p>Innovative web app for teaching anything, to anyone, from anywhere.</p>
+                    <div class="clear-20"></div>
+                    <a href="projects/chalkcast.html" target="blank"><div class="cta">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
                         <li class="collab">UX Research</li>
                         <li class="collab">UX Design</li>
@@ -133,6 +151,8 @@
                     <img class="portfolioLogo" src="images/portfolio/polygence/logo.png"></img>
                     <h4>Mentoring Platform</h4>
                     <p>An innovative mentoring platform that connects K-12 students with expert mentors to explore their interests.</p>
+                    <div class="clear-20"></div>
+                    <a href="projects/polygence.html" target="blank"><div class="cta">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
                         <li class="collab">UX Research</li>
                         <li class="collab">UX Design</li>
@@ -152,6 +172,8 @@
                     <img class="portfolioLogo" src="images/portfolio/sketchtivity/logo.svg"></img>
                     <h4>App for Learning Drawing</h4>
                     <p>A gamified app leveraging AI-driven feedback for learning basic drawing skills including drawing in perspective.</p>
+                    <div class="clear-20"></div>
+                    <a href="projects/sketchtivity.html" target="blank"><div class="cta">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
                         <li class="collab">UX Research</li>
                         <li class="collab">UX Design</li>
@@ -172,6 +194,8 @@
                     <img class="portfolioLogo" src="images/clients/adobe.png"></img>
                     <h4>SnapFX</h4>
                     <p>An experimental mobile app designed and developed at Adobe Research to help novices perform sophisticated image editing.</p>
+                    <div class="clear-20"></div>
+                    <a href="projects/snapfx.html" target="blank"><div class="cta">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
                         <li class="collab">UX Research</li>
                         <li class="collab">UX Design</li>
@@ -724,28 +748,28 @@
         });
 
         //Scrollbar
-        let winTop = window.scrollY;
-        let docHeight = document.body.scrollHeight;
-        let winHeight = window.innerHeight;
-        let initialScroll = Math.floor((winHeight/docHeight)*100);
-        document.getElementById('main-progressbar').style.height = initialScroll+'%';
+        // let winTop = window.scrollY;
+        // let docHeight = document.body.scrollHeight;
+        // let winHeight = window.innerHeight;
+        // let initialScroll = Math.floor((winHeight/docHeight)*100);
+        // document.getElementById('main-progressbar').style.height = initialScroll+'%';
 
-        $(document).ready(function() {
-            window.setInterval(function() {
-                toggleBioTerms();
-            }, 3000);
+        // $(document).ready(function() {
+        //     window.setInterval(function() {
+        //         toggleBioTerms();
+        //     }, 3000);
 
-            $(window).scroll(function() {
-                //Update progress bar
-                winTop = window.scrollY;
-                totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
-                document.getElementById('main-progressbar').style.height = totalScroll+'%';
+        //     $(window).scroll(function() {
+        //         //Update progress bar
+        //         winTop = window.scrollY;
+        //         totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
+        //         document.getElementById('main-progressbar').style.height = totalScroll+'%';
 
-                document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
-                document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
-                document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
-            });
-        });
+        //         document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
+        //         document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
+        //         document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
+        //     });
+        // });
         
         //UI Showcase
         let lastKnownScrollPosition = 0;
