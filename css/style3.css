@@ -168,7 +168,7 @@ p {
 
 #design ul li.collab {
   display: inline-block;
-  background-color: var(--brand-color)30;
+  background-color: #813dff30;
   /* border: 1px solid #777; */
   padding: 0 16px;
   font-size: 14px;
@@ -180,7 +180,7 @@ p {
 
 .portfolioSkills li{
   display: block;
-  background-color: var(--brand-color)30;
+  background-color: #813dff30;
   /* border: 1px solid #777; */
   padding: 0 16px;
   font-size: 14px;
@@ -191,14 +191,14 @@ p {
 }
 
 #clients {
-  background-color: var(--brand-color)10;
+  background-color: #ffffff10;
   backdrop-filter: blur(20px);
   margin: 60px 0;
   padding: 20px;
 }
 
 .pricing {
-  background-color: var(--brand-color)10;
+  background-color: #813dff10
   backdrop-filter: blur(20px);
   padding: 20px;
   margin-bottom: 20px;
@@ -685,7 +685,7 @@ nav .button-collapse {
 }
 
 .side-nav {
-  background-color: var(--brand-color)99;
+  background-color: #813dff99;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   width: 100vw;
