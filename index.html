@@ -22,9 +22,12 @@
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--JS Frameworks-->
@@ -80,16 +83,20 @@
         </div>
     </div> -->
 
-    <a href="#design"><div class="down"></div>
+    <div id="loaderOverlay">
+        <div class="circle"></div>
+    </div>
+
+    <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
     </a>
 
     <div class="home-wrap">
         <canvas id="home" class="hide-on-med-and-down"></canvas>
         <div class="section">
-            <div class="container">
-                <h1 class="center-align" style="font-size: 2.8rem; margin-top: 15vh;">I'M A <span>PRODUCT DESIGNER</span> AND <span> INNOVATOR</span></h1>
-                <h4 class="center-align">I design and prototype world-class UI. I have extensive experience in startups and 0-1 product design.</h4>
-                <div class="row hide-on-med-and-down">
+            <div class="container" >
+                <h1 class="center-align" style="font-size: 2.8rem; margin-top: 15vh;" data-aos="fade-up" data-aos-delay="700">I'M A <span>PRODUCT DESIGNER</span> AND <span> INNOVATOR</span></h1>
+                <h4 class="center-align" data-aos="fade-up" data-aos-delay="900">I design and prototype world-class UI. I have extensive experience in startups and 0-1 product design.</h4>
+                <div class="row hide-on-med-and-down" data-aos="fade-up" data-aos-delay="1100">
                     <div class="col s12 m1 l1">
                        
                     </div>
@@ -125,9 +132,9 @@
 
     <div class="section" id="design">
         <div class="container">
-            <h1><span>DESIGN</span> AND INNOVATION WORK</h1>
+            <h1 data-aos="fade-up" data-aos-delay="300"><span>DESIGN</span> AND INNOVATION WORK</h1>
           
-            <div class="row" id="clients">
+            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="500">
                 <div class="col s12 m6 l6">
                     <a href="projects/chalkcast.html"><img class="portfolioTeaser" src="images/portfolio/chalkcast.png"></img>
                     </a>
@@ -148,7 +155,7 @@
                 </div></a>
             </div>
 
-            <div class="row" id="clients">
+            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="500">
                 <div class="col s12 m6 l6">
                     <a href="projects/polygence.html"><img class="portfolioTeaser" src="images/portfolio/polygence2.png"></img>
                     </a>
@@ -169,7 +176,7 @@
                 </div></a>
             </div>
 
-            <div class="row" id="clients">
+            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="500">
                 <div class="col s12 m6 l6">
                     <a href="projects/sketchtivity.html"><img class="portfolioTeaser" src="images/portfolio/sketchtivity/teaser.png"></img>
                     </a>
@@ -191,7 +198,7 @@
                 </div></a>
             </div>
 
-            <div class="row" id="clients">
+            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="300">
                 <div class="col s12 m6 l6">
                     <a href="projects/snapfx.html"><img class="portfolioTeaser" src="images/portfolio/snapfx.png"></img>
                     </a>
@@ -249,7 +256,7 @@
                 </div> -->
             
             <div class="clear-60"></div>
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-delay="300">
                 <div class="col s12 m6 l4">
                     <a href="projects/zensketch.html"><img class="portfolioTeaserCenter" src="images/portfolio/zensketch.png"></img>
                     </a>
@@ -383,13 +390,13 @@
     </div>
 
 
-    <div class="section" id="bio">
+    <div class="section" id="bio" data-aos="fade-up" data-aos-delay="300">
         <div class="container">
             <div class="row">
-                <div class="col s12 m6 l6">
-                    <h1 style="text-align: left; font-weight: 200; font-size: 2rem; text-transform: uppercase;">I bring technology to people in a form they can love and understand</span></h1>
+                <div class="col s12 m6 l6" data-aos="fade-up" data-aos-delay="500">
+                    <h1 style="text-align: left; font-weight: 200; font-size: 2rem; text-transform: uppercase;" >I bring technology to people in a form they can love and understand</span></h1>
                     <p>I'm a multi-disciplinary designer and creative technologist that's passionate about designing and prototyping interactive experiences that empower people and organizations. </p>
-                    <p>I first fell in love with design when I started playing around with Photoshop as a teenager. I like to define design as <em>"bringing technology to people in a form that they can love and understand"</em>. I'm passionate about designing and building simple, usable, and beautiful products and services.</p>
+                    <p>I like to define design as <em>"bringing technology to people in a form that they can love and understand"</em>. I'm passionate about designing and building simple, usable, and beautiful products and services.</p>
                     <p>Because of my PhD background, I am also a specialist in prototyping and building highly custom and unique UIs. If it can be imagined, I'm confident I can build it. I am a specialist in sketch-based interfaces, sketch recognition, adaptive interfaces leveraging AI, intelligent tutoring systems, and real-time feedback driven by AI.</p>
                     <p>When I'm not absorbed in design, I am likely playing music, drawing, or traveling.</p>
                 </div>
@@ -766,8 +773,8 @@
 
     <div class="section" id="contact">
         <div class="container">
-            <div class="row">
-                <div class="col s12 m6 l6">
+            <div class="row" data-aos="fade-right" data-aos-delay="300">
+                <div class="col s12 m6 l6" >
                     <h4>CONNECT WITH ME</span>
                     </h4>
                     <p>Thanks for visiting my portfolio! I'd love to stay in touch.</br>
@@ -799,8 +806,17 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+
+        window.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+            setTimeout(function() {
+                document.getElementById('loaderOverlay').classList.toggle('inactive');
+            }, 500);
+        });
+
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 240
             closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -1120,4 +1136,5 @@
     }
 
   </script>
+  </body>
 </html>

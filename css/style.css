@@ -243,7 +243,7 @@ p {
   width: fit-content;
   padding: 0 50px 0 20px;
   line-height: 46px;
-  background: var(--brand-color) url('../images/icons/arrow-right.png') no-repeat 90% 50%;
+  background: var(--brand-color) url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
   color: #ffffff;
 }
 
@@ -256,13 +256,13 @@ p {
   width: fit-content;
   padding: 0 50px 0 20px;
   line-height: 46px;
-  background: #ffffff10 url('../images/icons/arrow-right.png') no-repeat 90% 50%;
+  background: #ffffff10 url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
   color: #ffffff;
 }
 
 .secondary:hover {
   transform: scale(1.05);
-  background: var(--brand-color) url('../images/icons/arrow-right.png') no-repeat 90% 50%;
+  background: var(--brand-color) url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
   transition-duration: 0.5s;
 }
 
@@ -384,7 +384,7 @@ p {
 
 .navbar-fixed {
   position: absolute;
-  z-index:999999999;
+  z-index: 2;
 }
 
 nav {
@@ -440,6 +440,8 @@ nav .button-collapse:hover {
   left: 50%;
   margin-left: -50px;
   background-image: url('../images/icons/down.svg');
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.6;
   transition-duration: 0.5s;
   z-index: 2;
@@ -1105,6 +1107,9 @@ h3 {
   top: calc(50vh - 100px);
   left: 0;
   background-image: url('../images/icons/down.svg');
+  background-size: 50% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
   transform: rotate(90deg);
   transition-duration: 0.5s;
   z-index: 2;
@@ -1115,8 +1120,11 @@ h3 {
   height: 80px;
   position: absolute;
   top: calc(50vh - 100px);
+  background-size: 50% 50%;
   right: 0;
   background-image: url('../images/icons/down.svg');
+  background-position: center;
+  background-repeat: no-repeat;
   transform: rotate(-90deg);
   transition-duration: 0.5s;
   z-index: 2;
@@ -1163,3 +1171,49 @@ h3 {
   right: -100vw;
   opacity: 0;
 }
+
+#loaderOverlay {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #070614;
+  z-index: 9999999;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#loaderOverlay.inactive {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.circle {
+  border: 2px solid rgba(129,61,255,0.10);
+  border-top: 2px solid var(--brand-color); /* visible loader segment */
+  position: fixed;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  left: calc(50vw - 50px);
+  top: calc(50vh - 50px);
+  animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #sidenav-overlay {
+    display: none;
+  }
