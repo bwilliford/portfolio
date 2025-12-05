@@ -427,36 +427,38 @@
     </div>
 </div>
 
-    <div class="section half" id="testimonials">
-        <div class="container">
-            <div class="row" data-aos="fade-up" data-aos-delay="300">
-                <div class="col s12 m6 l6" >
-                    <h4>CONNECT WITH ME</span>
-                    </h4>
-                    <p>Thanks for visiting my portfolio! I'd love to stay in touch.</br>
-                        Here's a couple of ways to stay connected -</p>
-                    <a href="https://www.linkedin.com/in/blakewilliford/" target="blank">
-                        <div class="linkedin"></div>
-                    </a>
-                    <a href="https://www.instagram.com/blakewilliforddesign/" target="blank">
-                        <div class="insta"></div>
-                    </a>
-                    <div class="clear-60"></div>
-                </div>
-                <div class="col s12 m6 l6">
-                    <h4>FREE CONSULTATION</span>
-                    </h4>
-                    <p>I'm always happy to collaborate on creative projects! Feel free to reach out and schedule some time with me.</p>
-                    <a href="https://cal.com/blake-williford-design/consultation" target="blank"><div class="cta">Schedule a Call</div></a>
-                </div>
+<div class="section" id="contact">
+    <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-delay="300">
+            <div class="col s12 m6 l6">
+                <img src="images/blake2.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Blake Williford"
+                    class="circular">
+            </div>
+            <div class="col s12 m6 l6">
+                <h4>FREE CONSULTATION</h4>
+                <p>I'm always happy to collaborate on creative projects! Feel free to reach out and schedule some time
+                    with me.</p>
+                <a href="https://cal.com/blake-williford-design/consultation" target="blank">
+                    <div class="cta">Schedule a Call</div>
+                </a>
+
+                <div class="clear-60"></div>
+                <h4>CONNECT WITH ME</h4>
+                <a href="https://www.linkedin.com/in/blakewilliford/" target="blank">
+                    <div class="linkedin"></div>
+                </a>
+                <a href="https://www.instagram.com/blakewilliforddesign/" target="blank">
+                    <div class="insta"></div>
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="footer">
-        &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
-        <a class="grey-text text-lighten-4 right" href="#!">VERSION 4.0 <em>SIZZLE</em></a>
-    </div>
+<div class="footer">
+    &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
+    <a class="grey-text text-lighten-4 right" href="#!">VERSION 4.0 <em>SIZZLE</em></a>
+</div>
 
 
     <!--Import jQuery before materialize.js-->
@@ -728,69 +730,5 @@
         }
     }
     </script>
-
-<script type="text/paperscript" canvas="home">
-
-    //Triangulation script by Blake Williford
-
-    var canvasHeight = paper.view.size.height;
-    var canvasWidth =	paper.view.size.width;
-    var points = [];
-    var lines = [];
-
-    generateStars(100);
-    function generateStars(number) {
-      for (i=0; i<number; i++) {
-        randX = Math.random()*canvasWidth;
-        randY = Math.random()*canvasHeight;
-        point = new Point(randX, randY);
-        points.push(point);
-      }
-    }
-
-    function removeLines(line)
-     {
-      var fadeEffect = setInterval(function() {
-       if (line.opacity < 0.1)
-       {
-        line.remove();
-        clearInterval(fadeEffect);
-       }
-       else
-       {
-        line.opacity -= 0.1;
-       }
-     }, 100);
-     }
-
-    function graphGenerator(point) {
-      var tempPoints = [];
-
-      corner = new Point(point.x-160, point.y-160);
-      range = new Rectangle(corner, 320);
-      for (i=0; i< points.length; i++) {
-        if (range.contains(points[i])) {
-          //circle = new Path.Circle(points[i], 1);
-          //circle.fillColor = '#fff';
-          //var line = new Path.Line(point, points[i]);
-          //line.strokeColor = 'rgba(255,255,255,0.2)';
-          //lines.push(line);
-          tempPoints.push(points[i]);
-        }
-      }
-      for (i=0; i < tempPoints.length-1; i++) {
-        for (j=1; j < tempPoints.length-1; j++) {
-          var line = new Path.Line(tempPoints[i], tempPoints[j]);
-          line.strokeColor = 'rgba(150,150,250,0.02)';
-          removeLines(line);
-        }
-      }
-    }
-
-    function onMouseMove(event) {
-      graphGenerator(event.point);
-    }
-
-  </script>
   </body>
 </html>
