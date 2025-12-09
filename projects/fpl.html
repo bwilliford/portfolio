@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/style3.css" >
+    <link rel="stylesheet" href="../css/style.css" >
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--JS Frameworks-->
@@ -18,34 +18,26 @@
 
   <body>
 
-    <div class="navbar-fixed">
-      <nav class="transparent z-depth-0">
-        <div class="nav-wrapper">
-          <div class="row">
-            <div class="col s12">
-              <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
-              <a href="../index.html" class="brand-logo" ><h4>BLAKE WILLIFORD</h4></a>
-                <ul id="nav" class="right hide-on-med-and-down">
-                  <li><a id="nav-design" href="../index.html#design">DESIGN</a></li>
-                  <!-- <li><a id="nav-research" href="../index.html#research">SCIENCE</a></li> -->
-                  <li><a id="nav-art" href="../index.html#art">ART</a></li>
-                  <li><a id="nav-bio" href="../index.html#bio">BIO</a></li>
-                  <li><a id="nav-cv" href="../index.html#cv">CV</a></li>
-                  <li><a id="nav-contact" href="../index.html#contact">CONTACT</a></li>
-                </ul>
-            </div>
-          </div>
-        <ul class="side-nav" id="mobile-demo">
-          <a class="closeMenu sidenav-close"></a><li><a href="../index.html#design">DESIGN</a></li>
-          <!-- <li><a href="../index.html#research">SCIENCE</a></li> -->
-          <li><a href="../index.html#art">ART</a></li>
-          <li><a href="../index.html#bio">BIO</a></li>
-          <li><a href="../index.html#cv">CV</a></li>
-          <li><a href="../index.html#contact">CONTACT</a></li>
+    <!-- Logo -->
+    <a href="../index.html" aria-label="Returns to home page">
+        <div id="logo" alt="Blake Williford Design">
+        </div>
+    </a>
+
+    <!-- Nav -->
+    <div id="navTrigger" onclick="toggleNav()"></div>
+
+    <!--Header-->
+    <div class="header"></div>
+    <div id="navWrapper">
+
+        <ul id="nav">
+        <li><a href="../design.html" onclick="toggleNav()">Design</a></li>
+        <li><a href="../bio.html" onclick="toggleNav()">Bio</a></li>
+        <li><a href="../cv.html" onclick="toggleNav()">CV</a></li>
+        <li><a href="../contact.html" onclick="toggleNav()">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-  </div>
+    </div>
 
 
 <div id="main-progressbar-container">
@@ -196,12 +188,11 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
      <script>
-       $('.button-collapse').sideNav({
-           menuWidth: 300, // Default is 240
-           closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-           edge: 'right'
-         }
-       );
+        //Nav
+        function toggleNav() {
+        document.getElementById("navWrapper").classList.toggle("active");
+        document.getElementById("navTrigger").classList.toggle("active");
+        }
 
        $( document ).ready(function() {
 
