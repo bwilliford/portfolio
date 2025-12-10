@@ -76,6 +76,25 @@
     <!-- <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
     </a> -->
 
+    <div id="hobbyOverlay">
+        <div class="exitHobbyOverlay" onclick="toggleOverlay()"></div>
+        <div class="container">
+            <div class="row">
+                <h2 class="uppercase" id="hobbyTitle"></h2>
+                <div class="col s12 m1 l2"></div>
+                <div class="col s12 m10 l8">
+                    <p id="hobbyDescription"></p>
+                </div>
+                <div class="col s12 m1 l2"></div>
+            </div>
+            <div class="row">    
+                <div id="hobbyContent">
+                </div>
+            </div>
+            <div class="clear-60"></div>
+        </div>
+    </div>
+
     <div class="section" id="bio" data-aos="fade" data-aos-delay="700">
         <div class="container">
             <div class="row">
@@ -83,8 +102,9 @@
                     <h1 style="text-align: left; font-weight: 200; font-size: 2rem; text-transform: uppercase;" >I bring technology to people in a form they can love and understand</span></h1>
                     <p>I'm a multi-disciplinary designer and creative technologist that's passionate about designing and prototyping interactive experiences that empower people and organizations. </p>
                     <p>I like to define design as <em>"bringing technology to people in a form that they can love and understand"</em>. I'm passionate about designing and building simple, usable, and beautiful products and services.</p>
-                    <p>Because of my PhD background, I am also a specialist in prototyping and building highly custom and unique UIs including ones that leverage AI. If it can be imagined, I'm confident I can build it.</p>
-                    <p>When I'm not absorbed in design, I am likely playing music, drawing, or traveling.</p>
+                    <p>Because of my PhD background, I am also a specialist in prototyping highly custom and unique UIs including ones that leverage AI and sketching. If it can be imagined, I'm confident I can build it.</p>
+                    <p>When I'm not absorbed in design, some of my hobbies include:</p>
+                    <div class="tertiary sketch" onclick="toggleOverlay('sketching')">Sketching</div> <div class="tertiary music" onclick="toggleOverlay('music')">Music</div> <div class="tertiary travel" onclick="toggleOverlay('travel')">Travel</div>
                 </div>
                 <div class="col s12 m6 l6">
                 </div>
@@ -214,7 +234,7 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js""></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
@@ -232,119 +252,87 @@
         document.getElementById("navTrigger").classList.toggle("active");
         }
 
-        //Scrollbar
-        // let winTop = window.scrollY;
-        // let docHeight = document.body.scrollHeight;
-        // let winHeight = window.innerHeight;
-        // let initialScroll = Math.floor((winHeight/docHeight)*100);
-        // document.getElementById('main-progressbar').style.height = initialScroll+'%';
+        //Hobby Overlay
+        function toggleOverlay(hobby) {
+            document.getElementById('hobbyOverlay').classList.toggle('active');
+            document.querySelector('.exitHobbyOverlay').classList.toggle('active');
+            document.body.classList.toggle('noscroll');
 
-        // $(document).ready(function() {
-        //     window.setInterval(function() {
-        //         toggleBioTerms();
-        //     }, 3000);
+            // Always reset the "hobbyContent" first (delete everything in it)
+            const hobbyTitle = document.getElementById('hobbyTitle');
+            const hobbyDescription = document.getElementById('hobbyDescription');
+            const hobbyContent = document.getElementById('hobbyContent');
+            if (hobbyContent) hobbyContent.innerHTML = '';
 
-        //     $(window).scroll(function() {
-        //         //Update progress bar
-        //         winTop = window.scrollY;
-        //         totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
-        //         document.getElementById('main-progressbar').style.height = totalScroll+'%';
+            if (hobby === 'sketching') {
+                hobbyTitle.textContent = 'Sketching';
+                hobbyDescription.textContent = "My first degree was in industrial design so I learned to sketch professionally. These days it is more of a hobby to relax and explore ideas. I'm especially fond of sketching architecture, fantasy concept art, and vehicles.";
 
-        //         document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
-        //         document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
-        //         document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
-        //     });
-        // });
-        
-        //UI Showcase
-        // let lastKnownScrollPosition = 0;
-        // let ticking = false;
-        // function doSomething(scrollPos) {
-        //     // Do something with the scroll position
-        //     //Move elements
-        //     // var winTop = $(window).scrollTop();
-        //     // var docHeight = $('body').height();
-        //     // var winHeight = $(window).height();
-        //     // var totalScroll = Math.floor((winTop / docHeight) * 100);
-        //     // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
-        // }
-        // document.addEventListener("scroll", (event) => {
-        //     lastKnownScrollPosition = window.scrollY;
+                // Array of image paths for "sketching" hobby
+                const sketchingImages = [
+                    './images/art/tractor1.jpg',
+                    './images/art/tractor2.jpg',
+                    './images/art/tractor3.jpg',
+                    './images/art/zerogcamera2.jpg',
+                    './images/art/zerogcamera.jpg',
+                    './images/art/porsche.jpg',
+                    './images/art/arch1.jpg',
+                    './images/art/arch2.jpg',
+                    './images/art/arch3.jpg',
+                    './images/art/arch4.jpg',
+                    './images/art/arch5.jpg',
+                    './images/art/arch6.jpg',
+                    './images/art/arch7.png',
+                    './images/art/arch8.png',
+                    './images/art/arch9.png',
+                    './images/art/arch10.png',
+                    './images/art/arch11.png',
+                    './images/art/arch12.png',
+                    './images/art/arch13.png',
+                    './images/art/arch14.png',
+                    './images/art/arch15.png',
+                    './images/art/arch16.png',
+                    './images/art/arch17.png',
+                    './images/art/cusco.jpg',
+                    './images/art/frog1.jpg',
+                    './images/art/frog2.jpg',
+                    './images/art/jabba.jpg',
+                    './images/art/chromefrog.jpg',
+                    './images/art/creature.jpg',
+                    './images/art/city.jpg',
+                    './images/art/watch.jpg',
+                    './images/art/spacetrain.jpg',
+                    './images/art/skull.jpg',
+                ];
 
-        //     if (!ticking) {
-        //         window.requestAnimationFrame(() => {
-        //             doSomething(lastKnownScrollPosition);
-        //             ticking = false;
-        //         });
-        //         ticking = true;
-        //     }
-        // });
+                // Add each image to the hobbyContent
+                if (hobbyContent) {
+                    for (let i = 0; i < sketchingImages.length; i++) {
+                        const col = document.createElement('col');
+                        col.className = "col s6 m4 l3";
+                        const img = document.createElement('img');
+                        img.src = sketchingImages[i];
+                        img.alt = 'Sketch ' + (i + 1);
+                        img.className = 'materialboxed';
+                        hobbyContent.appendChild(col);
+                        col.appendChild(img);
+                    }
+                }
 
-        //Update nav
-        // var links = document.getElementById('nav').childNodes;
+                //Add materialboxed to all images
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems);
+            }
+            else if (hobby === "music") {
+                hobbyTitle.textContent = 'Music';
+                hobbyDescription.textContent = "I view music as a deeply elegant and universal language. I am a multi-instrumentalist musician and songwriter. Here are a few samples of my solo work and collaborations ranging from jazz to funk and alternative rock.";
+            }
+            else if (hobby === "travel") {
+                hobbyTitle.textContent = 'Travel';
+                hobbyDescription.textContent = "I am deeply fortunate to have traveled to 56 countries. Experiencing other cultures is deeply rewarding and inspiring. I am fluent in spanish and have spent the bulk of my travels in Latin America. Here's a small collection of some of my photography.";
+            }
+        }
 
-        // var waypoint1 = new Waypoint({
-        //     element: document.getElementById('design'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "active";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint2 = new Waypoint({
-        //     element: document.getElementById('art'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "active";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint3 = new Waypoint({
-        //     element: document.getElementById('bio'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "active";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint4 = new Waypoint({
-        //     element: document.getElementById('cv'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "active";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint5 = new Waypoint({
-        //     element: document.getElementById('contact'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "active";
-        //     }
-        // });
-
-        // function toggleBioTerms() {
-        //     var term1 = document.getElementById('bioterm-1').innerHTML;
-        //     var term2 = document.getElementById('bioterm-2').innerHTML;
-        //     if (term1 == "DESIGN") {
-        //         document.getElementById('bioterm-1').innerHTML = "ART"
-        //         document.getElementById('bioterm-2').innerHTML = "SCIENCE"
-        //     } else {
-        //         document.getElementById('bioterm-1').innerHTML = "DESIGN"
-        //         document.getElementById('bioterm-2').innerHTML = "ENGINEERING"
-        //     }
-        // }
 
         function copyToClipboard() {
             document.getElementById('my-email').select();
