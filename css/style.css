@@ -287,8 +287,11 @@ p {
   width: fit-content;
   padding: 0 50px 0 20px;
   line-height: 46px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
   background: #ffffff10 url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
-  color: #ffffff;
 }
 
 .secondary:hover {
@@ -308,22 +311,38 @@ p {
   background: #ffffff10;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
 }
 
 .sketch {
   background: #ffffff10 url('../images/icons/sketch.svg') no-repeat 12px 50%;
 }
 
+.sketch:hover {
+  background: var(--brand-color) url('../images/icons/sketch.svg') no-repeat 12px 50%;
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
 .music {
   background: #ffffff10 url('../images/icons/music.svg') no-repeat 12px 50%;
+}
+
+.music:hover {
+  background: var(--brand-color) url('../images/icons/music.svg') no-repeat 12px 50%;
+  transform: scale(1.05);
+  transition-duration: 0.5s;
 }
 
 .travel {
   background: #ffffff10 url('../images/icons/travel.svg') no-repeat 12px 50%;
 }
 
-.tertiary:hover {
+.travel:hover {
+  background: var(--brand-color) url('../images/icons/travel.svg') no-repeat 12px 50%;
   transform: scale(1.05);
   transition-duration: 0.5s;
 }
@@ -823,10 +842,11 @@ nav .button-collapse {
 
 .footer {
    background-color: rgba(0,0,0,0);
-   padding: 0 36px;
+   padding: 0 40px;
    bottom: 0;
    width: 100%;
    line-height: 60px;
+   color: rgba(255,255,255,0.8);
 }
 
 .publication {
@@ -1443,6 +1463,14 @@ h3 {
     top: 4px;
   }
 
+  #contact .row .col {
+    padding: 0 20px;
+  }
+  
+  .footer {
+    padding: 0 24px;
+  }
+
   /* Nav */
   .header {
     width: 100vw;
@@ -1507,4 +1535,9 @@ h3 {
   z-index: 4;
   visibility: visible;
   transition-duration: var(--transition);
+}
+
+#hobbyTitle {
+  font-size: 32px;
+  margin-top: 32px;
 }
