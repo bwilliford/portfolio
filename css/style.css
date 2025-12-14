@@ -1513,6 +1513,10 @@ h3 {
   object-fit: cover;
 }
 
+#hobbyOverlay img.photo {
+  height: auto;
+}
+
 #hobbyOverlay .col {
   padding: 2px;
 }

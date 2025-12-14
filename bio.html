@@ -226,10 +226,10 @@
         </div>
     </div>
     
-    <div class="footer">
-        &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
-        <a class="grey-text text-lighten-4 right" href="#!">VERSION 4.0 <em>SIZZLE</em></a>
-    </div>
+<div class="footer">
+    &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
+    <div class="right">VERSION 4.2 <em>REFRESH</em></div>
+</div>
 
 
     <!--Import jQuery before materialize.js-->
@@ -257,7 +257,7 @@
             const hobbyTitle = document.getElementById('hobbyTitle');
             const hobbyDescription = document.getElementById('hobbyDescription');
             const hobbyContent = document.getElementById('hobbyContent');
-            if (hobbyContent) hobbyContent.innerHTML = '';
+            hobbyContent.innerHTML = '';
 
             if (hobby === 'sketching') {
                 hobbyTitle.textContent = 'Sketching';
@@ -301,17 +301,15 @@
                 ];
 
                 // Add each image to the hobbyContent
-                if (hobbyContent) {
-                    for (let i = 0; i < sketchingImages.length; i++) {
-                        const col = document.createElement('col');
-                        col.className = "col s12 m6 l3";
-                        const img = document.createElement('img');
-                        img.src = sketchingImages[i];
-                        img.alt = 'Sketch ' + (i + 1);
-                        img.className = 'materialboxed';
-                        hobbyContent.appendChild(col);
-                        col.appendChild(img);
-                    }
+                for (let i = 0; i < sketchingImages.length; i++) {
+                    const col = document.createElement('col');
+                    col.className = "col s12 m6 l3";
+                    const img = document.createElement('img');
+                    img.src = sketchingImages[i];
+                    img.alt = 'Sketch ' + (i + 1);
+                    img.className = 'materialboxed';
+                    hobbyContent.appendChild(col);
+                    col.appendChild(img);
                 }
 
                 //Add materialboxed to all images
@@ -321,10 +319,28 @@
             else if (hobby === "music") {
                 hobbyTitle.textContent = 'Music';
                 hobbyDescription.textContent = "I view music as a deeply elegant and universal language. I am a multi-instrumentalist musician and songwriter. Here are a few samples of my solo work and collaborations ranging from jazz to funk and alternative rock.";
+                hobbyContent.innerHTML = "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/album/71sWfyrDoKmW2LOL2XqSLc?utm_source=generator' width='100%' height='470' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe><div class='clear-20'></div><iframe data-testid='embed-iframe' style='border-radius:12px' src='https://open.spotify.com/embed/album/7uUMMKJf6FJudIezFp2DuN?utm_source=generator' width='100%' height='470' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe><div class='clear-20'></div><iframe data-testid='embed-iframe' style='border-radius:12px' src='https://open.spotify.com/embed/artist/3p3ESF7955O4ZFk6Toz1jY?utm_source=generator' width='100%' height='470' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
             }
             else if (hobby === "travel") {
                 hobbyTitle.textContent = 'Travel';
                 hobbyDescription.textContent = "I am fortunate to have traveled to 56 countries. Experiencing other cultures is immensely rewarding and inspiring. I am fluent in spanish and have spent the bulk of my travels in Latin America. Here's a small collection of some of my photography.";
+
+                // Add each photo to the hobbyContent
+                for (let i = 1; i < 13; i++) {
+                    const col = document.createElement('col');
+                    col.className = "col s12 m6 l3";
+                    const img = document.createElement('img');
+                    img.src = './images/photos/photo' + i + '.jpg';
+                    img.alt = 'Photo ' + (i + 1);
+                    img.className = 'materialboxed photo';
+                    hobbyContent.appendChild(col);
+                    col.appendChild(img);
+                }
+
+                //Add materialboxed to all images
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems);
+
             }
         }
 
