@@ -76,309 +76,27 @@
         <div class="circle"></div>
     </div>
 
-    <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
-    </a>
-
-    <div class="home-wrap">
-        <canvas id="home" class="hide-on-med-and-down"></canvas>
-        <div class="section">
-            <div class="container" >
-                <h1 class="center-align" style="font-size: 2.8rem; margin-top: 15vh;" data-aos="fade-up" data-aos-delay="700">I'M A <span>PRODUCT DESIGNER</span> AND <span> INNOVATOR</span></h1>
-                <h4 class="center-align" data-aos="fade-up" data-aos-delay="900">I design and prototype world-class UI. I have extensive experience in startups and 0-1 product design.</h4>
-                <div class="row hide-on-med-and-down" data-aos="fade-up" data-aos-delay="1100">
-                    <div class="col s12 m1 l1">
-                       
-                    </div>
-                    <div class="col s3 m2 l2">
-                        <img src="images/clients/adobe.png" style="width: 100%; margin-top: 30px;"></img>
-                    </div>
-                    <div class="col s3 m2 l2">
-                        <img src="images/clients/mfst.png" style="width: 100%"></img>
-                    </div>
-                    <div class="col s3 m2 l2">
-                        <img src="images/clients/usaa.png" style="width: 100%"></img>
-                    </div>
-                    <div class="col s3 m2 l2">
-                        <img src="images/clients/stubhub.png" style="width: 100%"></img>
-                    </div>
-                    <div class="col s3 m2 l2">
-                        <img src="images/clients/celebrity.png" style="width: 100%"></img>
-                    </div>
-                    <div class="col s12 m1 l1">
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- <div class="section" id="showcase" style="overflow: hidden;">
-        <img id="showcase1" class="showcase" src="images/showcase1.png"/>
-        <img id="showcase2" class="showcase" src="images/showcase2.png"/>
-        <img id="showcase3" class="showcase" src="images/showcase3.png"/>
-    </div> -->
-
-
-    <div class="section" id="design">
+    <div class="section home-wrap" data-aos="fade" data-aos-delay="700">
         <div class="container">
-            <h1 data-aos="fade-up" class="uppercase" data-aos-delay="300">Featured Projects</h1>
-          
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="projects/chalkcast.html"><img class="portfolioTeaser" src="images/portfolio/chalkcast.png"></img>
-                    </a>
-                </div>
-                <a href="projects/chalkcast.html"><div class="col s12 m6 l6">
-                    <img class="portfolioLogo" src="images/clients/chalkcast.png"></img>
-                    <h4>Virtual Classroom</h4>
-                    <p>Innovative web app for teaching anything, to anyone, from anywhere.</p>
-                    <div class="clear-20"></div>
-                    <a href="projects/chalkcast.html" target="blank"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Innovation</li>
-                    </ul> -->
-                </div></a>
+            <ul id="portfolioFilter">
+                <li id="all" onclick="populatePortfolioGrid('all')" class="active">All</li>
+                <li id="web" onclick="populatePortfolioGrid('web')">Web Apps</li>
+                <li id="mobile" onclick="populatePortfolioGrid('mobile')">Mobile Apps</li>
+                <li id="games" onclick="populatePortfolioGrid('games')">Games</li>
+                <li id="websites" onclick="populatePortfolioGrid('websites')">Websites</li>
+                <li id="branding" onclick="populatePortfolioGrid('branding')">Branding</li>
+            </ul>
+
+            <div class="clear-20"></div>
+
+            <div class="row" id="portfolioGrid">
+
             </div>
-
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="projects/polygence.html"><img class="portfolioTeaser" src="images/portfolio/polygence2.png"></img>
-                    </a>
-                </div>
-                <a href="projects/polygence.html"><div class="col s12 m6 l6">
-                    <img class="portfolioLogo" src="images/portfolio/polygence/logo.png"></img>
-                    <h4>Mentoring Platform</h4>
-                    <p>An innovative mentoring platform that connects K-12 students with expert mentors to explore their interests.</p>
-                    <div class="clear-20"></div>
-                    <a href="projects/polygence.html" target="blank"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Branding</li>
-                    </ul> -->
-                </div></a>
-            </div>
-
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="projects/sketchtivity.html"><img class="portfolioTeaser" src="images/portfolio/sketchtivity/teaser.png"></img>
-                    </a>
-                </div>
-                <a href="projects/sketchtivity.html"><div class="col s12 m6 l6">
-                    <img class="portfolioLogo" src="images/portfolio/sketchtivity/logo.svg"></img>
-                    <h4>App for Learning Drawing</h4>
-                    <p>A gamified app leveraging AI-driven feedback for learning basic drawing skills including drawing in perspective.</p>
-                    <div class="clear-20"></div>
-                    <a href="projects/sketchtivity.html" target="blank"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Branding</li>
-                        <li class="collab">Innovation</li>
-                    </ul> -->
-                </div></a>
-            </div>
-
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="projects/snapfx.html"><img class="portfolioTeaser" src="images/portfolio/snapfx.png"></img>
-                    </a>
-                </div>
-                <a href="projects/snapfx.html"><div class="col s12 m6 l6">
-                    <img class="portfolioLogo" src="images/clients/adobe.png"></img>
-                    <h4>SnapFX</h4>
-                    <p>An experimental mobile app designed and developed at Adobe Research to help novices perform sophisticated image editing.</p>
-                    <div class="clear-20"></div>
-                    <a href="projects/snapfx.html" target="blank"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Innovation</li>
-                        <li class="collab">Branding</li>
-                    </ul> -->
-                </div>
-            </div></a>
-
-            
-<!-- 
-            <div class="row" id="clients">
-                <div class="col s12 m6 l6">
-                    <a href="projects/medicarepathfinder.html"><img class="portfolioTeaser" src="images/portfolio/medicarepathfinder.png"></img>
-                    </a>
-                </div>
-                <div class="col s12 m6 l6">
-                    <h2 class="left-align">Medicare Pathfinder</h2>
-                    <h4>Personalized Healthcare</h4>
-                    <p>Web app for finding the perfect Medicare plan based on unique personal situation and predictive analytics.</p>
-                    <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Data Visualization</li>
-                    </ul>
-                    <a href="projects/medicarepathfinder.html"><div class="cta">View Case Study</div></a>
-                </div>
-            </div> -->
-                <!-- <div class="clear-40"></div>
-                <div class="col s12 m6 l4">
-                    <img src="images/clients/adobe.png"></img>
-                    <img src="images/clients/fjord.png"></img>
-                </div>
-                <div class="col s12 m6 l4">
-                    <img src="images/clients/mfst.png"></img>
-                    <img src="images/clients/usaa.png"></img>
-                </div>
-                <div class="col s12 m6 l4">
-                    <img src="images/clients/stubhub.png"></img>
-                    <img src="images/clients/celebrity.png"></img>
-                </div> -->
-            
-            <!-- <div class="clear-60"></div>
-            <div class="row" data-aos="fade-up" data-aos-delay="300">
-                <div class="col s12 m6 l4">
-                    <a href="projects/zensketch.html"><img class="portfolioTeaserCenter" src="images/portfolio/zensketch.png"></img>
-                    </a>
-                    <a href="projects/ubuntoo.html"><img class="portfolioTeaserCenter" src="images/portfolio/ubuntoo.png"></img>
-                    </a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="projects/mechanix.html"><img class="portfolioTeaserCenter" src="images/portfolio/mechanix.png"></img>
-                    </a>
-                    <a href="projects/fpl.html"><img class="portfolioTeaserCenter" src="images/portfolio/fpl.png"></img>
-                    </a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="projects/fossilsketch.html"><img class="portfolioTeaserCenter" src="images/portfolio/fossilsketch.png"></img>
-                    </a>
-                    <a href="projects/finalfrontier.html"><img class="portfolioTeaserCenter" src="images/portfolio/finalfrontier.png"></img></a>
-                </div>
-            </div> -->
         </div>
     </div>
+        
 
-    <!-- <div class="section"  id="research">
-    <div class="container">
-      <div class="row">
-          <h1 style="font-weight: 100;">MY <span>RESEARCH</span> EXPLORES METHODS FOR HELPING PEOPLE LEARN HOW TO DRAW AND BE MORE CREATIVE USING ARTIFICIAL INTELLIGENCE</span></h1>
-
-      </div>
-      <div class="clear-40"></div>
-      <div class="row">
-        <h4 style="color: #7227fd">PUBLICATIONS</h4>
-            <div class="publication">
-              <h5>Exploring the Potential of an Intelligent Tutoring System for Sketching Fundamentals</h5>
-              <h6><strong>Blake Williford</strong>, Matthew Runyon, Wayne Li, Julie Linsey, Tracy Hammond</h6>
-              <p><i>CHI 2020</i></p>
-            </div>
-            <div class="publication">
-              <h5>Recognizing Perspective Accuracy: An Intelligent User Interface for Assisting Novices</h5>
-              <h6><strong>Blake Williford</strong>, Matthew Runyon, Tracy Hammond</h6>
-              <p><i>IUI 2020</i></p>
-            </div>
-            <div class="publication">
-              <h5>A Framework for Motivating Sketching Practice with Sketch-based Gameplay</h5>
-              <h6><strong>Blake Williford</strong>, Matthew Runyon, Josh Cherian, Wayne Li, Julie Linsey, Tracy Hammond</h6>
-              <p><i>CHI Play 2019</i></p>
-            </div>
-            <div class="publication">
-              <h5>DrawMyPhoto: Assisting Novices in Drawing From Photographs</h5>
-              <h6><strong>Blake Williford</strong>, Abhay Doke, Michel Pahud, Ken Hinckley, Tracy Hammond</h6>
-              <p><i>Creativity and Cognition 2019</i></p>
-            </div>
-            <div class="publication">
-              <h5>It’s Not Just About Accuracy: Metrics That Matter When Measuring Expert Sketching Ability</h5>
-              <h6>Tracy Hammond, Shalini Kumar, Matthew Runyon, Josh Cherian, <strong>Blake Williford</strong>, Swarna Keshavabhotla, Wayne Li, Julie Linsey</h6>
-              <p><i>TiiS Intelligent Systems 2018</i></p>
-            </div>
-            <div class="publication">
-              <h5>Collaborative Live Media Curation: Shared Context for Participation in Online Learning</h5>
-              <h6>Bill Hamilton, Nic Lupfer, Nicholas Botello, Tyler Tesch, Alex Stacy, Jeremy Merrill, <strong>Blake Williford</strong>, Frank Bentley,  Andruid Kerne</h6>
-              <p><i>CHI 2018</i></p>
-            </div>
-            <div class="publication">
-              <h5>ZenSketch: A Sketch-Based Game for Improving Line Work</h5>
-              <h6><strong>Blake Williford</strong>, Matthew Runyon, Adil Hamid Malla, Wayne Li, Julie Linsey, Tracy Hammond</h6>
-              <p><i>CHI Play 2017 Student Game Competition</i></p>
-            </div>
-            <div class="publication">
-              <h5>Conquering the Cube – Learning to Sketch Primitives in Perspective with an Intelligent Tutoring System</h5>
-              <h6>Swarna Keshavabhotla, <strong>Blake Williford</strong>, Shalini Kumar, Ethan Hilton, Wayne Li, Tracy Hammond and Julie Linsey</h6>
-              <p><i>Expressive (SBIM) 2017</i></p>
-            </div>
-            <div class="publication">
-              <h5>SketchTivity: Improving Creativity by Learning Sketching with an Intelligent Tutoring System</h5>
-              <h6><strong>Blake Williford</strong></h6>
-              <p><i>Creativity and Cognition 2017 Doctoral Consortium</i></p>
-            </div>
-            <div class="publication">
-              <h5>Everyone Can Sketch: Reviving Hand-drawn Sketching with an Intelligent Tutoring System</h5>
-              <h6><strong>Blake Williford</strong>, Wayne Li, Ethan Hilton, Julie Linsey, Tracy Hammond</h6>
-              <p><i>SketchingDIS: Hand-drawn Sketching in HCI workshop at Designing Interactive Systems Conference (DIS 2017)</i>
-            </p></div>
-            <div class="publication">
-              <h5>Consistently Evaluating Sketching Ability in Engineering Curriculum</h5>
-              <h6>Ethan Hilton, <strong>Blake Williford</strong>, Wayne Li, Erin McTigue, Tracy Hammond and Julie Linsey</h6>
-              <p><em>IDCC 2016</em></p>
-            </div>
-            <div class="publication">
-              <h5>PerSketchTivity – An Intelligent Pen-Based Educational Application for Design Sketching Instruction</h5>
-              <h6><strong>Blake Williford</strong>, Paul Taele, Trevor Nelligan, Wayne Li, Dr. Julie Linsey, Dr. Tracy Hammond</h6>
-              <p><em>Revolutionizing Education with Digital Ink 2016</em></p></div>
-            <div class="publication">
-              <h5>SketchMaster – Education for the Conceptual Age</h5>
-              <h6>Master’s Thesis</h6>
-              <p><em>2015</em></p>
-           </div>
-       </div>
-    </div>
-  </div> -->
-
-    <!-- <div class="section" id="art">
-        <div class="container">
-            <div class="row">
-                <h1>I LOVE TO <span>SKETCH</span>. HERE'S A SMALL COLLECTION OF MY SKETCHES</h1>
-                <div class="clear-40"></div>
-                <div class="col s6 m4 l3">
-                    <img src="images/art/zerogcamera2.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/zerogcamera.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/cusco.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/frog1.jpg" class="materialboxed" loading="lazy"></img>
-                </div>
-                <div class="col s6 m4 l3">
-                    <img src="images/art/tractor3.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/tractor2.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/tractor1.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/jabba.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/frog2.jpg" class="materialboxed" loading="lazy"></img>
-                </div>
-                <div class="col s6 m4 l3">
-                    <img src="images/art/porsche.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/chromefrog.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/creature.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/city.jpg" class="materialboxed" loading="lazy"></img>
-                </div>
-                <div class="col s6 m4 l3">
-                    <img src="images/art/watch.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/spacetrain.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/skull.jpg" class="materialboxed" loading="lazy"></img>
-                    <img src="images/art/walterscott.jpg" class="materialboxed" loading="lazy"></img>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-<div class="section half hide-on-med-and-down" id="testimonials">
+<div class="section half hide-on-med-and-down" id="testimonials" data-aos="fade-up" data-aos-delay="300">
     <div class="leftArrow" onclick="swipeLeft()"></div>
     <div class="rightArrow" onclick="swipeRight()"></div>
     <div id="slide" class=" slide activeSlide">
@@ -441,7 +159,7 @@
             </div>
             <div class="col s12 m6 l6">
                 <h4>FREE CONSULTATION</h4>
-                <p>I'm always happy to collaborate on creative projects! Feel free to reach out and schedule some time
+                <p>I'm always happy to collaborate and help businesses grow. Feel free to reach out and schedule some time
                     with me.</p>
                 <a href="https://cal.com/blake-williford-design/consultation" target="blank">
                     <div class="cta">Schedule a Call</div>
@@ -477,126 +195,224 @@
 
     <script>
 
+        let portfolioGrid = document.getElementById('portfolioGrid');
+        let portfolioFilter = document.getElementById('portfolioFilter');
+        const projects = [
+            {
+                name: "Preemptive AI",
+                img: "./images/portfolio/preemptive/hero.jpg",
+                link: "./projects/preemptive.html",
+                tags: ["mobile", "all"]
+            },
+            {
+                name: "Chalkcast",
+                img: "images/portfolio/chalkcast/finaldesign3.jpg",
+                link: "./projects/chalkcast.html",
+                tags: ["web", "mobile", "all"]
+            },
+            {
+                name: "DrawDojo",
+                img: "images/portfolio/sketchtivity/drawdojo-hero.jpg",
+                link: "./projects/sketchtivity.html",
+                tags: ["web", "mobile", "all"]
+            },
+            {
+                name: "SnapFX",
+                img: "images/portfolio/snapfx.png",
+                link: "./projects/sketchtivity.html",
+                tags: ["mobile", "all"]
+            },
+            {
+                name: "Polygence",
+                img: "images/portfolio/polygence.png",
+                link: "./projects/polygence.html",
+                tags: ["web", "mobile", "all"]
+            },
+            {
+                name: "FPL",
+                img: "./images/portfolio/fpl.png",
+                link: "./projects/fpl.html",
+                tags: ["mobile", "all"]
+            },
+            {
+                name: "ZenSketch",
+                img: "./images/portfolio/zensketch.png",
+                link: "./projects/zensketch.html",
+                tags: ["games", "all"]
+            },
+            {
+                name: "R2 Labs",
+                img: "./images/websites/website1.jpg",
+                link: "https://www.r2-labs.io",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Radien",
+                img: "./images/websites/website2.jpg",
+                link: "https://bwilliford.github.io/Radien/",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Archer",
+                img: "./images/websites/website3.jpg",
+                link: "https://www.archer-eng.com",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Solatect",
+                img: "./images/websites/website4.jpg",
+                link: "https://www.solatect.com",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Ashra",
+                img: "./images/websites/website5.jpg",
+                link: "https://www.ashraintegrative.com",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Destined Studio",
+                img: "./images/websites/website6.jpg",
+                link: "https://www.destinedstudio.com",
+                tags: ["websites", "all"],
+                newTab: true
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding1.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding2.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding3.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding4.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding5.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding6.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding7.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding8.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding9.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding10.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            },
+            {
+                name: "Brand",
+                img: "./images/branding/branding11.jpg",
+                link: "",
+                tags: ["branding", "all"]
+            }
+        ];
+
+        populatePortfolioGrid("all");
+        function populatePortfolioGrid(tag) {
+            //Empty out div first
+            portfolioGrid.innerHTML = "";
+
+            //Make the right list element active
+            for (let i = 0; i < portfolioFilter.childElementCount; i++) {
+                const li = portfolioFilter.children[i];
+                if (li.id == tag) {
+                    li.classList.add('active');
+                } else {
+                    li.classList.remove('active');
+                }
+            }
+
+            //Populate the div with the right projects
+            for (let i = 0; i < projects.length; i++) {
+                if (tag && projects[i].tags.includes(tag)) {
+            
+                    const project = projects[i];
+                    const a = document.createElement('a');
+                    a.href = project.link;
+                    a.title = project.name;
+                    if (project.newTab) {
+                        a.target = "_blank";
+                    }
+
+                    const img = document.createElement('img');
+                    img.src = project.img;
+                    img.alt = project.name + " Thumbnail";
+                    img.className = "portfolioGridImg materialboxed";
+                    img.tabIndex = 0;
+                    img.style.backgroundColor = "rgba(255,255,255,0.05)";
+                    img.setAttribute('aria-label', project.name);
+
+                    const colDiv = document.createElement('div');
+                    colDiv.className = "col s12 m6 l4";
+                    colDiv.style.padding = "2px 2px";
+
+                    if (project.tags.includes("branding")) {
+                        colDiv.appendChild(img);
+                        portfolioGrid.appendChild(colDiv);
+
+                        $(img).materialbox();
+                    }
+                    else {
+                        a.appendChild(colDiv);
+                        colDiv.appendChild(img);
+                        portfolioGrid.appendChild(a);
+                    }
+                    
+                }
+            }
+            AOS.init();
+        }
+        
+
         window.addEventListener('DOMContentLoaded', function() {
             AOS.init();
             setTimeout(function() {
                 document.getElementById('loaderOverlay').classList.toggle('inactive');
             }, 500);
         });
-
-        //Scrollbar
-        // let winTop = window.scrollY;
-        // let docHeight = document.body.scrollHeight;
-        // let winHeight = window.innerHeight;
-        // let initialScroll = Math.floor((winHeight/docHeight)*100);
-        // document.getElementById('main-progressbar').style.height = initialScroll+'%';
-
-        // $(document).ready(function() {
-        //     window.setInterval(function() {
-        //         toggleBioTerms();
-        //     }, 3000);
-
-        //     $(window).scroll(function() {
-        //         //Update progress bar
-        //         winTop = window.scrollY;
-        //         totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
-        //         document.getElementById('main-progressbar').style.height = totalScroll+'%';
-
-        //         document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
-        //         document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
-        //         document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
-        //     });
-        // });
-        
-        //UI Showcase
-        // let lastKnownScrollPosition = 0;
-        // let ticking = false;
-        // function doSomething(scrollPos) {
-        //     // Do something with the scroll position
-        //     //Move elements
-        //     // var winTop = $(window).scrollTop();
-        //     // var docHeight = $('body').height();
-        //     // var winHeight = $(window).height();
-        //     // var totalScroll = Math.floor((winTop / docHeight) * 100);
-        //     // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
-        // }
-        // document.addEventListener("scroll", (event) => {
-        //     lastKnownScrollPosition = window.scrollY;
-
-        //     if (!ticking) {
-        //         window.requestAnimationFrame(() => {
-        //             doSomething(lastKnownScrollPosition);
-        //             ticking = false;
-        //         });
-        //         ticking = true;
-        //     }
-        // });
-
-        //Update nav
-        // var links = document.getElementById('nav').childNodes;
-
-        // var waypoint1 = new Waypoint({
-        //     element: document.getElementById('design'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "active";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint2 = new Waypoint({
-        //     element: document.getElementById('art'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "active";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint3 = new Waypoint({
-        //     element: document.getElementById('bio'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "active";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint4 = new Waypoint({
-        //     element: document.getElementById('cv'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "active";
-        //         document.getElementById('nav-contact').className = "";
-        //     }
-        // });
-        // var waypoint5 = new Waypoint({
-        //     element: document.getElementById('contact'),
-        //     handler: function() {
-        //         document.getElementById('nav-design').className = "";
-        //         document.getElementById('nav-art').className = "";
-        //         document.getElementById('nav-bio').className = "";
-        //         document.getElementById('nav-cv').className = "";
-        //         document.getElementById('nav-contact').className = "active";
-        //     }
-        // });
-
-        // function toggleBioTerms() {
-        //     var term1 = document.getElementById('bioterm-1').innerHTML;
-        //     var term2 = document.getElementById('bioterm-2').innerHTML;
-        //     if (term1 == "DESIGN") {
-        //         document.getElementById('bioterm-1').innerHTML = "ART"
-        //         document.getElementById('bioterm-2').innerHTML = "SCIENCE"
-        //     } else {
-        //         document.getElementById('bioterm-1').innerHTML = "DESIGN"
-        //         document.getElementById('bioterm-2').innerHTML = "ENGINEERING"
-        //     }
-        // }
 
         function copyToClipboard() {
             document.getElementById('my-email').select();
@@ -733,69 +549,5 @@
         }
     }
     </script>
-
-<script type="text/paperscript" canvas="home">
-
-    //Triangulation script by Blake Williford
-
-    var canvasHeight = paper.view.size.height;
-    var canvasWidth =	paper.view.size.width;
-    var points = [];
-    var lines = [];
-
-    generateStars(100);
-    function generateStars(number) {
-      for (i=0; i<number; i++) {
-        randX = Math.random()*canvasWidth;
-        randY = Math.random()*canvasHeight;
-        point = new Point(randX, randY);
-        points.push(point);
-      }
-    }
-
-    function removeLines(line)
-     {
-      var fadeEffect = setInterval(function() {
-       if (line.opacity < 0.1)
-       {
-        line.remove();
-        clearInterval(fadeEffect);
-       }
-       else
-       {
-        line.opacity -= 0.1;
-       }
-     }, 100);
-     }
-
-    function graphGenerator(point) {
-      var tempPoints = [];
-
-      corner = new Point(point.x-160, point.y-160);
-      range = new Rectangle(corner, 320);
-      for (i=0; i< points.length; i++) {
-        if (range.contains(points[i])) {
-          //circle = new Path.Circle(points[i], 1);
-          //circle.fillColor = '#fff';
-          //var line = new Path.Line(point, points[i]);
-          //line.strokeColor = 'rgba(255,255,255,0.2)';
-          //lines.push(line);
-          tempPoints.push(points[i]);
-        }
-      }
-      for (i=0; i < tempPoints.length-1; i++) {
-        for (j=1; j < tempPoints.length-1; j++) {
-          var line = new Path.Line(tempPoints[i], tempPoints[j]);
-          line.strokeColor = 'rgba(150,150,250,0.02)';
-          removeLines(line);
-        }
-      }
-    }
-
-    function onMouseMove(event) {
-      graphGenerator(event.point);
-    }
-
-  </script>
   </body>
 </html>

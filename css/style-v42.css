@@ -18,7 +18,6 @@ html {
   overflow-x: hidden;
 }
 
-
 body {
   background: #070614;
   background-size: 100% 100vh;
@@ -217,7 +216,7 @@ p {
   background-color: #813dff30;
   /* border: 1px solid #777; */
   padding: 0 16px;
-  font-size: 14px;
+  font-size: 16px;
   width: fit-content;
   margin: 0px 4px 8px 0px;
   line-height: 32px;
@@ -238,8 +237,14 @@ p {
   margin-bottom: 20px;
 }
 
+.portfolioGridImg {
+  width: 100%;
+  aspect-ratio: 10/6;
+  transition-duration: 0.5s;
+}
+
 .portfolioTeaser {
-  width: 90%;
+  width: 95%;
   transition-duration: 0.5s;
 }
 
@@ -267,6 +272,24 @@ p {
 
 .portfolioTeaserRight:hover {
   transform: perspective(400px) rotateY(-20deg);
+  transition-duration: 0.5s;
+}
+
+#portfolioFilter li {
+  display: inline-block;
+  width: fit-content;
+  margin: 0px 40px 20px 0px;
+  line-height: 32px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+}
+
+#portfolioFilter li:hover, #portfolioFilter li.active {
+  color: rgba(255,255,255,1);
   transition-duration: 0.5s;
 }
 
@@ -398,7 +421,7 @@ p {
 
 #summary ul li {
   line-height: 30px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   border-radius: 15px;
   margin-bottom: 16px;
   font-size: 1.2em;
@@ -644,22 +667,32 @@ nav .button-collapse:hover {
     }
 }
 
+.hero-title {
+  margin-top: 15vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
 h1 {
   font-family: 'Barlow', sans-serif;
   font-weight: 100;
-  font-size: 2.4rem;
+  font-size: 3rem;
   text-align: center;
 }
 
 h2 {
   font-family: 'Barlow', sans-serif;
-  font-size: 2rem;
-  opacity: 0.8;
+  font-weight: 100;
+  font-size: 2.25rem;
+  text-align: center;
 }
 
 h3 {
   font-family: 'Barlow', sans-serif;
   font-weight: 100;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -1000,22 +1033,30 @@ nav .button-collapse {
 }
 
 #project-nav {
-
+  margin: 0;
+  padding: 0;
+  padding: 100px 0 150px 0;
+  min-height: unset;
 }
 
 .project-nav-container {
   width: 202px;
-  margin: 30vh auto;
+  margin: 0 auto;
 }
 
 .prev-project {
   width: 100px;
   height: 100px;
   float: left;
-  background-image: url('../images/icons/prev.svg');
+  background-image: url('../images/icons/down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  transform: rotate(90deg);
   background-color: rgba(0,0,0,0.1);
   transition-duration: 0.5s;
-  opacity: 0.6;
+  
+  opacity: 0.8;
 }
 
 .prev-project:hover {
@@ -1027,11 +1068,15 @@ nav .button-collapse {
 .next-project {
   width: 100px;
   height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  transform: rotate(-90deg);
   float: right;
-  background-image: url('../images/icons/next.svg');
+  background-image: url('../images/icons/down.svg');
   background-color: rgba(0,0,0,0.1);
   transition-duration: 0.5s;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .next-project:hover {
@@ -1094,17 +1139,6 @@ nav .button-collapse {
   background-color: var(--brand-color);
   height: 0px;
   width: px;
-}
-
-h2 {
-  font-size: 1.8em;
-  text-align: center;
-  font-weight: 200;
-}
-
-h3 {
-  font-size: 1.4em;
-  text-align: center;
 }
 
 .persona {
@@ -1402,6 +1436,10 @@ h3 {
 
 /* Change look / feel for smaller screen sizes */
 @media only screen and (max-width: 800px) {
+
+  .hero-title {
+    margin-top: 10vh;
+  }
 
   #nav {
     top: 20vh;
