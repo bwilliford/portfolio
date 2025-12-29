@@ -98,7 +98,7 @@ main::before {
 
 h1 {
   font-size: clamp(3rem, 10vw, 8rem);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.05em;
   opacity: 0;
   transform: translateY(-40px);
@@ -110,19 +110,6 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Glow */
-.glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 60%);
-  filter: blur(60px);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: transform 0.15s ease-out;
-  z-index: 1;
 }
 
 header {
@@ -141,12 +128,12 @@ header {
 /* Bottom year */
 footer {
   position: absolute;
-  bottom: calc(50vh - 120px);
+  bottom: calc(50vh - 130px);
   width: 100%;
   text-align: center;
   font-size: clamp(2.4rem, 6vw, 2.8rem);
-  font-weight: 200;
-  line-height: 3rem;
+  font-weight: 300;
+  line-height: 2.4rem;
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1.8s ease forwards;
@@ -183,7 +170,6 @@ canvas {
 <script>
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
-const glow = document.getElementById('glow');
 
 let w, h, particles = [];
 let mouseX = 0, mouseY = 0;
@@ -273,8 +259,6 @@ animate();
 const updateMousePosition = (x, y) => {
   mouseX = x;
   mouseY = y;
-  glow.style.left = x + 'px';
-  glow.style.top = y + 'px';
 };
 
 window.addEventListener('mousemove', e => {
