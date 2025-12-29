@@ -205,22 +205,32 @@ class Particle {
     const distance = Math.sqrt(dx * dx + dy * dy);
     const mouseRadius = 100; // Radius of mouse influence
     
-    // Apply repulsion force if particle is near mouse
+    // Apply repulsion force if particle is near mouse and let the effect fade out smoothly
     if (distance < mouseRadius && distance > 0) {
       const force = (mouseRadius - distance) / mouseRadius; // Stronger when closer
       const angle = Math.atan2(dy, dx);
-      const pushStrength = force * 0.3; // Adjust strength here
-      
+      const pushStrength = force * 0.2; // Adjust strength here
+
       this.vx += Math.cos(angle) * pushStrength;
       this.vy += Math.sin(angle) * pushStrength;
-      
-      // Apply slight damping only when near mouse for smoother motion
-      this.vx *= 0.99;
-      this.vy *= 0.99;
+
+      // Store a "repulse timer" to start fading out this force
+      this.repulseFade = 1.0;
+    }
+
+    // If there's residual repulse, slowly fade it out with extra damping
+    if (this.repulseFade && this.repulseFade > 0) {
+      // Gradually reduce velocity (simulate force fading back to gravity/falling)
+      this.vx *= 0.97;
+      this.vy *= 0.97;
+      this.repulseFade *= 0.94; // Exponential fade
+      if (this.repulseFade < 0.02) {
+        this.repulseFade = 0;
+      }
     }
     
     // Ensure minimum downward velocity to keep snow falling
-    const minFallSpeed = 0.3;
+    const minFallSpeed = 1;
     if (this.vy < minFallSpeed) {
       this.vy = minFallSpeed;
     }
@@ -238,6 +248,8 @@ class Particle {
     } else if (this.x > w) {
       this.x = 0;
     }
+
+    
   }
   draw() {
     ctx.beginPath();
@@ -247,7 +259,7 @@ class Particle {
   }
 }
 
-for (let i = 0; i < 2000; i++) {
+for (let i = 0; i < 3000; i++) {
   particles.push(new Particle());
 }
 
