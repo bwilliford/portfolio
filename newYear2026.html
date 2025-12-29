@@ -76,6 +76,8 @@ main {
   background: url("./images/snowBG.png") no-repeat center center;
   background-size: cover;
   touch-action: none; /* Prevent default touch behaviors for smoother interaction */
+  opacity: 0;
+  animation: reveal 2s ease forwards;
 }
 main::before {
   content: "";
@@ -103,6 +105,7 @@ h1 {
   opacity: 0;
   transform: translateY(-40px);
   animation: reveal 1.8s ease forwards;
+  animation-delay: 2s;
 }
 
 @keyframes reveal {
@@ -123,6 +126,7 @@ header {
   z-index: 3;
   transform: translateY(40px);
   animation: reveal 2.8s ease forwards;
+  animation-delay: 3s;
 }
 
 /* Bottom year */
@@ -137,6 +141,7 @@ footer {
   opacity: 0;
   transform: translateY(40px);
   animation: reveal 1.8s ease forwards;
+  animation-delay: 3s;
   z-index: 3;
 }
 
