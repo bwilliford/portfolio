@@ -26,7 +26,7 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style-v42.css">
+    <link rel="stylesheet" href="css/style-v421.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,20 +77,20 @@
         <div class="circle"></div>
     </div>
 
-    <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
+    <a href="#design" data-aos="fade-up" data-aos-delay="1300" class="hide-on-med-and-down"><div class="down"></div>
     </a>
 
     <div class="home-wrap">
         <canvas id="home" class="hide-on-med-and-down"></canvas>
-        <div class="section">
-            <div class="container" >
+        <div class="section specialized">
+            <div class="container">
                 <div class="row">
                     <div class="col s12 m4 l4">
-                        <img src="images/Blake2.png" class="circular" style="width: 90%; margin: 0 auto"></img>
+                        <img src="images/Blake2.png" class="circular center-align" style="width: 90%; display: block; margin: 0 auto" data-aos="fade-up" data-aos-delay="700"></img>
                     </div>
                     <div class="col s12 m8 l8">
-                        <h1 class="left-align" data-aos="fade-up" data-aos-delay="700">I'M A <span>PRODUCT DESIGNER</span> WITH EXPERTISE IN <span>ED TECH</span> AND <span>AI</span></h1>
-                        <h2 class="left-align" data-aos="fade-up" data-aos-delay="900">10+ years designing learning experiences for K-12 and higher education that drive real learning outcomes</h2>
+                        <h1 class="left-align" data-aos="fade-up" data-aos-delay="900">I'M A <span>PRODUCT DESIGNER</span> WITH EXPERTISE IN <span>ED TECH</span> AND <span>AI</span></h1>
+                        <h2 class="left-align" data-aos="fade-up" data-aos-delay="1100">10+ years designing learning experiences for K-12 and higher education that drive real learning outcomes</h2>
                     </div>
                 </div>
                 
@@ -108,28 +108,6 @@
     <div class="section" id="design">
         <div class="container">
             <h2 data-aos="fade-up" class="uppercase" data-aos-delay="300">Featured Projects</h2>
-          
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="./projects/preemptive.html"><img class="portfolioTeaser" src="images/portfolio/preemptive.png"></img>
-                    </a>
-                </div>
-                <a href="./projects/preemptive.html"><div class="col s12 m6 l6">
-                    <div class="clear-20"></div>
-                    <img class="portfolioLogo" src="images/clients/preemptive.svg"></img>
-                    <h4>AI Health Checkup App</h4>
-                    <p>Innovative native app for daily health checkups.</p>
-                    <div class="clear-20"></div>
-                    <a href="./projects/preemptive.html"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Innovation</li>
-                    </ul> -->
-                </div></a>
-            </div>
 
             <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
                 <div class="col s12 m6 l6">
@@ -138,8 +116,7 @@
                 </div>
                 <a href="projects/chalkcast.html"><div class="col s12 m6 l6">
                     <img class="portfolioLogo" src="images/clients/chalkcast.png"></img>
-                    <h4>Virtual Classroom App</h4>
-                    <p>Innovative web app for teaching anything, to anyone, from anywhere.</p>
+                    <h4>Virtual classroom app that engages students and delights teachers</h4>
                     <div class="clear-20"></div>
                     <a href="projects/chalkcast.html"><div class="secondary">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
@@ -159,8 +136,7 @@
                 </div>
                 <a href="projects/polygence.html"><div class="col s12 m6 l6">
                     <img class="portfolioLogo" src="images/portfolio/polygence/logo.png"></img>
-                    <h4>Mentoring Platform</h4>
-                    <p>An innovative mentoring platform that connects K-12 students with expert mentors to explore their interests.</p>
+                    <h4>Innovative mentoring platform that helps high school students find their passion and get accepted into top-tier universities</h4>
                     <div class="clear-20"></div>
                     <a href="projects/polygence.html"><div class="secondary">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
@@ -180,8 +156,7 @@
                 </div>
                 <a href="projects/sketchtivity.html"><div class="col s12 m6 l6">
                     <img class="portfolioLogo" src="images/portfolio/sketchtivity/logo.svg"></img>
-                    <h4>App for Learning Drawing</h4>
-                    <p>A gamified app leveraging AI-driven feedback for learning basic drawing skills including drawing in perspective.</p>
+                    <h4>AI-powered app that helps people learn perspective drawing skills</h4>
                     <div class="clear-20"></div>
                     <a href="projects/sketchtivity.html"><div class="secondary">View Case Study</div></a>
                     <!-- <ul class="portfolioSkills">
@@ -195,29 +170,6 @@
                 </div></a>
             </div>
 
-            <div class="row" id="clients" data-aos="fade-up" data-aos-delay="200">
-                <div class="col s12 m6 l6">
-                    <a href="projects/snapfx.html"><img class="portfolioTeaser" src="images/portfolio/snapfx.png"></img>
-                    </a>
-                </div>
-                <a href="projects/snapfx.html"><div class="col s12 m6 l6">
-                    <img class="portfolioLogo" src="images/clients/adobe.png"></img>
-                    <h4>SnapFX</h4>
-                    <p>An experimental mobile app designed and developed at Adobe Research to help novices perform sophisticated image editing.</p>
-                    <div class="clear-20"></div>
-                    <a href="projects/snapfx.html"><div class="secondary">View Case Study</div></a>
-                    <!-- <ul class="portfolioSkills">
-                        <li class="collab">UX Research</li>
-                        <li class="collab">UX Design</li>
-                        <li class="collab">UI Design</li>
-                        <li class="collab">Front-end Development</li>
-                        <li class="collab">Innovation</li>
-                        <li class="collab">Branding</li>
-                    </ul> -->
-                </div>
-            </div></a>
-
-            
 <!-- 
             <div class="row" id="clients">
                 <div class="col s12 m6 l6">

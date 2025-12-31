@@ -14,7 +14,7 @@
 }
 
 html {
-  cursor: url('../images/icons/cursor.png'), auto;
+  cursor: url('../images/icons/cursor.svg'), auto;
   overflow-x: hidden;
 }
 
@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  cursor: url('../images/icons/cursor-active.png'), auto;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
 }
 
 span {
@@ -52,7 +52,7 @@ span {
 .brand-logo:hover {
   opacity: 0.7;
   transition-duration: 0.5s;
-  cursor: url('../images/icons/cursor-active.png'), auto;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
 }
 
 #bioterm-1 {
@@ -138,10 +138,16 @@ p {
   height: 50px;
   margin-top: 20px;
 }
+
 .section {
   padding: 150px 0px;
   min-height: 100vh;
 }
+
+.section.specialized {
+  padding: 25vh 0px;
+}
+
 
 .half {
   min-height: 750px;
@@ -291,6 +297,7 @@ p {
 #portfolioFilter li:hover, #portfolioFilter li.active {
   color: rgba(255,255,255,1);
   transition-duration: 0.5s;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
 }
 
 .cta {
@@ -318,14 +325,14 @@ p {
 }
 
 .secondary:hover {
-  cursor: url('../images/icons/cursor-active.png'), auto;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
   transform: scale(1.05);
   background: var(--brand-color) url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
   transition-duration: 0.5s;
 }
 
 .tertiary {
-  cursor: url('../images/icons/cursor-active.png'), auto;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
   width: fit-content;
   display: inline-block;
   padding: 0 16px 0 36px;
@@ -441,7 +448,7 @@ p {
   background-image: url('../images/icons/skill.png');
   background-position: 0px 6px;
   background-repeat: no-repeat;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
 }
 
 .okr {
@@ -539,7 +546,7 @@ nav .button-collapse:hover {
     height: 100px;
     line-height: 100px;
     padding: 18px 0 0 24px;
-    cursor: url('../images/icons/cursor.png'), auto;
+    cursor: url('../images/icons/cursor.svg'), auto;
 }
 
 .love {
@@ -985,6 +992,10 @@ nav .button-collapse {
 
 #materialbox-overlay {
   background-color: rgba(0,0,0,0.8);
+}
+
+.materialboxed {
+  cursor: url('../images/icons/cursor-active.svg'), auto;
 }
 
 .masonry-grid {
@@ -1441,6 +1452,11 @@ nav .button-collapse {
     margin-top: 10vh;
   }
 
+  .section.specialized {
+    padding: 15vh 0px;
+  }
+  
+
   #nav {
     top: 20vh;
     right: 0;
@@ -1568,7 +1584,7 @@ nav .button-collapse {
   right: 16px;
   opacity: 0;
   visibility: hidden;
-  cursor: url('../images/icons/cursor-active.png'), auto;
+  cursor: url('../images/icons/cursor-active.svg'), auto;
   transition-duration: var(--transition);
 }
 
