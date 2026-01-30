@@ -25,10 +25,12 @@ window.addEventListener('DOMContentLoaded', function() {
         header.style.display = 'none';
     }
 
-    // Initialize Lenis
-    const lenis = new Lenis({
-        autoRaf: true,
-        lerp: 0.05,
-        duration: 2,
-    });
+    // Initialize Lenis (skip if not loaded, e.g. bio.html)
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            autoRaf: true,
+            lerp: 0.05,
+            duration: 2,
+        });
+    }
 });
