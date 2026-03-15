@@ -1629,6 +1629,7 @@ nav .button-collapse {
 
   #navWrapper {
     right: 0vw !important;
+    height: 0px;
   }
 
   .scrollUpButton {
