@@ -10,9 +10,11 @@ function toggleNav() {
 function scrollToTop() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
+        complete: function() {
+            scrollTopButton.style.display = 'none';
+        }
     });
-    scrollTopButton.style.display = 'none';
 }
 
 // Show or hide the .header depending on scroll position

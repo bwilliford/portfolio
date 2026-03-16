@@ -3,6 +3,7 @@
 
 :root { 
   --brand-color: #813dff;
+  --bodyText: rgba(255,255,255,0.7);
 
   --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.25);
@@ -91,7 +92,7 @@ span {
 p {
   font-size: 18px;
   font-weight: 300;
-  color: rgba(255,255,255,0.8)
+  color: var(--bodyText)
 }
 
 .accomplishments li {
@@ -233,7 +234,7 @@ p {
   backdrop-filter: blur(20px);
   margin: 20px 0;
   padding: 80px 20px;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0) 55%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.10) 0%, rgba(0, 0, 255, 0) 50%);
 }
 
 .pricing {
@@ -333,7 +334,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  color: rgba(255,255,255,0.8);
+  color: var(--bodyText);
   background: #ffffff10 url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
 }
 
@@ -357,7 +358,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  color: rgba(255,255,255,0.8);
+  color: var(--bodyText);
 }
 
 .sketch {
@@ -441,7 +442,7 @@ p {
 
 #summary ul li {
   line-height: 30px;
-  color: rgba(255,255,255,0.8);
+  color: var(--bodyText);
   border-radius: 15px;
   margin-bottom: 16px;
   font-size: 1.2em;
@@ -461,7 +462,7 @@ p {
   background-image: url('../images/icons/skill.png');
   background-position: 0px 6px;
   background-repeat: no-repeat;
-  color: rgba(255,255,255,0.8);
+  color: var(--bodyText);
 }
 
 .okr {
@@ -904,7 +905,7 @@ nav .button-collapse {
    bottom: 0;
    width: 100%;
    line-height: 60px;
-   color: rgba(255,255,255,0.8);
+   color: var(--bodyText);
 }
 
 .publication {

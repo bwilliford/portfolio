@@ -703,21 +703,101 @@
 
 <script type="text/paperscript" canvas="home">
 
-    //Triangulation script by Blake Williford
-
     var canvasHeight = paper.view.size.height;
     var canvasWidth =	paper.view.size.width;
     var points = [];
     var lines = [];
 
-    generateStars(100);
+    var numStars = Math.floor(canvasWidth / 10);
+    generateStars(numStars);
     function generateStars(number) {
-      for (i=0; i<number; i++) {
-        randX = Math.random()*canvasWidth;
-        randY = Math.random()*canvasHeight;
-        point = new Point(randX, randY);
+      var cornerSize = 0.75; // fraction of canvas for each corner region
+      var bias = 2;        // exponent > 1 = points clustered toward the corner vertex
+      for (i = 0; i < number; i++) {
+        var corner = Math.floor(Math.random() * 2); // 0 = top-left, 1 = top-right
+        var randX, randY;
+        if (corner === 0) {
+          randX = canvasWidth * cornerSize * Math.pow(Math.random(), bias);
+          randY = canvasHeight * cornerSize * Math.pow(Math.random(), bias);
+        } else {
+          randX = canvasWidth * (1 - cornerSize * Math.pow(Math.random(), bias));
+          randY = canvasHeight * cornerSize * Math.pow(Math.random(), bias);
+        }
+        var point = new Point(randX, randY);
         points.push(point);
       }
+
+
+    // Make star points gently oscillate around their original positions and animate connecting lines
+
+    // Store original positions to oscillate around
+    var originalPoints = points.slice(); // shallow copy (ok, because Point is immutable in Paper.js)
+
+    // Velocity/oscillation state array for each point
+    var oscillationStates = [];
+
+    // Helper to generate parameters for each point's oscillation
+    function getOscillationState(i) {
+        return {
+            // Each point has phase offset for animation (makes them look random)
+            phaseX: Math.random() * Math.PI * 2,
+            phaseY: Math.random() * Math.PI * 2,
+            // Amplitude: max pixel jitter around center
+            amplitudeX: 30 + Math.random() * 22, // px
+            amplitudeY: 30 + Math.random() * 22, // px
+            // Frequency: speed of oscillation in radians per second
+            freqX: 0.27 + Math.random() * 0.11,
+            freqY: 0.27 + Math.random() * 0.11
+        };
+    }
+    for (var i = 0; i < points.length; i++) {
+        oscillationStates.push(getOscillationState(i));
+    }
+
+    // Draw lines between close points
+    function drawConnections() {
+        // Remove old lines
+        if (typeof linePaths !== 'undefined') {
+            for (var k = 0; k < linePaths.length; k++) {
+                linePaths[k].remove();
+            }
+        }
+        linePaths = [];
+
+        var distanceThreshold = 110; // px
+
+        for (var i = 0; i < points.length; i++) {
+            for (var j = i + 1; j < points.length; j++) {
+                var dist = points[i].getDistance(points[j]);
+                if (dist < distanceThreshold) {
+                    var line = new Path.Line(points[i], points[j]);
+                    line.strokeColor = new Color(0.8, 0.8, 1, Math.max(0.05, 0.25 - dist / (distanceThreshold*2)));
+                    line.strokeWidth = 2;
+                    linePaths.push(line);
+                }
+            }
+        }
+    }
+
+    // Create array to hold Path.Line objects
+    var linePaths = [];
+
+    // Animate: oscillate points around original positions and redraw lines each frame
+    view.onFrame = function(event) {
+        var t = event.time;
+        for (var i = 0; i < points.length; i++) {
+            var o = originalPoints[i];
+            var s = oscillationStates[i];
+            points[i] = new Point(
+                o.x + s.amplitudeX * Math.sin(s.phaseX + s.freqX * t),
+                o.y + s.amplitudeY * Math.sin(s.phaseY + s.freqY * t)
+            );
+        }
+
+        // Redraw lines
+        drawConnections();
+    };
+
     }
 
     function removeLines(line)
@@ -730,9 +810,10 @@
        }
        else
        {
-        line.opacity -= 0.1;
+        line.opacity -= 0.2; // fade faster
+        if (line.opacity < 0) line.opacity = 0;
        }
-     }, 100);
+     }, 50); // update more frequently for smoother/faster fade
      }
 
     function graphGenerator(point) {
@@ -757,10 +838,6 @@
           removeLines(line);
         }
       }
-    }
-
-    function onMouseMove(event) {
-      graphGenerator(event.point);
     }
 
   </script>
