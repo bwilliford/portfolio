@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Blake Williford // Designer + Creative Technologist</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Design and Creative Technology services">
+    <meta name="keywords" content="Design, UX, UI, Research, Front-end development, HCI, Sketch Recognition, Creativity, Branding, Illustration, Sketch">
+    <meta name="author" content="Blake Williford">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20461668-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-20461668-1');
+    </script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+    <link rel="stylesheet" href="css/style-v425.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--JS Frameworks-->
+    <script src="js/paper-full.min.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    
+    <!-- Logo -->
+    <a href="./index.html" aria-label="Returns to home page">
+        <div id="logo" alt="Blake Williford Design">
+        </div>
+    </a>
+
+    <!-- Nav -->
+    <div id="navTrigger" onclick="toggleNav()"></div>
+
+    <!--Header-->
+    <div class="header"></div>
+    <div id="navWrapper">
+
+        <ul id="nav">
+        <li><a href="./index.html" onclick="toggleNav()">Design</a></li>
+        <li><a href="./bio.html" onclick="toggleNav()">Bio</a></li>
+        <li><a href="./cv.html" onclick="toggleNav()">CV</a></li>
+        <li><a href="./contact.html" onclick="toggleNav()">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="scrollUpButton" onclick="scrollToTop()"></div>
+
+    <!-- <div id="main-progressbar-container">
+        <div id="main-progressbar">
+        </div>
+    </div> -->
+
+    <div id="loaderOverlay">
+        <div class="circle"></div>
+    </div>
+
+    <!-- <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
+    </a> -->
+
+    <script type="text/javascript" src="https://widget.senja.io/js/iframeResizer.min.js"></script>
+<iframe id="wall-of-love-JcTPSwY" src="https://senja.io/p/blake-williford/JcTPSwY?hideNavigation=true&embed=true" title="Wall of Love" frameborder="0" scrolling="no" width="100%"></iframe>
+<script type="text/javascript">document.addEventListener("DOMContentLoaded", function () {iFrameResize({log: false, checkOrigin: false}, "#wall-of-love-JcTPSwY");});</script>
+
+<div class="section" id="contact">
+    <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-delay="300">
+            <div class="col s12 m6 l6">
+                <img src="images/Blake2.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Blake Williford" class="circular">
+            </div>
+            <div class="col s12 m6 l6">
+                <h4>FREE CONSULTATION</h4>
+                <p>I'm always happy to collaborate and help businesses grow. Feel free to reach out and schedule some time
+                    with me.</p>
+                <a href="https://cal.com/blake-williford-design/consultation" target="blank">
+                    <div class="cta">Schedule a Call</div>
+                </a>
+
+                <div class="clear-60"></div>
+                <h4>CONNECT WITH ME</h4>
+                <a href="https://www.linkedin.com/in/blakewilliford/" target="blank">
+                    <div class="linkedin"></div>
+                </a>
+                <a href="https://www.instagram.com/blakewilliforddesign/" target="blank">
+                    <div class="insta"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
+    <div class="right">VERSION 4.2 <em>REFRESH</em></div>
+</div>
+
+
+ 
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+
+        window.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+            setTimeout(function() {
+                document.getElementById('loaderOverlay').classList.toggle('inactive');
+            }, 500);
+        });
+
+        //Scrollbar
+        // let winTop = window.scrollY;
+        // let docHeight = document.body.scrollHeight;
+        // let winHeight = window.innerHeight;
+        // let initialScroll = Math.floor((winHeight/docHeight)*100);
+        // document.getElementById('main-progressbar').style.height = initialScroll+'%';
+
+        // $(document).ready(function() {
+        //     window.setInterval(function() {
+        //         toggleBioTerms();
+        //     }, 3000);
+
+        //     $(window).scroll(function() {
+        //         //Update progress bar
+        //         winTop = window.scrollY;
+        //         totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
+        //         document.getElementById('main-progressbar').style.height = totalScroll+'%';
+
+        //         document.getElementById('showcase1').style.marginLeft = (winTop/10)+"px";
+        //         document.getElementById('showcase2').style.marginLeft = "-"+(winTop/10)+"px";
+        //         document.getElementById('showcase3').style.marginLeft = (winTop/15)+"px";
+        //     });
+        // });
+        
+        //UI Showcase
+        // let lastKnownScrollPosition = 0;
+        // let ticking = false;
+        // function doSomething(scrollPos) {
+        //     // Do something with the scroll position
+        //     //Move elements
+        //     // var winTop = $(window).scrollTop();
+        //     // var docHeight = $('body').height();
+        //     // var winHeight = $(window).height();
+        //     // var totalScroll = Math.floor((winTop / docHeight) * 100);
+        //     // document.getElementById('showcase1').style.marginLeft = totalScroll / 10;
+        // }
+        // document.addEventListener("scroll", (event) => {
+        //     lastKnownScrollPosition = window.scrollY;
+
+        //     if (!ticking) {
+        //         window.requestAnimationFrame(() => {
+        //             doSomething(lastKnownScrollPosition);
+        //             ticking = false;
+        //         });
+        //         ticking = true;
+        //     }
+        // });
+
+        //Update nav
+        // var links = document.getElementById('nav').childNodes;
+
+        // var waypoint1 = new Waypoint({
+        //     element: document.getElementById('design'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "active";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint2 = new Waypoint({
+        //     element: document.getElementById('art'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "active";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint3 = new Waypoint({
+        //     element: document.getElementById('bio'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "active";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint4 = new Waypoint({
+        //     element: document.getElementById('cv'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "active";
+        //         document.getElementById('nav-contact').className = "";
+        //     }
+        // });
+        // var waypoint5 = new Waypoint({
+        //     element: document.getElementById('contact'),
+        //     handler: function() {
+        //         document.getElementById('nav-design').className = "";
+        //         document.getElementById('nav-art').className = "";
+        //         document.getElementById('nav-bio').className = "";
+        //         document.getElementById('nav-cv').className = "";
+        //         document.getElementById('nav-contact').className = "active";
+        //     }
+        // });
+
+        // function toggleBioTerms() {
+        //     var term1 = document.getElementById('bioterm-1').innerHTML;
+        //     var term2 = document.getElementById('bioterm-2').innerHTML;
+        //     if (term1 == "DESIGN") {
+        //         document.getElementById('bioterm-1').innerHTML = "ART"
+        //         document.getElementById('bioterm-2').innerHTML = "SCIENCE"
+        //     } else {
+        //         document.getElementById('bioterm-1').innerHTML = "DESIGN"
+        //         document.getElementById('bioterm-2').innerHTML = "ENGINEERING"
+        //     }
+        // }
+
+        function copyToClipboard() {
+            document.getElementById('my-email').select();
+            document.execCommand("Copy");
+            alert("Copied the text: bwilliford@gmail.com");
+        }
+
+        class SwipeDetector {
+        constructor(element, threshold = 50) {
+            this.element = element;
+            this.startX = 0;
+            this.startY = 0;
+            this.threshold = threshold;
+            this.swiping = false;
+    
+            element.addEventListener('mousedown', this.handleTouchStart.bind(this));
+            element.addEventListener('touchstart', this.handleTouchStart.bind(this));
+            element.addEventListener('mouseup', this.handleTouchEnd.bind(this));
+            element.addEventListener('touchend', this.handleTouchEnd.bind(this));
+            element.addEventListener('mousemove', this.handleTouchMove.bind(this));
+            element.addEventListener('touchmove', this.handleTouchMove.bind(this));
+        }
+    
+        handleTouchStart(event) {
+            this.swiping = true;
+            this.startX = event.type.startsWith('mouse') ? event.clientX : event.touches[0].clientX;
+            this.startY = event.type.startsWith('mouse') ? event.clientY : event.touches[0].clientY;
+        }
+    
+        handleTouchMove(event) {
+            if (!this.swiping) return;
+            const currentX = event.type.startsWith('mouse') ? event.clientX : event.touches[0].clientX;
+            const currentY = event.type.startsWith('mouse') ? event.clientY : event.touches[0].clientY;
+    
+            const diffX = currentX - this.startX;
+            const diffY = currentY - this.startY;
+    
+            if (Math.abs(diffX) > this.threshold || Math.abs(diffY) > this.threshold) {
+                this.swiping = false;
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    this.onSwipe(diffX > 0 ? 'right' : 'left');
+                } else {
+                    this.onSwipe(diffY > 0 ? 'down' : 'up');
+                }
+            }
+        }
+    
+        handleTouchEnd() {
+            this.swiping = false;
+        }
+    
+        onSwipe(direction) {
+            console.log(`Swiped ${direction}`);
+            if (direction == "left") {
+                swipeRight();
+                
+            }
+            else if (direction == "right") {
+                swipeLeft();
+            }
+        }
+    }
+    
+    const element = document.getElementById('slide');
+    const element2 = document.getElementById('slide2');
+    const element3 = document.getElementById('slide3');
+    const element4 = document.getElementById('slide4');
+    const swipeDetector = new SwipeDetector(element);
+    const swipeDetector2 = new SwipeDetector(element2);
+    const swipeDetector3 = new SwipeDetector(element3);
+    const swipeDetector4 = new SwipeDetector(element4);
+
+    let slide = 1;
+    
+    function swipeLeft() {
+        if (slide == 1) {
+            document.getElementById('slide').className = "slide leftSlide";
+            document.getElementById('slide2').className = "slide activeSlide";
+            document.getElementById('slide3').className = "slide rightSlide";
+            document.getElementById('slide4').className = "slide rightSlide";
+            slide = 2;
+        }
+        else if (slide == 2) {
+            document.getElementById('slide2').className = "slide leftSlide";
+            document.getElementById('slide3').className = "slide activeSlide";
+            document.getElementById('slide4').className = "slide rightSlide";
+            document.getElementById('slide').className = "slide rightSlide";
+            slide = 3;
+        }
+        else if (slide == 3) {
+            document.getElementById('slide3').className = "slide leftSlide";
+            document.getElementById('slide4').className = "slide activeSlide";
+            document.getElementById('slide').className = "slide rightSlide";
+            document.getElementById('slide2').className = "slide rightSlide";
+            slide = 4;
+        }
+        else {
+            document.getElementById('slide4').className = "slide leftSlide";
+            document.getElementById('slide').className = "slide activeSlide";
+            document.getElementById('slide2').className = "slide rightSlide";
+            document.getElementById('slide3').className = "slide rightSlide";
+            slide = 1;
+        }
+    }
+    
+    function swipeRight() {
+        if (slide == 1) {
+            document.getElementById('slide').className = "slide rightSlide";
+            document.getElementById('slide4').className = "slide activeSlide";
+            document.getElementById('slide3').className = "slide leftSlide";
+            document.getElementById('slide2').className = "slide leftSlide";
+            slide = 4;
+        }
+        else if (slide == 4) {
+            document.getElementById('slide4').className = "slide rightSlide";
+            document.getElementById('slide3').className = "slide activeSlide";
+            document.getElementById('slide2').className = "slide leftSlide";
+            document.getElementById('slide').className = "slide leftSlide";
+            slide = 3;
+        }
+        else if (slide == 3) {
+            document.getElementById('slide3').className = "slide rightSlide";
+            document.getElementById('slide2').className = "slide activeSlide";
+            document.getElementById('slide').className = "slide leftSlide";
+            document.getElementById('slide4').className = "slide leftSlide";
+            slide = 2;
+        }
+        else {
+            document.getElementById('slide2').className = "slide rightSlide";
+            document.getElementById('slide').className = "slide activeSlide";
+            document.getElementById('slide4').className = "slide leftSlide";
+            document.getElementById('slide3').className = "slide leftSlide";
+            slide = 1;
+        }
+    }
+    </script>
+
+<!-- <script type="text/paperscript" canvas="home">
+
+    var canvasHeight = paper.view.size.height;
+    var canvasWidth =	paper.view.size.width;
+    var points = [];
+    var lines = [];
+
+    var numStars = Math.floor(canvasWidth / 10);
+    generateStars(numStars);
+    function generateStars(number) {
+      var cornerSize = 0.75; // fraction of canvas for each corner region
+      var bias = 2;        // exponent > 1 = points clustered toward the corner vertex
+      for (i = 0; i < number; i++) {
+        var corner = Math.floor(Math.random() * 2); // 0 = top-left, 1 = top-right
+        var randX, randY;
+        if (corner === 0) {
+          randX = canvasWidth * cornerSize * Math.pow(Math.random(), bias);
+          randY = canvasHeight * cornerSize * Math.pow(Math.random(), bias);
+        } else {
+          randX = canvasWidth * (1 - cornerSize * Math.pow(Math.random(), bias));
+          randY = canvasHeight * cornerSize * Math.pow(Math.random(), bias);
+        }
+        var point = new Point(randX, randY);
+        points.push(point);
+      }
+
+
+    // Make star points gently oscillate around their original positions and animate connecting lines
+
+    // Store original positions to oscillate around
+    var originalPoints = points.slice(); // shallow copy (ok, because Point is immutable in Paper.js)
+
+    // Velocity/oscillation state array for each point
+    var oscillationStates = [];
+
+    // Helper to generate parameters for each point's oscillation
+    function getOscillationState(i) {
+        return {
+            // Each point has phase offset for animation (makes them look random)
+            phaseX: Math.random() * Math.PI * 2,
+            phaseY: Math.random() * Math.PI * 2,
+            // Amplitude: max pixel jitter around center
+            amplitudeX: 30 + Math.random() * 22, // px
+            amplitudeY: 30 + Math.random() * 22, // px
+            // Frequency: speed of oscillation in radians per second
+            freqX: 0.27 + Math.random() * 0.11,
+            freqY: 0.27 + Math.random() * 0.11
+        };
+    }
+    for (var i = 0; i < points.length; i++) {
+        oscillationStates.push(getOscillationState(i));
+    }
+
+    // Draw lines between close points
+    function drawConnections() {
+        // Remove old lines
+        if (typeof linePaths !== 'undefined') {
+            for (var k = 0; k < linePaths.length; k++) {
+                linePaths[k].remove();
+            }
+        }
+        linePaths = [];
+
+        var distanceThreshold = 110; // px
+
+        for (var i = 0; i < points.length; i++) {
+            for (var j = i + 1; j < points.length; j++) {
+                var dist = points[i].getDistance(points[j]);
+                if (dist < distanceThreshold) {
+                    var line = new Path.Line(points[i], points[j]);
+                    line.strokeColor = new Color(0.8, 0.8, 1, Math.max(0.05, 0.25 - dist / (distanceThreshold*2)));
+                    line.strokeWidth = 2;
+                    linePaths.push(line);
+                }
+            }
+        }
+    }
+
+    // Create array to hold Path.Line objects
+    var linePaths = [];
+
+    // Animate: oscillate points around original positions and redraw lines each frame
+    view.onFrame = function(event) {
+        var t = event.time;
+        for (var i = 0; i < points.length; i++) {
+            var o = originalPoints[i];
+            var s = oscillationStates[i];
+            points[i] = new Point(
+                o.x + s.amplitudeX * Math.sin(s.phaseX + s.freqX * t),
+                o.y + s.amplitudeY * Math.sin(s.phaseY + s.freqY * t)
+            );
+        }
+
+        // Redraw lines
+        drawConnections();
+    };
+
+    }
+
+    function removeLines(line)
+     {
+      var fadeEffect = setInterval(function() {
+       if (line.opacity < 0.1)
+       {
+        line.remove();
+        clearInterval(fadeEffect);
+       }
+       else
+       {
+        line.opacity -= 0.2; // fade faster
+        if (line.opacity < 0) line.opacity = 0;
+       }
+     }, 50); // update more frequently for smoother/faster fade
+     }
+
+    function graphGenerator(point) {
+      var tempPoints = [];
+
+      corner = new Point(point.x-160, point.y-160);
+      range = new Rectangle(corner, 320);
+      for (i=0; i< points.length; i++) {
+        if (range.contains(points[i])) {
+          //circle = new Path.Circle(points[i], 1);
+          //circle.fillColor = '#fff';
+          //var line = new Path.Line(point, points[i]);
+          //line.strokeColor = 'rgba(255,255,255,0.2)';
+          //lines.push(line);
+          tempPoints.push(points[i]);
+        }
+      }
+      for (i=0; i < tempPoints.length-1; i++) {
+        for (j=1; j < tempPoints.length-1; j++) {
+          var line = new Path.Line(tempPoints[i], tempPoints[j]);
+          line.strokeColor = 'rgba(150,150,250,0.02)';
+          removeLines(line);
+        }
+      }
+    }
+
+  </script> -->
+  </body>
+</html>

@@ -11,7 +11,7 @@
   --transition: 0.3s;
 
   --master-border-radius: 24px;
-  --image-border-radius: 12px;
+  --image-border-radius: 4px;
   scroll-behavior: smooth;
 }
 
@@ -36,6 +36,10 @@ body.noscroll {
 
 a {
   color: var(--brand-color);
+}
+
+img {
+    border-radius: var(--image-border-radius);
 }
 
 .uppercase {
@@ -161,7 +165,7 @@ p {
 
 #contact {
   padding: 160px 20px 160px 20px;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0) 55%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0) 45%);
 }
 
 #contact .row .col {
@@ -247,10 +251,10 @@ p {
 }
 
 #clients {
-  backdrop-filter: blur(20px);
-  margin: 20px 0;
-  padding: 80px 20px;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.10) 0%, rgba(0, 0, 255, 0) 50%);
+  margin: 128px 0 192px 0;
+  padding: 0px 0px;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.10) 0%, rgba(0, 0, 255, 0) 45%);
+  border-radius: 12px;
 }
 
 .pricing {
@@ -258,6 +262,7 @@ p {
   backdrop-filter: blur(20px);
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 12px;
 }
 
 .insightNumber {
@@ -285,7 +290,7 @@ p {
 }
 
 .portfolioTeaser:hover {
-  transform: perspective(400px) rotateY(10deg);
+  transform: perspective(400px) rotateY(5deg);
   transition-duration: 0.5s;
 }
 
@@ -332,9 +337,10 @@ p {
 
 .cta {
   width: fit-content;
-  padding: 0 50px 0 20px;
+  padding: 0 50px 0 24px;
   line-height: 48px;
-  background: var(--brand-color) url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
+  background: var(--brand-color) url('../images/icons/arrow-right.svg') no-repeat 85% 50%;
+  border-radius: var(--master-border-radius);
   color: #ffffff;
 }
 
@@ -345,12 +351,13 @@ p {
 
 .secondary {
   width: fit-content;
-  padding: 0 50px 0 20px;
+  padding: 0 46px 0 24px;
   line-height: 46px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: var(--bodyText);
+  border-radius: var(--master-border-radius);
   background: #ffffff10 url('../images/icons/arrow-right.svg') no-repeat 90% 50%;
 }
 
@@ -365,7 +372,7 @@ p {
   cursor: url('../images/icons/cursor-active.svg'), auto;
   width: fit-content;
   display: inline-block;
-  padding: 0 16px 0 36px;
+  padding: 0 20px 0 36px;
   margin-right: 4px;
   line-height: 46px;
   background: #ffffff10;
@@ -374,6 +381,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
+  border-radius: var(--master-border-radius);
   color: var(--bodyText);
 }
 
@@ -526,7 +534,7 @@ p {
 }
 
 #testimonials {
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0) 55%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0) 45%);
 }
 
 .btn {
@@ -584,17 +592,18 @@ nav .button-collapse:hover {
 }
 
 .down {
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   left: 50%;
+  border-radius: 50%;
   margin-left: -50px;
   background-image: url('../images/icons/down.svg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 30% 30%;
-  opacity: 0.8;
+  background-size: 40% 40%;
+  opacity: 1;
   transition-duration: 0.5s;
   z-index: 2;
 }
@@ -1049,6 +1058,7 @@ nav .button-collapse {
   background-color: rgba(0,0,0,0.3);
   height: 48px;
   width: 48px;
+  border-radius: var(--master-border-radius);
   display: inline-block;
   transition-duration: 0.5s;
 }
@@ -1063,8 +1073,10 @@ nav .button-collapse {
   background-color: #0274b3;
   height: 48px;
   width: 48px;
+  border-radius: var(--master-border-radius);
   display: inline-block;
   transition-duration: 0.5s;
+  margin-right: 4px;
 }
 
 .linkedin:hover {
@@ -1328,13 +1340,14 @@ nav .button-collapse {
 }
 
 .leftArrow {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   top: calc(50vh - 100px);
-  left: 0;
+  left: 12px;
   background-image: url('../images/icons/down.svg');
-  background-size: 50% 50%;
+  background-size: 40% 40%;
+  border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
   transform: rotate(90deg);
@@ -1343,12 +1356,13 @@ nav .button-collapse {
 }
 
 .rightArrow {
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   top: calc(50vh - 100px);
-  background-size: 50% 50%;
-  right: 0;
+  background-size: 40% 40%;
+  border-radius: 50%;
+  right: 12px;
   background-image: url('../images/icons/down.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -1452,7 +1466,7 @@ nav .button-collapse {
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  top: 12px;
+  top: 24px;
   left: 40px;
   height: 60px;
   width: 264px;
@@ -1467,8 +1481,8 @@ nav .button-collapse {
 
 #nav {
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 12px;
+  right: 0;
   margin: 0;
   padding: 0;
   transition-duration: var(--transition-duration);
@@ -1499,6 +1513,7 @@ nav .button-collapse {
 
 #nav li a {
   padding: 0 24px 0 24px;
+  border-radius: 12px;
   transition-duration: 0.5s;
 }
 
@@ -1698,12 +1713,13 @@ nav .button-collapse {
 
   .scrollUpButton {
     position: fixed;
-    bottom: 0px;
-    right: 0px;
-    width: 100px;
-    height: 100px;
+    bottom: 24px;
+    right: 12px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
     background: rgba(255,255,255,0) url('../images/icons/down.svg');
-    background-size: 30% 30%;
+    background-size: 40% 40%;
     background-position: center;
     background-repeat: no-repeat;
     transform: rotate(180deg);
@@ -1712,7 +1728,7 @@ nav .button-collapse {
   
   .scrollUpButton:hover {
     background: var(--brand-color) url('../images/icons/down.svg');
-    background-size: 30% 30%;
+    background-size: 40% 40%;
     background-position: center;
     background-repeat: no-repeat;
     transition-duration: var(--transition);
