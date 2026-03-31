@@ -598,7 +598,7 @@ nav .button-collapse:hover {
   bottom: 12px;
   left: 50%;
   border-radius: 50%;
-  margin-left: -50px;
+  margin-left: -32px;
   background-image: url('../images/icons/down.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -1740,6 +1740,6 @@ nav .button-collapse {
   }
 }
 
-.container {
-    width: 80% !important;
+.clientLogos img {
+    opacity: 0.5;
 }
