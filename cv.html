@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>CV</title>
+    <title>CV | Blake Williford</title>
     <meta charset="UTF-8">
     <meta name="description" content="Design and Creative Technology services">
     <meta name="keywords" content="Design, UX, UI, Research, Front-end development, HCI, Sketch Recognition, Creativity, Branding, Illustration, Sketch">
@@ -28,6 +28,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
     <link rel="stylesheet" href="css/style-v425.css">
+    <link rel="stylesheet" href="css/a11y.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,38 +48,42 @@
 
 <body>
      <!-- Logo -->
-     <a href="./index.html" aria-label="Returns to home page">
-        <div id="logo" alt="Blake Williford Design">
-        </div>
-    </a>
+     <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div role="banner">
+    <!-- Logo -->
+    <a href="./index.html" aria-label="Blake Williford, home"><div id="logo"></div></a>
 
     <!-- Nav -->
-    <div id="navTrigger" onclick="toggleNav()"></div>
+    <button id="navTrigger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navWrapper" onclick="toggleNav()"></button>
 
     <!--Header-->
     <div class="header"></div>
-    <div id="navWrapper">
+    <div id="navWrapper" role="navigation" aria-label="Main">
 
         <ul id="nav">
         <li><a href="./index.html" onclick="toggleNav()">Design</a></li>
         <li><a href="./bio.html" onclick="toggleNav()">Bio</a></li>
-        <li><a href="./cv.html" onclick="toggleNav()">CV</a></li>
+        <li><a href="./cv.html" aria-current="page" onclick="toggleNav()">CV</a></li>
         <li><a href="./contact.html" onclick="toggleNav()">Contact</a></li>
         </ul>
     </div>
+    </div>
 
-    <div class="scrollUpButton" onclick="scrollToTop()"></div>
+    <main id="main" tabindex="-1">
+
+    <button type="button" class="scrollUpButton" aria-label="Back to top" onclick="scrollToTop()"></button>
 
     <!-- <div id="main-progressbar-container">
         <div id="main-progressbar">
         </div>
     </div> -->
 
-    <!-- <div id="loaderOverlay">
+    <!-- <div id="loaderOverlay" aria-hidden="true">
         <div class="circle"></div>
     </div> -->
 
-    <!-- <a href="#design" data-aos="fade-up" data-aos-delay="1300" ><div class="down"></div>
+    <!-- <a href="#design" data-aos="fade-up" data-aos-delay="1300" aria-label="Skip to content"><div class="down"></div>
     </a> -->
     <div class="section" id="cv" data-aos="fade" data-aos-delay="700">
         <div class="container">
@@ -86,7 +91,7 @@
                 
                     <h1 class="center-align">CV</h1>
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <a href="./docs/BlakeWillifordCV.pdf" target="blank">
+                        <a href="./docs/BlakeWillifordCV.pdf" target="_blank" rel="noopener">
                             <div class="secondary pdf" style="white-space: nowrap;">Download PDF</div>
                         </a>
                     </div>
@@ -103,9 +108,9 @@
                         <h5>Creativity Support</h5>
                     </div> -->
         
-                            <h4>SKILLS</h4>
+                            <h2 class="h4">SKILLS</h2>
                             <div class="skillset">
-                                <h5>Design</h5>
+                                <h3 class="h5">Design</h3>
                                 <ul>
                                     <li>Sketching</li>
                                     <li>Information Architecture</li>
@@ -119,7 +124,7 @@
                                 </ul>
                             </div>
                             <div class="skillset">
-                                <h5>Development</h5>
+                                <h3 class="h5">Development</h3>
                                 <ul>
                                     <li>JS</li>
                                     <li>HTML</li>
@@ -129,7 +134,7 @@
                                 </ul>
                             </div>
                             <div class="skillset">
-                                <h5>Research</h5>
+                                <h3 class="h5">Research</h3>
                                 <ul>
                                     <li>Semi-structured Interviews</li>
                                     <li>Focus groups</li>
@@ -144,7 +149,7 @@
                                 </ul>
                             </div>
                             <div class="skillset">
-                                <h5>Software</h5>
+                                <h3 class="h5">Software</h3>
                                 <ul>
                                     <li>Figma</li>
                                     <li>Cursor</li>
@@ -159,38 +164,38 @@
                                 </ul>
                             </div>
         
-                            <h4>AWARDS</h4>
-                            <h5>CHI Play 2017 Student Game Design Competition</h5>
-                            <h6 class="first">1st Place</h6>
+                            <h2 class="h4">AWARDS</h2>
+                            <h3 class="h5">CHI Play 2017 Student Game Design Competition</h3>
+                            <p class="h6 first">1st Place</p>
         
-                            <h5>Tapia 2017 Student Research Competition</h5>
-                            <h6 class="second">2nd Place</h6>
+                            <h3 class="h5">Tapia 2017 Student Research Competition</h3>
+                            <p class="h6 second">2nd Place</p>
                         
                 </div>
                 <div class="col s12 m8 l8">
-                    <h4>EDUCATION</h4>
+                    <h2 class="h4">EDUCATION</h2>
 
                     <div class="education">
-                        <h5>Ph.D. Computer Science (Human-Computer Interaction)</h5>
-                        <h6>Texas A&amp;M University</h6>
-                        <h6><em>2016 - 2020</em></h6>
+                        <h3 class="h5">Ph.D. Computer Science (Human-Computer Interaction)</h3>
+                        <h4 class="h6">Texas A&amp;M University</h4>
+                        <h4 class="h6"><em>2016 - 2020</em></h4>
                     </div>
                     <div class="education">
-                        <h5>M.S. Human-Computer Interaction</h5>
-                        <h6>Georgia Institute of Technology</h6>
-                        <h6><em>2013 - 2015</em></h6>
+                        <h3 class="h5">M.S. Human-Computer Interaction</h3>
+                        <h4 class="h6">Georgia Institute of Technology</h4>
+                        <h4 class="h6"><em>2013 - 2015</em></h4>
                     </div>
                     <div class="education">
-                        <h5>B.S. Industrial Design</h5>
-                        <h6>Georgia Institute of Technology</h6>
-                        <h6><em>2007 - 2011</em></h6>
+                        <h3 class="h5">B.S. Industrial Design</h3>
+                        <h4 class="h6">Georgia Institute of Technology</h4>
+                        <h4 class="h6"><em>2007 - 2011</em></h4>
                     </div>
 
-                    <h4>EXPERIENCE</h4>
+                    <h2 class="h4">EXPERIENCE</h2>
                     <div class="experience">
-                        <h5>Blake Williford Design</h5>
-                        <h6>Freelance Designer</h6>
-                        <h6><em>2023 - Present</em></h6>
+                        <h3 class="h5">Blake Williford Design</h3>
+                        <h4 class="h6">Freelance Designer</h4>
+                        <h4 class="h6"><em>2023 - Present</em></h4>
                         <p>Freelance UI / UX design, front-end development, branding, and illustration services with 10 years of experience working on projects for more than 50 clients including ~15 startups.</p>
                         <p>(2025-2026) Most recently led product design for an onboarding experience for Motif - A collaborative software for the architecture (AEC) space. Work involved understanding the end users and key workflows in the product, and creating interactive tutorials and video tutorials for these workflows. I also bridged into front-end development and UI polish, completing 15+ front-end tickets, and produced design guidelines for their tablet-based experience.</p>
                         <p>(2025) Led product design for a R&D project at ed tech startup Articulate involving using LLMs to create a next-gen personalized learning experience. Collaborated with the CEO and a top engineer as a design strategist, and helped the team develop the initial MVP for the new product.</p>
@@ -199,22 +204,22 @@
                         <p>(2023) Led product design (contract) for Radien - a product that leverages AI to analyze front-end code and find inconsistencies, inefficiencies, and dead code to clean-up tech debt. My collaboration with the founders and other stakeholders led to a redesign of the design system, produced concepts for VC pitch decks, and partnerships with major brands like Indeed and SurveyMonkey.</p>
                         <p>(2014) Designed brand and helped launch website for Titin, an innovative fitness apparel company that was featured on Shark Tank and received a $1 million investment from FUBU CEO Daymond John.</p>
                         <p>(2013) Greatly improved UI design and visual design for sustainability startup Ubuntoo and helped launch its initial website and web app in 2019 to 750+ key partners including major brands like CocaCola and Clorox.</p>      
-                        <p>Entreprenuerial projects include: <a href="https://www.drawdojo.com" target="blank" alt="DrawDojo - An educational app for learning drawing skills">DrawDojo - An educational app for learning drawing skills</a> and <a href="https://www.destinedstudio.com/MysticalPath.html" target="blank" alt="Mystical Path - a mobile RPG for improving basic drawing skills">Mystical Path - a mobile RPG for improving basic drawing skills</a></p>
+                        <p>Entreprenuerial projects include: <a href="https://www.drawdojo.com" target="_blank" rel="noopener" alt="DrawDojo - An educational app for learning drawing skills">DrawDojo - An educational app for learning drawing skills</a> and <a href="https://www.destinedstudio.com/MysticalPath.html" target="_blank" rel="noopener" alt="Mystical Path - a mobile RPG for improving basic drawing skills">Mystical Path - a mobile RPG for improving basic drawing skills</a></p>
                     </div>
                     <div class="experience">
-                        <h5>Polygence</h5>
-                        <h6>Lead UX / UI Designer</h6>
-                        <h6><em>2022 - 2023</em></h6>
-                        <p>Led UX / UI design for this educational technology startup (<a href="https://www.polygence.org/" alt="Research Opportunities for High School Students" target="blank">Research Opportunities for High School Students)</a></p>
+                        <h3 class="h5">Polygence</h3>
+                        <h4 class="h6">Lead UX / UI Designer</h4>
+                        <h4 class="h6"><em>2022 - 2023</em></h4>
+                        <p>Led UX / UI design for this educational technology startup (<a href="https://www.polygence.org/" alt="Research Opportunities for High School Students" target="_blank" rel="noopener">Research Opportunities for High School Students)</a></p>
                         <p>Facilitated a rebranding and visual refresh of website, web app, and native app (4.7 rating on App Store)</p>
                         <p>Conducted interviews and usability testing with dozens of mentors and students</p>
                         <p>Designed and facilitated numerous shipped features to create a world-class passion project experience for mentors and students, including tools for sharing resources, scheduling sessions, and a brand new native app</p>
                         <p>Company has impacted the lives of more than 2400 students from 44 countries</p>
                     </div>
                     <div class="experience">
-                        <h5>ChalkCast</h5>
-                        <h6>Lead UX / UI Designer</h6>
-                        <h6><em>2021 – 2022</em></h6>
+                        <h3 class="h5">ChalkCast</h3>
+                        <h4 class="h6">Lead UX / UI Designer</h4>
+                        <h4 class="h6"><em>2021 – 2022</em></h4>
                         <p>Lead UX / UI design for this educational technology startup (virtual classroom tool).</p>
                         <p>Rebranded company and collaborated with mid-level UX designer to produce a more cohesive style guide.</p>
                         <p>Designed and coded company's front-facing brochure site.</p>
@@ -224,9 +229,9 @@
                     </div>
      
                     <div class="experience">
-                        <h5>Texas A&amp;M University / Sketch Recognition Lab</h5>
-                        <h6>Designer / Researcher</h6>
-                        <h6><em>2016 - 2021</em></h6>
+                        <h3 class="h5">Texas A&amp;M University / Sketch Recognition Lab</h3>
+                        <h4 class="h6">Designer / Researcher</h4>
+                        <h4 class="h6"><em>2016 - 2021</em></h4>
                         <p>Lead the design and development of “Sketchtivity” an educational platform for teaching the fundamentals of design sketching and improving creativity in people. It has been used by over 1000 students at 3 universities and 3 high
                             schools.
                         </p>
@@ -236,132 +241,135 @@
                         <p>Award-winning design and research, and publications at top conferences around the world.</p>
                     </div>
                     <div class="experience">
-                        <h5>Medicare Pathfinder</h5>
-                        <h6>Lead UX / UI Designer</h6>
-                        <h6><em>2015 - 2021</em></h6>
+                        <h3 class="h5">Medicare Pathfinder</h3>
+                        <h4 class="h6">Lead UX / UI Designer</h4>
+                        <h4 class="h6"><em>2015 - 2021</em></h4>
                         <p>Lead UX / UI design and front-end development for this healthcare startup.</p>
                         <p>Helped company raise more than $450,000 in venture capital.</p>
                         <p>Designed and developed a simple and clean patient-facing application to gather data on seniors and match them with best healthcare plans.</p>
                         <p>Designed and developed innovative visualizations for predictive analytics dashboard which can prevent providers from losing money.</p>
                     </div>
                     <div class="experience">
-                        <h5>Adobe Research</h5>
-                        <h6>Designer / Researcher</h6>
-                        <h6><em>2019</em></h6>
+                        <h3 class="h5">Adobe Research</h3>
+                        <h4 class="h6">Designer / Researcher</h4>
+                        <h4 class="h6"><em>2019</em></h4>
                         <p>Worked with Holger Winnemoeller in Creative Intelligence Lab to design and develop a novel image editing creativity support tool. This tool leverages modularized Photoshop commands and a simple drag-and-drop user interface to make
                             sophisticated image editing much easier for novices.</p>
                         <p>Filed for US Patent as co-inventor</p>
                     </div>
                     <div class="experience">
-                        <h5>Microsoft Research</h5>
-                        <h6>Designer / Researcher</h6>
-                        <h6><em>2018</em></h6>
+                        <h3 class="h5">Microsoft Research</h3>
+                        <h4 class="h6">Designer / Researcher</h4>
+                        <h4 class="h6"><em>2018</em></h4>
                         <p>Worked with AI and Ink applied research group to conceptualize, design, and develop a novel sketch-based application leveraging Windows Ink</p>
                         <p>Collaborated with Ken Hinckley and Michel Pahud in MSR to conduct a user study of the application with 20 participants.</p>
                         <p>Filed for 2 US Patents as lead inventor</p>
                     </div>
                     <div class="experience">
-                        <h5>Fjord</h5>
-                        <h6>Interaction Designer</h6>
-                        <h6><em>2015 – 2016</em></h6>
+                        <h3 class="h5">Fjord</h3>
+                        <h4 class="h6">Interaction Designer</h4>
+                        <h4 class="h6"><em>2015 – 2016</em></h4>
                         <p>Collaborated on several client projects for the Atlanta studio of this service design firm. Work involved research, interviews, journey mapping, persona creation, sketching, wireframing, prototyping and visual design.</p>
                         <p>Projects included a mortgage buying application for USAA, report outage and bill paying experiences for Florida Power & Light, and a booking experience for Celebrity Cruiselines</p>
                     </div>
                     <div class="experience">
-                        <h5>Georgia Institute of Technology</h5>
-                        <h6>Graduate Teaching Assistant</h6>
-                        <h6><em>2015</em></h6>
+                        <h3 class="h5">Georgia Institute of Technology</h3>
+                        <h4 class="h6">Graduate Teaching Assistant</h4>
+                        <h4 class="h6"><em>2015</em></h4>
                         <p>Assisted sophomore undergrad Industrial Design students in their main studio course. Responsibilities included helping them with research, ideation, giving them constructive feedback, and grading. Used my knowledge and experience
                             to ensure they get in to good habits, break bad habits, and are dedicated to process.</p>
                     </div>
                     <div class="experience">
-                        <h5>Georgia Institute of Technology</h5>
-                        <h6>Graduate Research Assistant</h6>
-                        <h6><em>2014</em></h6>
+                        <h3 class="h5">Georgia Institute of Technology</h3>
+                        <h4 class="h6">Graduate Research Assistant</h4>
+                        <h4 class="h6"><em>2014</em></h4>
                         <p>Performed research in the area of advancing spatial reasoning and creative skills in engineers through learning sketching – Specifically by using educational software. Closely related to my Master’s Thesis and PhD dissertation.</p>
                         </p>
                     </div>
                     <div class="experience">
-                        <h5>StubHub / eBay</h5>
-                        <h6>UX Designer Intern</h6>
-                        <h6><em>2014</em></h6>
+                        <h3 class="h5">StubHub / eBay</h3>
+                        <h4 class="h6">UX Designer Intern</h4>
+                        <h4 class="h6"><em>2014</em></h4>
                         <p>Hybrid UX Designer role in which I designed and prototyped a new profile system concept for StubHub users called “My Hub”.</p>
                         <p>Worked closely with a Project Manager intern to conceptualize a site-wide personalization framework, with the goal of making StubHub a more personally catered experience for event discovery and planning.</p>
                         <p>Assisted UX team on several projects related to the responsive redesign of StubHub website by exploring page designs with sketches, wireframes, and prototypes.</p>
                     </div>
                     <div class="experience">
-                        <h5>THINK Interactive</h5>
-                        <h6>UX Designer</h6>
-                        <h6><em>2013 – 2014</em>
-                            <h6>
+                        <h3 class="h5">THINK Interactive</h3>
+                        <h4 class="h6">UX Designer</h4>
+                        <h4 class="h6"><em>2013 – 2014</em></h4>
+                            <div class="h6">
                                 <p>Assisted UX team in the design of two responsive websites for national brands during a 3-month contract position with information architecture, wireframes, task-flows, and sitemaps.</p>
+                            </div>
                     </div>
                     <div class="experience">
-                        <h5>Cardinal Web Solutions</h5>
-                        <h6>Lead UI / Visual Designer</h6>
-                        <h6><em>2012 - 2013</em>
-                            <h6>
+                        <h3 class="h5">Cardinal Web Solutions</h3>
+                        <h4 class="h6">Lead UI / Visual Designer</h4>
+                        <h4 class="h6"><em>2012 - 2013</em></h4>
+                            <div class="h6">
                                 <p>Led the design services of this growing digital agency as their first in-house designer.</p>
                                 <p>Rebranded the company and its entire physical and digital presence, leading to a more clear, concise, and cohesive brand identity.</p>
                                 <p>Directed a wide variety of projects for around 30+ local and national clients involving responsive web design, mobile site/app design, graphic design, and branding during a time in which the company tripled in size.</p>
+                            </div>
                     </div>
                     <div class="experience">
-                        <h5>Cooper Lighting</h5>
-                        <h6>Industrial Design Intern</h6>
-                        <h6><em>2011</em>
-                            <h6>
+                        <h3 class="h5">Cooper Lighting</h3>
+                        <h4 class="h6">Industrial Design Intern</h4>
+                        <h4 class="h6"><em>2011</em></h4>
+                            <div class="h6">
                                 <p>Supported design team and worked on a variety of commercial LED lighting products. Developed concepts for a family of products for InVue, re-imagining their high-end outdoor lighting brand.</p>
+                            </div>
                     </div>
 
                     <div class="clear-40"></div>
-                    <h4>SPEAKING</h4>
+                    <h2 class="h4">SPEAKING</h2>
 
                     <div class="experience">
-                        <h5>"Exploring Methods for Holistically Improving Drawing Ability with Artificial Intelligence"</h5>
-                        <h6>Computer Science Department (Texas A&M)</h6>
-                        <h6><em>December 13th, 2019</em></h6>
+                        <h3 class="h5">"Exploring Methods for Holistically Improving Drawing Ability with Artificial Intelligence"</h3>
+                        <h4 class="h6">Computer Science Department (Texas A&M)</h4>
+                        <h4 class="h6"><em>December 13th, 2019</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"A Framework for Motivating Sketching Practice with Sketch-based Gameplay"</h5>
-                        <h6>CHI Play 2019</h6>
-                        <h6><em>October 23rd, 2019</em></h6>
+                        <h3 class="h5">"A Framework for Motivating Sketching Practice with Sketch-based Gameplay"</h3>
+                        <h4 class="h6">CHI Play 2019</h4>
+                        <h4 class="h6"><em>October 23rd, 2019</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"Teaching Sketching with Artificial Intelligence: Integrating an Intelligent Tutoring System into Classrooms"</h5>
-                        <h6>Educational Psychology Department (Texas A&M)</h6>
-                        <h6><em>April 15th, 2019</em></h6>
+                        <h3 class="h5">"Teaching Sketching with Artificial Intelligence: Integrating an Intelligent Tutoring System into Classrooms"</h3>
+                        <h4 class="h6">Educational Psychology Department (Texas A&M)</h4>
+                        <h4 class="h6"><em>April 15th, 2019</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"It’s Not Just About Accuracy: Metrics That Matter When Measuring Expert Sketching Ability"</h5>
-                        <h6>IUI 2019</h6>
-                        <h6><em>March 19th, 2019</em></h6>
+                        <h3 class="h5">"It’s Not Just About Accuracy: Metrics That Matter When Measuring Expert Sketching Ability"</h3>
+                        <h4 class="h6">IUI 2019</h4>
+                        <h4 class="h6"><em>March 19th, 2019</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"Facilitating Improvements in Drawing Ability, Self-efficacy, Motivation, and Creativity with Intelligent Systems"</h5>
-                        <h6>Adobe Research</h6>
-                        <h6><em>September 4th, 2018</em></h6>
+                        <h3 class="h5">"Facilitating Improvements in Drawing Ability, Self-efficacy, Motivation, and Creativity with Intelligent Systems"</h3>
+                        <h4 class="h6">Adobe Research</h4>
+                        <h4 class="h6"><em>September 4th, 2018</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"ZenSketch: A Novel Sketch-based Game for Improving Line work"</h5>
-                        <h6>CHI Play 2017</h6>
-                        <h6><em>October 18th, 2017</em></h6>
+                        <h3 class="h5">"ZenSketch: A Novel Sketch-based Game for Improving Line work"</h3>
+                        <h4 class="h6">CHI Play 2017</h4>
+                        <h4 class="h6"><em>October 18th, 2017</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"Conquering the Cube: Learning to Sketch Primitives in Perspective with an Intelligent Tutoring System"</h5>
-                        <h6>Expressive 2017</h6>
-                        <h6><em>July 28th, 2017</em></h6>
+                        <h3 class="h5">"Conquering the Cube: Learning to Sketch Primitives in Perspective with an Intelligent Tutoring System"</h3>
+                        <h4 class="h6">Expressive 2017</h4>
+                        <h4 class="h6"><em>July 28th, 2017</em></h4>
                     </div>
 
                     <div class="experience">
-                        <h5>"Education for the Conceptual Age"</h5>
-                        <h6>WIPTTE 2015</h6>
-                        <h6><em>April 28th, 2015</em></h6>
+                        <h3 class="h5">"Education for the Conceptual Age"</h3>
+                        <h4 class="h6">WIPTTE 2015</h4>
+                        <h4 class="h6"><em>April 28th, 2015</em></h4>
                     </div>         
             </div>
             
@@ -370,54 +378,54 @@
     </div>
 
     <div class="section half hide-on-med-and-down" id="testimonials" data-aos="fade-up" data-aos-delay="300">
-        <div class="leftArrow" onclick="swipeLeft()"></div>
-        <div class="rightArrow" onclick="swipeRight()"></div>
+        <button type="button" class="leftArrow" aria-label="Previous testimonial" onclick="swipeLeft()"></button>
+        <button type="button" class="rightArrow" aria-label="Next testimonial" onclick="swipeRight()"></button>
         <div id="slide" class=" slide activeSlide">
             <div class="container">
                 <div class="row">
-                    <h4 class="center-align">"Not only is Blake a creative thinker and talented designer, but he delivers,
+                    <p class="h4 center-align">"Not only is Blake a creative thinker and talented designer, but he delivers,
                         and gets things done. We've done some of our best product work building on the foundation of Blake's
                         ideas. His passion and enthusiasm are infectious, and everything is more dynamic when he's around."
-                    </h4>
-                    <img src="images/testimonials/kate.jpeg" class="circular testimonialImage">
-                    <h5 class="center-align"><b>KATE MIGLIAZZO</b></h5>
-                    <h6 class="center-align"><span><b>DIRECTOR OF PRODUCT, CHALKCAST</b></span></h6>
+                    </p>
+                    <img alt="" src="images/testimonials/kate.jpeg" class="circular testimonialImage">
+                    <p class="h5 center-align"><b>KATE MIGLIAZZO</b></p>
+                    <p class="h6 center-align"><span><b>DIRECTOR OF PRODUCT, CHALKCAST</b></span></p>
                 </div>
             </div>
         </div>
         <div id="slide2" class="slide rightSlide">
             <div class="container">
                 <div class="row">
-                    <h4 class="center-align">"Blake is the best designer I've ever worked with. He regularly
-                        learns more and more cutting edge techniques to make your business stand out from the rest."</h4>
-                        <img src="images/testimonials/frank.jpeg" class="circular testimonialImage">
-                    <h5 class="center-align"><b>FRANK WALL</b></h5>
-                    <h6 class="center-align"><span><b>PERSONAL TRAINER (CLIENT)</b></span></h6>
+                    <p class="h4 center-align">"Blake is the best designer I've ever worked with. He regularly
+                        learns more and more cutting edge techniques to make your business stand out from the rest."</p>
+                        <img alt="" src="images/testimonials/frank.jpeg" class="circular testimonialImage">
+                    <p class="h5 center-align"><b>FRANK WALL</b></p>
+                    <p class="h6 center-align"><span><b>PERSONAL TRAINER (CLIENT)</b></span></p>
                 </div>
             </div>
         </div>
         <div id="slide3" class="slide rightSlide">
             <div class="container">
                 <div class="row">
-                    <h4 class="center-align">"Blake possess a powerful combination of aesthetic/visual skills and the
+                    <p class="h4 center-align">"Blake possess a powerful combination of aesthetic/visual skills and the
                         ability to craft a seamless and enjoyable user journey. His attention to detail is impeccable, and
                         he approaches each task with a user-centric mindset, ensuring that every design decision is
-                        purposeful."</h4>
-                        <img src="images/testimonials/rushil.jpeg" class="circular testimonialImage">
-                    <h5 class="center-align"><b>RUSHIL KHURANA</b></h5>
-                    <h6 class="center-align"><span><b>CO-FOUNDER AND CEO, RADIEN</b></span></h6>
+                        purposeful."</p>
+                        <img alt="" src="images/testimonials/rushil.jpeg" class="circular testimonialImage">
+                    <p class="h5 center-align"><b>RUSHIL KHURANA</b></p>
+                    <p class="h6 center-align"><span><b>CO-FOUNDER AND CEO, RADIEN</b></span></p>
                 </div>
             </div>
         </div>
         <div id="slide4" class="slide leftSlide">
             <div class="container">
                 <div class="row">
-                    <h4 class="center-align">"Blake frequently prototypes his own work in code, which makes his designs
+                    <p class="h4 center-align">"Blake frequently prototypes his own work in code, which makes his designs
                         practical and also speeds up the delivery process for developers who implement his designs /
-                        integrate his prototypes."</h4>
-                        <img src="images/testimonials/austin.jpeg" class="circular testimonialImage">
-                    <h5 class="center-align"><b>AUSTIN THERIOT</b></h5>
-                    <h6 class="center-align"><span><b>SENIOR SOFTWARE ENGINEER</b></span></h6>
+                        integrate his prototypes."</p>
+                        <img alt="" src="images/testimonials/austin.jpeg" class="circular testimonialImage">
+                    <p class="h5 center-align"><b>AUSTIN THERIOT</b></p>
+                    <p class="h6 center-align"><span><b>SENIOR SOFTWARE ENGINEER</b></span></p>
                 </div>
             </div>
         </div>
@@ -431,19 +439,19 @@
                     class="circular">
             </div>
             <div class="col s12 m6 l6">
-                <h4>FREE CONSULTATION</h4>
+                <h2 class="h4">FREE CONSULTATION</h2>
                 <p>I'm always happy to collaborate and help businesses grow. Feel free to reach out and schedule some time
                     with me.</p>
-                <a href="https://cal.com/blake-williford-design/consultation" target="blank">
+                <a href="https://cal.com/blake-williford-design/consultation" target="_blank" rel="noopener">
                     <div class="cta">Schedule a Call</div>
                 </a>
 
                 <div class="clear-60"></div>
-                <h4>CONNECT WITH ME</h4>
-                <a href="https://www.linkedin.com/in/blakewilliford/" target="blank">
+                <h2 class="h4">CONNECT WITH ME</h2>
+                <a href="https://www.linkedin.com/in/blakewilliford/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)">
                     <div class="linkedin"></div>
                 </a>
-                <a href="https://www.instagram.com/blakewilliforddesign/" target="blank">
+                <a href="https://www.instagram.com/blakewilliforddesign/" target="_blank" rel="noopener" aria-label="Instagram (opens in new tab)">
                     <div class="insta"></div>
                 </a>
             </div>
@@ -451,7 +459,9 @@
     </div>
 </div>
 
-<div class="footer">
+</main>
+
+<div class="footer" role="contentinfo">
     &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
     <div class="right">VERSION 4.2 <em>REFRESH</em></div>
 </div>
@@ -467,7 +477,7 @@
     <script>
 
         window.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
+            AOS.init({ disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
             setTimeout(function() {
                 document.getElementById('loaderOverlay').classList.toggle('inactive');
             }, 500);

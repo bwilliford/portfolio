@@ -1,6 +1,6 @@
-<html>
+<html lang="en">
   <head>
-    <title>Blake Williford // Designer + Creative Technologist</title>
+    <title>Game UI Case Study | Blake Williford</title>
     <meta charset="UTF-8">
     <meta name="description" content="Design and Creative Technology services">
     <meta name="keywords" content="Design, UX, UI, Research, Front-end Development, HCI, Sketch Recognition, Creativity, Branding, Illustration, Sketch">
@@ -10,7 +10,8 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
-    <link rel="stylesheet" href="../css/style-v425.css" >
+    <link rel="stylesheet" href="../css/style-v425.css">
+    <link rel="stylesheet" href="../css/a11y.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--JS Frameworks-->
@@ -29,17 +30,18 @@
   <body>
 
     <!-- Logo -->
-    <a href="../index.html" aria-label="Returns to home page">
-        <div id="logo" alt="Blake Williford Design">
-        </div>
-    </a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div role="banner">
+    <!-- Logo -->
+    <a href="../index.html" aria-label="Blake Williford, home"><div id="logo"></div></a>
 
     <!-- Nav -->
-    <div id="navTrigger" onclick="toggleNav()"></div>
+    <button id="navTrigger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navWrapper" onclick="toggleNav()"></button>
 
     <!--Header-->
     <div class="header"></div>
-    <div id="navWrapper">
+    <div id="navWrapper" role="navigation" aria-label="Main">
 
         <ul id="nav">
         <li><a href="../index.html" onclick="toggleNav()">Design</a></li>
@@ -48,6 +50,9 @@
         <li><a href="../contact.html" onclick="toggleNav()">Contact</a></li>
         </ul>
     </div>
+    </div>
+
+    <main id="main" tabindex="-1">
 
 
 <div id="main-progressbar-container">
@@ -55,29 +60,29 @@
   </div>
 </div>
 
-<div class="scrollUpButton" onclick="scrollToTop()"></div>
+<button type="button" class="scrollUpButton" aria-label="Back to top" onclick="scrollToTop()"></button>
 
   <div class="section"  id="summary">
     <div class="container">
       <h1>GAME UI WORK</h1>
       <div class="row">
         <div class="col s12 m9 l9">
-          <h4>ZenSketch</h4>
+          <h2 class="h4">ZenSketch</h2>
           <p>ZenSketch is an award-winning educational game I developed in the first year of my PhD with colleagues Matthew Runyon and Adil Hamid Malla. The game transfers a common drawing exercise of connecting dots to the digital medium and takes advantage of stealth learning to improve basic line quality through engaging gameplay. It utilizes gesture-based sketch recognition to extract features of user's line work like accuracy, smoothness, and speed, in addition to device data like pressure.</p>
           <p>I was thrilled to win First Place (Jury Award) at CHI Play 2017's Student Game Design Competition in Amsterdam, Netherands for this game. The jury consisted of industry professionals and the competition included more than 30 entries worldwide. It was praised for its originality, simplicity, and purpose in genuinely improving basic drawing fundamentals. We are in the midst of ongoing studies and improvements with more than 130 participants but we plan to release it soon so everyone can play.</p>
-          <h5>CHI Play 2017 Student Game Design Competition</h5>
-          <h6 class="first">1st Place</h6>
+          <h3 class="h5">CHI Play 2017 Student Game Design Competition</h3>
+          <p class="h6 first">1st Place</p>
 
         </div>
         <div class="col s12 m3 l3">
-          <h5>COLLABORATORS</h5>
+          <h3 class="h5">COLLABORATORS</h3>
           <ul>
             <li class="collab">Matthew Runyon</li>
             <li class="collab">Adil Hamid Malla</li>
             <li class="collab">Christopher Beyer</li>
           </ul>
           <div class="clear-20"></div>
-          <h5>MY ROLE</h5>
+          <h3 class="h5">MY ROLE</h3>
             <ul>
               <li>Game Design</li>
               <li>UI Design</li>
@@ -94,16 +99,16 @@
       <div class="container">
         <div class="row">
             <div class="col s12 m6 l6">
-               <img src="../images/zensketch/zensketch1.png" class="materialboxed"></img>
-               <img src="../images/zensketch/zensketch3.png" class="materialboxed"></img>
-               <img src="../images/portfolio/zensketch/use1.jpg" class="materialboxed"></img>
-               <img src="../images/portfolio/zensketch/use3.jpg" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 1 of 8" src="../images/zensketch/zensketch1.png" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 2 of 8" src="../images/zensketch/zensketch3.png" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 3 of 8" src="../images/portfolio/zensketch/use1.jpg" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 4 of 8" src="../images/portfolio/zensketch/use3.jpg" class="materialboxed"></img>
             </div>
              <div class="col s12 m6 l6">
-                <img src="../images/zensketch/zensketch2.png" class="materialboxed"></img>
-                <img src="../images/zensketch/screenshot1.jpg" class="materialboxed"></img>
-               <img src="../images/portfolio/zensketch/use2.jpg" class="materialboxed"></img>
-               <img src="../images/portfolio/zensketch/use4.jpg" class="materialboxed"></img>
+                <img alt="Game UI – ZenSketch game screen, image 5 of 8" src="../images/zensketch/zensketch2.png" class="materialboxed"></img>
+                <img alt="Game UI – ZenSketch game screen, image 6 of 8" src="../images/zensketch/screenshot1.jpg" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 7 of 8" src="../images/portfolio/zensketch/use2.jpg" class="materialboxed"></img>
+               <img alt="Game UI – ZenSketch game screen, image 8 of 8" src="../images/portfolio/zensketch/use4.jpg" class="materialboxed"></img>
             </div>
         </div>
      </div>
@@ -113,27 +118,29 @@
     <div class="container">
       <div class="row">
         <div class="col s12 m9 l9">
-          <h4>Spiritual Successor</h4>
-          <p>I am building a more full-length spiritual successor of this game in Unity game engine. I have done all design, development, art direction, UI, and animation and gained significant experience with Unity.</h5>
+          <h2 class="h4">Spiritual Successor</h2>
+          <p>I am building a more full-length spiritual successor of this game in Unity game engine. I have done all design, development, art direction, UI, and animation and gained significant experience with Unity.</p>
         </div>
         <div class="col s12 m3 l3">
         </div>
       </div>
       <div class="row">
         <div class="col s12 m6 l6">
-            <img src="../images/zensketch/path1.png" class="materialboxed"></img>
-            <img src="../images/zensketch/path3.png" class="materialboxed"></img>
+            <img alt="Game UI – Spiritual Successor, image 1 of 4" src="../images/zensketch/path1.png" class="materialboxed"></img>
+            <img alt="Game UI – Spiritual Successor, image 2 of 4" src="../images/zensketch/path3.png" class="materialboxed"></img>
         </div>
         <div class="col s12 m6 l6">
-            <img src="../images/zensketch/path2.png" class="materialboxed"></img>
-            <img src="../images/zensketch/path4.png" class="materialboxed"></img>
+            <img alt="Game UI – Spiritual Successor, image 3 of 4" src="../images/zensketch/path2.png" class="materialboxed"></img>
+            <img alt="Game UI – Spiritual Successor, image 4 of 4" src="../images/zensketch/path4.png" class="materialboxed"></img>
         </div>
       </div>
     </div>
   </div>
 
 
-<div class="footer">
+</main>
+
+<div class="footer" role="contentinfo">
     &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
     <div class="right">VERSION 4.2 <em>REFRESH</em></div>
 </div>

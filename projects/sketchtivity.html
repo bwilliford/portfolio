@@ -1,7 +1,7 @@
-<html>
+<html lang="en">
 
 <head>
-  <title>Blake Williford // Designer + Creative Technologist</title>
+  <title>Sketchtivity Case Study | Blake Williford</title>
   <meta charset="UTF-8">
   <meta name="description" content="Design and Creative Technology services">
   <meta name="keywords"
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
   <link rel="stylesheet" href="../css/style-v425.css">
+  <link rel="stylesheet" href="../css/a11y.css">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--JS Frameworks-->
@@ -31,17 +32,18 @@
 <body>
 
   <!-- Logo -->
-  <a href="../index.html" aria-label="Returns to home page">
-    <div id="logo" alt="Blake Williford Design">
-    </div>
-  </a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div role="banner">
+    <!-- Logo -->
+    <a href="../index.html" aria-label="Blake Williford, home"><div id="logo"></div></a>
 
   <!-- Nav -->
-  <div id="navTrigger" onclick="toggleNav()"></div>
+  <button id="navTrigger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navWrapper" onclick="toggleNav()"></button>
 
   <!--Header-->
   <div class="header"></div>
-  <div id="navWrapper">
+  <div id="navWrapper" role="navigation" aria-label="Main">
 
     <ul id="nav">
       <li><a href="../index.html" onclick="toggleNav()">Design</a></li>
@@ -50,6 +52,9 @@
       <li><a href="../contact.html" onclick="toggleNav()">Contact</a></li>
     </ul>
   </div>
+    </div>
+
+    <main id="main" tabindex="-1">
 
 
   <div id="main-progressbar-container">
@@ -57,10 +62,9 @@
     </div>
   </div>
 
-  <div class="scrollUpButton" onclick="scrollToTop()"></div>
+  <button type="button" class="scrollUpButton" aria-label="Back to top" onclick="scrollToTop()"></button>
 
-  <a href="#summary">
-    <div class="down"></div>
+  <a href="#summary" aria-label="Skip to content"><div class="down"></div>
   </a>
 
   <div id="project-progressbar-container">
@@ -94,8 +98,8 @@
       <div class="row">
         <div class="col s12 m2 l2"></div>
         <div class="col s12 m8 l8">
-          <img src="../images/portfolio/sketchtivity/logo.svg" style="width: 40%; margin: 0 auto; display: block;">
-          <h2>Educational App for Learning Sketching</h2>
+          <img alt="Sketchtivity logo" src="../images/portfolio/sketchtivity/logo.svg" style="width: 40%; margin: 0 auto; display: block;">
+          <h1 class="h2">Educational App for Learning Sketching</h1>
           <p>This case study details the research and iteration that went into Sketchtivity, an NSF-funded research
             project that was the basis of my PhD dissertation, as well as the product I spun out of it, DrawDojo
         </div>
@@ -105,7 +109,7 @@
 
       <div class="row">
         <div class="col s12 m4 l4">
-          <h5>MY ROLE</h5>
+          <h2 class="h5">MY ROLE</h2>
           <ul class="portfolioSkills">
             <li>UX Research</li>
             <li>UX Design</li>
@@ -115,7 +119,7 @@
             <li>Innovation</li>
           </ul>
           <div class="clear-20"></div>
-          <h5>COLLABORATORS</h5>
+          <h2 class="h5">COLLABORATORS</h2>
           <ul class="portfolioSkills">
             <li class="">Matthew Runyon</li>
             <li class="">Dr. Tracy Hammond</li>
@@ -124,7 +128,7 @@
           </ul>
         </div>
         <div class="col s12 m8 l8">
-          <h5>ACCOMPLISHMENTS</h5>
+          <h2 class="h5">ACCOMPLISHMENTS</h2>
           <ul class="accomplishments">
             <li class="">Proved through user studies with hundreds of students that <b>students can make statistically
                 significant improvements in accuracy, line quality, and speed of basic primitives</b></li>
@@ -138,7 +142,7 @@
             <li class=""><b>Published and presented work at top HCI conferences around the world</b> including CHI, IUI,
               SBIM, CHI Play, and Creativity & Cognition</li>
             <li><b>Spun out an app</b> from the research called <a href="https://www.drawdojo.com"
-                target="blank">DrawDojo</a></li>
+                target="_blank" rel="noopener">DrawDojo</a></li>
           </ul>
         </div>
       </div>
@@ -234,7 +238,7 @@
 
           <h2>BACKGROUND</h2>
           <div class="col s12 m6 l6">
-            <img src="../images/portfolio/sketchtivity/background.jpg"></img>
+            <img alt="Sketchtivity – Background" src="../images/portfolio/sketchtivity/background.jpg"></img>
           </div>
           <div class="col s12 m6 l6" style="padding-left: 20px;">
             <p>Drawing is a skill that can be difficult to learn for many people. The act of drawing is complex and
@@ -255,7 +259,7 @@
           <div class="clear-60"></div>
           <h2>MOTIVATION</h2>
           <div class="col s12 m6 l6">
-            <img src="../images/portfolio/sketchtivity/experiencemap.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Motivation: experiencemap, image 1 of 2" src="../images/portfolio/sketchtivity/experiencemap.jpg" class="materialboxed"></img>
           </div>
           <div class="col s12 m6 l6" style="padding-left: 20px;">
             <p>My research has led to me realize the major difference between beginners who struggle at sketching and
@@ -292,10 +296,10 @@
           <div class="col s12 m2 l2">
           </div>
           <div class="col s12 m3 l3">
-            <img src="../images/portfolio/sketchtivity/participants.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Understanding the users: participants, image 1 of 2" src="../images/portfolio/sketchtivity/participants.jpg" class="materialboxed"></img>
           </div>
           <div class="col s12 m9 l9">
-            <img src="../images/portfolio/sketchtivity/personas.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Understanding the users: personas, image 1 of 2" src="../images/portfolio/sketchtivity/personas.jpg" class="materialboxed"></img>
           </div>
         </div>
 
@@ -305,7 +309,7 @@
           <div class="clear-60"></div>
           <h2>MOTIVATION</h2>
           <div class="col s12 m6 l6">
-            <img src="../images/portfolio/sketchtivity/experiencemap.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Motivation: experiencemap, image 2 of 2" src="../images/portfolio/sketchtivity/experiencemap.jpg" class="materialboxed"></img>
           </div>
           <div class="col s12 m6 l6" style="padding-left: 20px;">
             <p>My research has led to me realize the major difference between beginners who struggle at sketching and
@@ -342,10 +346,10 @@
           <div class="col s12 m2 l2">
           </div>
           <div class="col s12 m3 l3">
-            <img src="../images/portfolio/sketchtivity/participants.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Understanding the users: participants, image 2 of 2" src="../images/portfolio/sketchtivity/participants.jpg" class="materialboxed"></img>
           </div>
           <div class="col s12 m9 l9">
-            <img src="../images/portfolio/sketchtivity/personas.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Understanding the users: personas, image 2 of 2" src="../images/portfolio/sketchtivity/personas.jpg" class="materialboxed"></img>
           </div>
         </div>
 
@@ -364,8 +368,8 @@
               accepted and SRL began working on the project (I joined SRL 2 years later to lead development)</p>
           </div>
           <div class="col s12 m6 l6">
-            <img src="../images/portfolio/sketchtivity/Wireframing.jpg" class="materialboxed"></img>
-            <img src="../images/portfolio/sketchtivity/usabilitytest1.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 1 - low-fidelity prototype and usability testing: wireframing" src="../images/portfolio/sketchtivity/Wireframing.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 1 - low-fidelity prototype and usability testing: usabilitytest" src="../images/portfolio/sketchtivity/usabilitytest1.jpg" class="materialboxed"></img>
 
           </div>
         </div>
@@ -384,10 +388,10 @@
             <p><i>Speed of basic primitives</i></p>
           </div>
           <div class="col s12 m4 l4">
-            <img src="../images/portfolio/sketchtivity/prototype2.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 2 - mid-fidelity prototype and usability testing" src="../images/portfolio/sketchtivity/prototype2.jpg" class="materialboxed"></img>
           </div>
           <div class="col s12 m4 l4">
-            <img src="../images/portfolio/sketchtivity/usabilitytest2.jpg" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 2 - mid-fidelity prototype and usability testing: usabilitytest" src="../images/portfolio/sketchtivity/usabilitytest2.jpg" class="materialboxed"></img>
           </div>
         </div>
 
@@ -410,16 +414,16 @@
         </div>
         <div class="row">
           <div class="col s12 m4 l4">
-            <img src="../images/portfolio/sketchtivity/sketch5.png" class="materialboxed"></img>
-            <img src="../images/portfolio/sketchtivity/sketch3.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 1 of 6" src="../images/portfolio/sketchtivity/sketch5.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 2 of 6" src="../images/portfolio/sketchtivity/sketch3.png" class="materialboxed"></img>
           </div>
           <div class="col s12 m4 l4">
-            <img src="../images/portfolio/sketchtivity/sketch1.png" class="materialboxed"></img>
-            <img src="../images/portfolio/sketchtivity/sketch4.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 3 of 6" src="../images/portfolio/sketchtivity/sketch1.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 4 of 6" src="../images/portfolio/sketchtivity/sketch4.png" class="materialboxed"></img>
           </div>
           <div class="col s12 m4 l4">
-            <img src="../images/portfolio/sketchtivity/sketch2.png" class="materialboxed"></img>
-            <img src="../images/portfolio/sketchtivity/sketch6.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 5 of 6" src="../images/portfolio/sketchtivity/sketch2.png" class="materialboxed"></img>
+            <img alt="Sketchtivity – Iteration 3 - high-fidelity prototype and ongoing deployment: sketch, image 6 of 6" src="../images/portfolio/sketchtivity/sketch6.png" class="materialboxed"></img>
           </div>
         </div>
 
@@ -451,21 +455,21 @@
       </div>
       <div class="row">
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/sketchtivity/sketch1.png" class="materialboxed"></img>
+          <img alt="Sketchtivity – Perspective algorithm and intelligent interface: sketch" src="../images/portfolio/sketchtivity/sketch1.png" class="materialboxed"></img>
         </div>
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/sketchtivity/studydesign.jpg" class="materialboxed"></img>
+          <img alt="Sketchtivity – Perspective algorithm and intelligent interface: studydesign" src="../images/portfolio/sketchtivity/studydesign.jpg" class="materialboxed"></img>
         </div>
       </div>
       <div class="row">
         <div class="col s12 m4 l4">
-          <img src="../images/portfolio/sketchtivity/perspchart.png" class="materialboxed"></img>
+          <img alt="Sketchtivity – Perspective algorithm and intelligent interface: perspchart, image 1 of 2" src="../images/portfolio/sketchtivity/perspchart.png" class="materialboxed"></img>
         </div>
         <div class="col s12 m4 l4">
-          <img src="../images/portfolio/sketchtivity/perspchart2.png" class="materialboxed"></img>
+          <img alt="Sketchtivity – Perspective algorithm and intelligent interface: perspchart, image 2 of 2" src="../images/portfolio/sketchtivity/perspchart2.png" class="materialboxed"></img>
         </div>
         <div class="col s12 m4 l4">
-          <img src="../images/portfolio/sketchtivity/perspective.jpg" class="materialboxed"></img>
+          <img alt="Sketchtivity – Perspective algorithm and intelligent interface" src="../images/portfolio/sketchtivity/perspective.jpg" class="materialboxed"></img>
         </div>
       </div>
 
@@ -476,7 +480,7 @@
         <div class="col s12 m2 l2"></div>
         <div class="col s12 m8 l8">
           <p>After finishing my PhD I spun out a web app from the research called <a href="https://www.drawdojo.com"
-              target="blank">DrawDojo</a>. DrawDojo is an ongoing project to practice app design and development, and
+              target="_blank" rel="noopener">DrawDojo</a>. DrawDojo is an ongoing project to practice app design and development, and
             share resources related to teaching drawing. It can be used on any tablet device to practice basic drawing
             skills.</p>
         </div>
@@ -486,16 +490,16 @@
 
       <div class="row">
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/sketchtivity/drawdojo1.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo3.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo5.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo7.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 1 of 8" src="../images/portfolio/sketchtivity/drawdojo1.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 2 of 8" src="../images/portfolio/sketchtivity/drawdojo3.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 3 of 8" src="../images/portfolio/sketchtivity/drawdojo5.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 4 of 8" src="../images/portfolio/sketchtivity/drawdojo7.jpg" class="materialboxed rounded"></img>
         </div>
         <div class="col s12 m6 l6">
-          <img src="../images/portfolio/sketchtivity/drawdojo2.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo4.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo6.jpg" class="materialboxed rounded"></img>
-          <img src="../images/portfolio/sketchtivity/drawdojo8.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 5 of 8" src="../images/portfolio/sketchtivity/drawdojo2.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 6 of 8" src="../images/portfolio/sketchtivity/drawdojo4.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 7 of 8" src="../images/portfolio/sketchtivity/drawdojo6.jpg" class="materialboxed rounded"></img>
+          <img alt="Sketchtivity – Drawdojo, image 8 of 8" src="../images/portfolio/sketchtivity/drawdojo8.jpg" class="materialboxed rounded"></img>
         </div>
       </div>
     </div>
@@ -508,13 +512,16 @@
   <div class="section" id="project-nav">
     <div class="container">
       <div class="project-nav-container">
-        <a href="../index.html#design" class="prev-project"></a>
-        <a href="preemptive.html" class="next-project"></a>
+        <a href="../index.html#design" class="prev-project" aria-label="Back to all projects"></a>
+        <a href="preemptive.html" class="next-project" aria-label="Next project: PreemptiveAI"></a>
       </div>
     </div>
   </div>
 
-  <div class="footer">
+  
+</main>
+
+<div class="footer" role="contentinfo">
     &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
     <div class="right">VERSION 4.2 <em>REFRESH</em></div>
   </div>

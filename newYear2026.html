@@ -166,7 +166,7 @@ canvas {
 
 <body>
 <main>
-  <canvas id="particles"></canvas>
+  <canvas aria-hidden="true" id="particles"></canvas>
 
   <div class="glow" id="glow"></div>
   <div class="center">
@@ -268,13 +268,16 @@ for (let i = 0; i < 2500; i++) {
   particles.push(new Particle());
 }
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function animate() {
   ctx.clearRect(0, 0, w, h);
   particles.forEach(p => {
     p.update();
     p.draw();
   });
-  requestAnimationFrame(animate);
+  // Draw a single static frame for visitors who prefer reduced motion
+  if (!reduceMotion) requestAnimationFrame(animate);
 }
 animate();
 

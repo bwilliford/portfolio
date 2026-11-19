@@ -1,7 +1,7 @@
-<html>
+<html lang="en">
 
 <head>
-  <title>Blake Williford // Designer + Creative Technologist</title>
+  <title>Kognitos Case Study | Blake Williford</title>
   <meta charset="UTF-8">
   <meta name="description" content="Design and Creative Technology services">
   <meta name="keywords"
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
   <link rel="stylesheet" href="../css/style-v425.css">
+  <link rel="stylesheet" href="../css/a11y.css">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--JS Frameworks-->
@@ -34,17 +35,18 @@
 <body>
 
     <!-- Logo -->
-    <a href="../index.html" aria-label="Returns to home page">
-        <div id="logo" alt="Blake Williford Design">
-        </div>
-    </a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div role="banner">
+    <!-- Logo -->
+    <a href="../index.html" aria-label="Blake Williford, home"><div id="logo"></div></a>
 
     <!-- Nav -->
-    <div id="navTrigger" onclick="toggleNav()"></div>
+    <button id="navTrigger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navWrapper" onclick="toggleNav()"></button>
 
     <!--Header-->
     <div class="header"></div>
-    <div id="navWrapper">
+    <div id="navWrapper" role="navigation" aria-label="Main">
 
         <ul id="nav">
         <li><a href="../index.html" onclick="toggleNav()">Design</a></li>
@@ -53,6 +55,9 @@
         <li><a href="../contact.html" onclick="toggleNav()">Contact</a></li>
         </ul>
     </div>
+    </div>
+
+    <main id="main" tabindex="-1">
 
 
   <div id="main-progressbar-container">
@@ -60,9 +65,9 @@
     </div>
   </div>
 
-  <div class="scrollUpButton" onclick="scrollToTop()"></div>
+  <button type="button" class="scrollUpButton" aria-label="Back to top" onclick="scrollToTop()"></button>
 
-  <a href="#summary"><div class="down"></div></a>
+  <a href="#summary" aria-label="Skip to content"><div class="down"></div></a>
 
   <div id="project-progressbar-container">
     <ul>
@@ -95,9 +100,9 @@
         <div class="row">
             <div class="col s12 m2 l2"></div>
             <div class="col s12 m8 l8">
-                <img loading="lazy" src="../images/clients/kognitosColor.svg" style="width: 300px; margin: 0 auto; display: block;">
+                <img alt="Kognitos logo" loading="lazy" src="../images/clients/kognitosColor.svg" style="width: 300px; margin: 0 auto; display: block;">
                 <h1>AI-Powered Business Automation Platform</h1>
-                <h3><em>Empowering everyday business users to automate workflows using natural language</em></h3>
+                <h2 class="h3"><em>Empowering everyday business users to automate workflows using natural language</em></h2>
                 <p>Kognitos set out to reinvent business automation by enabling non-technical users to automate workflows using natural language (english). The goal was to evolve the platform from a technically powerful but expert-dependent system into an intuitive, AI-native interface accessible to everyday business users in operations, finance, etc.</p>
             </div>
             <div class="col s12 m2 l2"></div>
@@ -105,14 +110,14 @@
         <div class="clear-60"></div>
         <div class="row">
             <div class="col s12 m4 l4">
-                <h5>COLLABORATORS</h5>
+                <h3 class="h5">COLLABORATORS</h3>
                 <ul class="portfolioSkills">
                     <li class="">Rushil Khurana</li>
                     <li class="">Mudra Nagda</li>
                 </ul>
             </div>
             <div class="col s12 m4 l4">
-                <h5>MY ROLE</h5>
+                <h3 class="h5">MY ROLE</h3>
                 <ul class="portfolioSkills">
                     <li>UX Design</li>
                     <li>UI Design</li>
@@ -124,7 +129,7 @@
             </div>
 
             <div class="col s12 m4 l4">
-                <h5>ACCOMPLISHMENTS</h5>
+                <h3 class="h5">ACCOMPLISHMENTS</h3>
                 <ul class="accomplishments">
                     <li><b>Led product design</b> for the V2 of their web-based business automation application.</li>
                     <li>Collaborated with head of design and engineering team to understand limitations and iterate on the product.</li>
@@ -157,9 +162,9 @@
         <div class="col s12 m8 l8">
             <div style="display: flex; flex-direction: column; justify-content: center; height: 55vh;">
                 <h2>SCOPE</h2>
-                <h5 class="center-align">Large B2B Enterprise SaaS</h5>
-                <h5 class="center-align">Less tech-savvy companies typically (e.g. Coke, Pepsi, Wells Fargo)</h5>
-                <h5 class="center-align">Business users typically in operations, finance, HR, etc.</h5>
+                <h3 class="h5 center-align">Large B2B Enterprise SaaS</h3>
+                <h3 class="h5 center-align">Less tech-savvy companies typically (e.g. Coke, Pepsi, Wells Fargo)</h3>
+                <h3 class="h5 center-align">Business users typically in operations, finance, HR, etc.</h3>
             </div>
         </div>
       </div>
@@ -173,17 +178,17 @@
         <div class="clear-60"></div>
         <div class="row">
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/persona.jpg" class="materialboxed"></img>
+                <img alt="Kognitos – Persona" loading="lazy" src="../images/portfolio/kognitos/persona.jpg" class="materialboxed"></img>
                 <h3>Persona</h3>
                 <p>The primary persona is a business user who is not particularly tech-savvy and needs to automate workflows using natural language (english).</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/scenarios.jpg" class="materialboxed"></img>
+                <img alt="Kognitos – Scenarios" loading="lazy" src="../images/portfolio/kognitos/scenarios.jpg" class="materialboxed"></img>
                 <h3>Scenarios</h3>
                 <p>Typical example scenarios for the software include things like automating claims processing, or automating invoice processing.</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/flows.jpg" class="materialboxed"></img>
+                <img alt="Kognitos – Flows" loading="lazy" src="../images/portfolio/kognitos/flows.jpg" class="materialboxed"></img>
                 <h3>Flows</h3>
                 <p>Key flows that needed to be designed.</p>
             </div>
@@ -203,22 +208,22 @@
           </div>
         <div class="row">
             <div class="col s12 m6 l3">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-1.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Initialize: iteration, image 1 of 2" loading="lazy" src="../images/portfolio/kognitos/iteration1-1.jpg" class="materialboxed fullWidth"></img>
                 <h3>Initialize</h3>
                 <p>Users start by describing the automation they want to create.</p>
             </div>
             <div class="col s12 m6 l3">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-2.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Edit: iteration, image 1 of 2" loading="lazy" src="../images/portfolio/kognitos/iteration1-2.jpg" class="materialboxed fullWidth"></img>
                 <h3>Edit</h3>
                 <p>Users can edit the automation by writing directly in english or prompting the Kognitos agent. The agent detects issues or clarifications.</p>
             </div>
             <div class="col s12 m6 l3">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-3.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Run: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration1-3.jpg" class="materialboxed fullWidth"></img>
                 <h3>Run</h3>
                 <p>Users now run the automation and see the results. The user has to provide inputs. Errors are sometimes detected and the user is prompted to fix them.</p>
             </div>
             <div class="col s12 m6 l3">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-4.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Results: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration1-4.jpg" class="materialboxed fullWidth"></img>
                 <h3>Results</h3>
                 <p>Users can deploy the automation to their system.</p>
             </div>
@@ -235,13 +240,13 @@
 
         <div class="row">
             <div class="col s12 m6 l6">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-1.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Version A - Initial Prompt Only: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration1-1.jpg" class="materialboxed fullWidth"></img>
                 <h3>Version A - Initial Prompt Only</h3>
                 <p>The system take the initial prompt and runs with it. Clarifications happens after it creates the intial SOP (Standard Operating Procedure).</p>
                 
             </div>
             <div class="col s12 m6 l6">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration1-5.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Version B - Clarification Conversation: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration1-5.jpg" class="materialboxed fullWidth"></img>
                 <h3>Version B - Clarification Conversation</h3>
                 <p>The system asks for clarifications before it creates the intial SOP. This ensures it can create a more accurate SOP to start with.</p>
             </div>
@@ -283,7 +288,7 @@
             
         <div class="clear-60"></div>
         <h2 class="uppercase">Interactive Prototype</h2>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 800px; display: block;" width="800" height="600" src="https://embed.figma.com/proto/4mbeNqTEPdlvA2yVmZcXoW/Kognitos?page-id=349%3A404&node-id=349-491&p=f&viewport=15%2C122%2C0.04&scaling=scale-down&content-scaling=responsive&starting-point-node-id=349%3A491&embed-host=share&hide-ui=1" allowfullscreen></iframe>
+        <iframe title="Kognitos interactive prototype (Figma)" style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 800px; display: block;" width="800" height="600" src="https://embed.figma.com/proto/4mbeNqTEPdlvA2yVmZcXoW/Kognitos?page-id=349%3A404&node-id=349-491&p=f&viewport=15%2C122%2C0.04&scaling=scale-down&content-scaling=responsive&starting-point-node-id=349%3A491&embed-host=share&hide-ui=1" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -300,17 +305,17 @@
         <div class="clear-60"></div>
         <div class="row">
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-1.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Initialize: iteration, image 2 of 2" loading="lazy" src="../images/portfolio/kognitos/iteration2-1.jpg" class="materialboxed fullWidth"></img>
                 <h3>Initialize</h3>
                 <p>Users start by describing the automation they want to create.</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-2.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Edit: iteration, image 2 of 2" loading="lazy" src="../images/portfolio/kognitos/iteration2-2.jpg" class="materialboxed fullWidth"></img>
                 <h3>Edit</h3>
                 <p>Users can edit the automation by writing directly in englsih or prompting the Kognitos agent. The agent detects issues or clarifications.</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-3.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Clarifications: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration2-3.jpg" class="materialboxed fullWidth"></img>
                 <h3>Clarifications</h3>
                 <p>Users must clarify details of the automation before it can run.</p>
             </div>
@@ -318,17 +323,17 @@
         <div class="clear-60"></div>
         <div class="row">
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-4.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Inputs: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration2-4.jpg" class="materialboxed fullWidth"></img>
                 <h3>Inputs</h3>
                 <p>Users must provide valid inputs for the automation to run (e.g. email addresses, files, dates, etc.).</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-5.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Handle Exceptions: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration2-5.jpg" class="materialboxed fullWidth"></img>
                 <h3>Handle Exceptions</h3>
                 <p>Users sometimes have to handle exceptions and errors that occur during the automation running.</p>
             </div>
             <div class="col s12 m4 l4">
-                <img loading="lazy" src="../images/portfolio/kognitos/iteration2-6.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Explore Results: iteration" loading="lazy" src="../images/portfolio/kognitos/iteration2-6.jpg" class="materialboxed fullWidth"></img>
                 <h3>Explore Results</h3>
                 <p>Users can explore the results of the automation by prompting the Kognitos agent.</p>
             </div>
@@ -342,12 +347,12 @@
         
         
         <!-- <h2 class="uppercase">Interactive Prototype</h2>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 800px; display: block;" width="800" height="600" src="https://embed.figma.com/proto/4mbeNqTEPdlvA2yVmZcXoW/Kognitos?page-id=708%3A858&node-id=708-859&p=f&viewport=793%2C419%2C0.2&scaling=scale-down&content-scaling=responsive&starting-point-node-id=708%3A859&embed-host=share&hide-ui=1" allowfullscreen></iframe> -->
+        <iframe title="Kognitos interactive prototype (Figma)" style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 800px; display: block;" width="800" height="600" src="https://embed.figma.com/proto/4mbeNqTEPdlvA2yVmZcXoW/Kognitos?page-id=708%3A858&node-id=708-859&p=f&viewport=793%2C419%2C0.2&scaling=scale-down&content-scaling=responsive&starting-point-node-id=708%3A859&embed-host=share&hide-ui=1" allowfullscreen></iframe> -->
     </div>
 </div>
 
 <div class="section">
-    <img src="../images/portfolio/kognitos/beautyShot.png" class="materialboxed fullWidth"></img>
+    <img alt="Kognitos – Final aop flow: beauty shot" src="../images/portfolio/kognitos/beautyShot.png" class="materialboxed fullWidth"></img>
 </div>
 
 
@@ -363,12 +368,12 @@
         </div>
         <div class="row">
             <div class="col s12 m6 l6">
-                <img loading="lazy" src="../images/portfolio/kognitos/dashboard1.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Dashboard" loading="lazy" src="../images/portfolio/kognitos/dashboard1.jpg" class="materialboxed fullWidth"></img>
                 <h3>Dashboard</h3>
                 <p>The dashboard is the main page for users to manage their automations. It provides a high-level overview of the automations they have created, as well as the ability to create new automations.</p>
             </div>
             <div class="col s12 m6 l6">
-                <img loading="lazy" src="../images/portfolio/kognitos/dashboard2.jpg" class="materialboxed fullWidth"></img>
+                <img alt="Kognitos – Automation Details: dashboard" loading="lazy" src="../images/portfolio/kognitos/dashboard2.jpg" class="materialboxed fullWidth"></img>
                 <h3>Automation Details</h3>
                 <p>Users can view the details of an automation, including recent runs, inputs, and results.</p>
             </div>
@@ -386,7 +391,7 @@
             </div>
             <div class="col s12 m2 l2"></div>
         </div>
-        <img loading="lazy" src="../images/portfolio/kognitos/visualDesign.jpg" class="materialboxed fullWidth"></img>
+        <img alt="Kognitos – Improving Design System: visual design" loading="lazy" src="../images/portfolio/kognitos/visualDesign.jpg" class="materialboxed fullWidth"></img>
         <div class="clear-60"></div>
         <div class="row">
             <div class="col s12 m2 l2"></div>
@@ -419,15 +424,17 @@
 <div class="section" id="project-nav">
     <div class="container">
       <div class="project-nav-container">
-        <a href="../index.html#design" class="prev-project"></a>
-        <a href="preemptive.html" class="next-project"></a>
+        <a href="../index.html#design" class="prev-project" aria-label="Back to all projects"></a>
+        <a href="preemptive.html" class="next-project" aria-label="Next project: PreemptiveAI"></a>
       </div>
     </div>
   </div>
 
 
 
-<div class="footer">
+</main>
+
+<div class="footer" role="contentinfo">
     &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
     <div class="right">VERSION 4.2 <em>REFRESH</em></div>
 </div>

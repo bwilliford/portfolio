@@ -1,7 +1,7 @@
-<html>
+<html lang="en">
 
 <head>
-    <title>Blake Williford // Designer + Creative Technologist</title>
+    <title>ChalkCast Case Study | Blake Williford</title>
     <meta charset="UTF-8">
     <meta name="description" content="Design and Creative Technology services">
     <meta name="keywords" content="Design, UX, UI, Research, Front-end Development, HCI, Sketch Recognition, Creativity, Branding, Illustration, Sketch">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
     <link rel="stylesheet" href="../css/style-v425.css">
+    <link rel="stylesheet" href="../css/a11y.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--JS Frameworks-->
@@ -30,17 +31,18 @@
 <body>
 
     <!-- Logo -->
-    <a href="../index.html" aria-label="Returns to home page">
-        <div id="logo" alt="Blake Williford Design">
-        </div>
-    </a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div role="banner">
+    <!-- Logo -->
+    <a href="../index.html" aria-label="Blake Williford, home"><div id="logo"></div></a>
 
     <!-- Nav -->
-    <div id="navTrigger" onclick="toggleNav()"></div>
+    <button id="navTrigger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navWrapper" onclick="toggleNav()"></button>
 
     <!--Header-->
     <div class="header"></div>
-    <div id="navWrapper">
+    <div id="navWrapper" role="navigation" aria-label="Main">
 
         <ul id="nav">
         <li><a href="../index.html" onclick="toggleNav()">Design</a></li>
@@ -49,6 +51,9 @@
         <li><a href="../contact.html" onclick="toggleNav()">Contact</a></li>
         </ul>
     </div>
+    </div>
+
+    <main id="main" tabindex="-1">
 
 
     <div id="main-progressbar-container">
@@ -56,7 +61,7 @@
         </div>
     </div>
 
-    <div class="scrollUpButton" onclick="scrollToTop()"></div>
+    <button type="button" class="scrollUpButton" aria-label="Back to top" onclick="scrollToTop()"></button>
 
     <div id="project-progressbar-container">
         <ul>
@@ -80,7 +85,7 @@
         </ul>
     </div>
 
-    <a href="#summary"><div class="down"></div>
+    <a href="#summary" aria-label="Skip to content"><div class="down"></div>
     </a>
 
     <div class="section" id="title" style="background-image: url('../images/portfolio/chalkcast/finaldesign3.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
@@ -91,8 +96,8 @@
             <div class="row">
                   <div class="col s12 m2 l2"></div>
                   <div class="col s12 m8 l8">
-                  <img src="../images/clients/chalkcast.png" style="width: 40%; margin: 0 auto; display: block;">
-                  <h2>Innovative virtual classroom tool for teaching anything, to anyone, from anywhere</h2>
+                  <img alt="ChalkCast logo" src="../images/clients/chalkcast.png" style="width: 40%; margin: 0 auto; display: block;">
+                  <h1 class="h2">Innovative virtual classroom tool for teaching anything, to anyone, from anywhere</h1>
                 <p>This case study details the UX research and design process for two key ChalkCast features important for engagement while teaching virtually. In previous research we had discovered that <b>one of the biggest challenges when teaching remotely is engaging the students and encouraging interaction</b>. For example, in most classes students refuse to turn their camera on and may not even be there at all. How can learning remotely be more fun and engaging?</p>
                  </div>
                  <div class="col s12 m2 l2"></div>
@@ -101,7 +106,7 @@
         
         <div class="row">
             <div class="col s12 m4 l4">
-                <h5>MY ROLE</h5>
+                <h2 class="h5">MY ROLE</h2>
                 <ul class="portfolioSkills">
                     <li>UX Research</li>
                     <li>UX Design</li>
@@ -111,14 +116,14 @@
                     <li>Innovation</li>
                 </ul>
                 <div class="clear-20"></div>
-                <h5>COLLABORATORS</h5>
+                <h2 class="h5">COLLABORATORS</h2>
                 <ul class="portfolioSkills">
                     <li>Brennan Banta</li>
                     <li>Christina James</li>
                 </ul>
             </div>
             <div class="col s12 m8 l8">
-                <h5>ACCOMPLISHMENTS</h5>
+                <h2 class="h5">ACCOMPLISHMENTS</h2>
                 <ul class="accomplishments">
                     <li><b>Led UX / UI design</b> for this educational technology startup (virtual classroom tool).</li>
                     <li>Rebranded company and collaborated with mid-level UX designer to produce a <b>more consistent and cohesive brand and  design system.</b></li>
@@ -156,10 +161,10 @@
 
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/research1.png">
+                        <img alt="ChalkCast – Research, image 1 of 2" class="materialboxed" src="../images/portfolio/chalkcast/research1.png">
                     </div>
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/research2.png">
+                        <img alt="ChalkCast – Research, image 2 of 2" class="materialboxed" src="../images/portfolio/chalkcast/research2.png">
                     </div>
                 </div>
 
@@ -174,14 +179,14 @@
 
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona1.jpg">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona3.jpg">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona5.jpg">
+                        <img alt="ChalkCast – Personas, image 1 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona1.jpg">
+                        <img alt="ChalkCast – Personas, image 2 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona3.jpg">
+                        <img alt="ChalkCast – Personas, image 3 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona5.jpg">
                     </div>
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona2.jpg">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona4.jpg">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/persona6.jpg">
+                        <img alt="ChalkCast – Personas, image 4 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona2.jpg">
+                        <img alt="ChalkCast – Personas, image 5 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona4.jpg">
+                        <img alt="ChalkCast – Personas, image 6 of 6" class="materialboxed" src="../images/portfolio/chalkcast/persona6.jpg">
                     </div>
                     <!-- <div class="col s12 m4 l4">
                         <div class="pricing">
@@ -249,14 +254,14 @@
 
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/icebreaker1.png">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/icebreaker2.png">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/icebreaker3.png">     
+                        <img alt="ChalkCast – Themes: icebreaker, image 1 of 3" class="materialboxed" src="../images/portfolio/chalkcast/icebreaker1.png">
+                        <img alt="ChalkCast – Themes: icebreaker, image 2 of 3" class="materialboxed" src="../images/portfolio/chalkcast/icebreaker2.png">
+                        <img alt="ChalkCast – Themes: icebreaker, image 3 of 3" class="materialboxed" src="../images/portfolio/chalkcast/icebreaker3.png">     
                     </div>
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/chalkboard1.png">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/chalkboard2.png">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/chalkboard3.png">
+                        <img alt="ChalkCast – Themes: chalkboard, image 1 of 3" class="materialboxed" src="../images/portfolio/chalkcast/chalkboard1.png">
+                        <img alt="ChalkCast – Themes: chalkboard, image 2 of 3" class="materialboxed" src="../images/portfolio/chalkcast/chalkboard2.png">
+                        <img alt="ChalkCast – Themes: chalkboard, image 3 of 3" class="materialboxed" src="../images/portfolio/chalkcast/chalkboard3.png">
                     </div>
                 </div>
 
@@ -271,10 +276,10 @@
                 </div>
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/valueEffort.png">
+                        <img alt="ChalkCast – Value vs effort planning" class="materialboxed" src="../images/portfolio/chalkcast/valueEffort.png">
                     </div>
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/icebreaker4.png">
+                        <img alt="ChalkCast – Value vs effort planning: icebreaker" class="materialboxed" src="../images/portfolio/chalkcast/icebreaker4.png">
                     </div>
                 </div>
 
@@ -289,10 +294,10 @@
 
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/icebreaker5.png">
+                        <img alt="ChalkCast – Wireframes and usability testing: icebreaker" class="materialboxed" src="../images/portfolio/chalkcast/icebreaker5.png">
                     </div>
                     <div class="col s12 m6 l6">
-                        <img class="materialboxed" src="../images/portfolio/chalkcast/chalkboard5.png">
+                        <img alt="ChalkCast – Wireframes and usability testing: chalkboard" class="materialboxed" src="../images/portfolio/chalkcast/chalkboard5.png">
                     </div>
                 </div>
             </div>
@@ -339,12 +344,12 @@
 
             <div class="row">
                 <div class="col s12 m6 l6">
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/designsystem1.jpg"></a>
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/designsystem3.jpg"></a>
+                    <img alt="ChalkCast – Brand and design system, image 1 of 4" class="materialboxed" src="../images/portfolio/chalkcast/designsystem1.jpg"></a>
+                    <img alt="ChalkCast – Brand and design system, image 2 of 4" class="materialboxed" src="../images/portfolio/chalkcast/designsystem3.jpg"></a>
                 </div>
                 <div class="col s12 m6 l6">
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/designsystem2.jpg"></a>
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/designsystem4.jpg"></a>
+                    <img alt="ChalkCast – Brand and design system, image 3 of 4" class="materialboxed" src="../images/portfolio/chalkcast/designsystem2.jpg"></a>
+                    <img alt="ChalkCast – Brand and design system, image 4 of 4" class="materialboxed" src="../images/portfolio/chalkcast/designsystem4.jpg"></a>
                 </div>
             </div>
 
@@ -352,17 +357,17 @@
             <h2>FINAL DESIGNS</h2>
             <div class="row">
                 <div class="col s12 m6 l6">
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/icebreakerHero.png"></a>
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/finaldesign1.jpg"></a>
+                    <img alt="ChalkCast – Final designs: icebreaker hero" class="materialboxed" src="../images/portfolio/chalkcast/icebreakerHero.png"></a>
+                    <img alt="ChalkCast – Final designs: finaldesign, image 1 of 2" class="materialboxed" src="../images/portfolio/chalkcast/finaldesign1.jpg"></a>
                 </div>
                 <div class="col s12 m6 l6">
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/chalkboardHero.png"></a>
-                    <img class="materialboxed" src="../images/portfolio/chalkcast/finaldesign2.jpg"></a>
+                    <img alt="ChalkCast – Final designs: chalkboard hero" class="materialboxed" src="../images/portfolio/chalkcast/chalkboardHero.png"></a>
+                    <img alt="ChalkCast – Final designs: finaldesign, image 2 of 2" class="materialboxed" src="../images/portfolio/chalkcast/finaldesign2.jpg"></a>
                 </div>
             </div>
             <h2>CHALKBOARD DEMO</h2>
             <div class="map-container">
-                <iframe width="560" height="280" src="https://www.youtube.com/embed/BFGG5o0IvUA?si=HoeOBTKFrC-qyUlm" frameborder="0"
+                <iframe title="ChalkCast video (YouTube)" width="560" height="280" src="https://www.youtube.com/embed/BFGG5o0IvUA?si=HoeOBTKFrC-qyUlm" frameborder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
         </div>
@@ -377,13 +382,13 @@
                 <h2>PROTOTYPES</h2>
                 <div class="col s12 m6 l6">
                     <h2>Icebreaker (Quiz)</h2>
-                    <a href="https://www.figma.com/proto/w9AorlZeO57DGPAh0ihqxp/Icebreaker?node-id=677-605&scaling=contain&page-id=668%3A2&starting-point-node-id=677%3A605" target="blank"><img src="../images/portfolio/chalkcast/icebreakerHero.png"></a>
-                    <a href="https://www.figma.com/proto/w9AorlZeO57DGPAh0ihqxp/Icebreaker?node-id=677-605&scaling=contain&page-id=668%3A2&starting-point-node-id=677%3A605" target="blank"><div class="cta">View Prototype</div></a>
+                    <a href="https://www.figma.com/proto/w9AorlZeO57DGPAh0ihqxp/Icebreaker?node-id=677-605&scaling=contain&page-id=668%3A2&starting-point-node-id=677%3A605" target="_blank" rel="noopener"><img alt="ChalkCast – Icebreaker (Quiz): icebreaker hero" src="../images/portfolio/chalkcast/icebreakerHero.png"></a>
+                    <a href="https://www.figma.com/proto/w9AorlZeO57DGPAh0ihqxp/Icebreaker?node-id=677-605&scaling=contain&page-id=668%3A2&starting-point-node-id=677%3A605" target="_blank" rel="noopener"><div class="cta">View Prototype</div></a>
                 </div>
                 <div class="col s12 m6 l6">
                     <h2>Chalkboard</h2>
-                    <a href="https://blakewilliford.com/concepts/demos/sessionOwner.html" target="blank"><img src="../images/portfolio/chalkcast/chalkboardHero.png"></a>
-                    <a href="https://blakewilliford.com/concepts/demos/sessionOwner.html" target="blank"><div class="cta">View Prototype</div></a>
+                    <a href="https://blakewilliford.com/concepts/demos/sessionOwner.html" target="_blank" rel="noopener"><img alt="ChalkCast – Chalkboard: chalkboard hero" src="../images/portfolio/chalkcast/chalkboardHero.png"></a>
+                    <a href="https://blakewilliford.com/concepts/demos/sessionOwner.html" target="_blank" rel="noopener"><div class="cta">View Prototype</div></a>
                 </div>
             </div>
 
@@ -392,15 +397,15 @@
                     <div class="col s12 m6 l6">
                         <div class="pricing">
                             <p><em>"Not only is Blake a creative thinker and talented designer, but he delivers, and gets things done. We've done some of our best product work building on the foundation of Blake's ideas. His passion and enthusiasm are infectious, and everything is more dynamic when he's around. He is a terrific networker as well, with a tremendously positive outlook on life. I loved having Blake on my team."</em></p>
-                            <h4>Kate Migliazzo</h4>
-                            <h5>Senior Product Manager</h5>
+                            <h3 class="h4">Kate Migliazzo</h3>
+                            <h4 class="h5">Senior Product Manager</h4>
                         </div>
                     </div>
                     <div class="col s12 m6 l6">
                         <div class="pricing">
                             <p><em>"Blake brings an advanced set of programming skills to his design tool belt that make executing features a breeze. During my time working with him, he created high-fidelity mockups that felt so accurate to the real product, our design and research team was better positioned to get meaningful feedback from user testers. Blake also came into our company ready to analyze and improve our information architecture which helped realize the scope of our product. I recommend Blake to teams of any size looking to improve their product and design processes, especially those in the ed tech field, which Blake has demonstrated an immense passion for."</em></p>
-                            <h4>Brennan Banta</h4>
-                            <h5>Product Designer</h5>
+                            <h3 class="h4">Brennan Banta</h3>
+                            <h4 class="h5">Product Designer</h4>
                         </div>
                     </div>
                 </div>
@@ -410,14 +415,16 @@
     <div class="section" id="project-nav">
         <div class="container">
             <div class="project-nav-container">
-                <a href="../index.html#design" class="prev-project"></a>
-                <a href="sketchtivity.html" class="next-project"></a>
+                <a href="../index.html#design" class="prev-project" aria-label="Back to all projects"></a>
+                <a href="sketchtivity.html" class="next-project" aria-label="Next project: Sketchtivity"></a>
             </div>
         </div>
     </div>
 
 
-<div class="footer">
+</main>
+
+<div class="footer" role="contentinfo">
     &copy; BLAKE WILLIFORD <span class="love">CODED WITH &#x2764;</span>
     <div class="right">VERSION 4.2 <em>REFRESH</em></div>
 </div>
