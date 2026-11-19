@@ -1,12 +1,10 @@
 /* Accessibility (WCAG 2.1/2.2 AA) overrides — load after the main stylesheet */
 
 :root {
-  /* Brand color for backgrounds (buttons, nav hover, scrollbar, etc.): same blue-violet hue as the text color,
-     dark enough for white text at 5.1:1 */
-  --brand-color: #525fe6;
-
-  /* Lighter, bluer brand purple for text on the dark background: 6.3:1 on #070614 (the background brand color is only 4.0:1, too dark for text) */
-  --brand-text: #7a85ff;
+  /* One brand hue (246°) in two near-identical shades. No single purple can pass AA both behind white text
+     and as small text on the #070614 page, so: */
+  --brand-color: #6c5ef3; /* backgrounds (buttons, nav hover, scrollbar): white text 4.6:1 */
+  --brand-text: #7d70ff;  /* text on the dark page: 5.4:1 */
 }
 
 /* Screen-reader-only text */
@@ -229,7 +227,7 @@ button.tertiary {
   cursor: inherit;
 }
 
-/* Secondary buttons turn brand-colored on hover; full white text keeps 5:1 contrast (70% white was 3.3:1) */
+/* Secondary buttons turn brand-colored on hover; full white text keeps 4.6:1 contrast */
 .secondary:hover,
 .tertiary:hover,
 .tertiary:focus-visible {

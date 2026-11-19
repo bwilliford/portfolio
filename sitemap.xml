@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://blakewilliford.com/</loc><lastmod>2026-11-19</lastmod><priority>1.0</priority></url>
+  <url><loc>https://blakewilliford.com/bio.html</loc><lastmod>2026-11-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://blakewilliford.com/cv.html</loc><lastmod>2026-11-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://blakewilliford.com/edtech.html</loc><lastmod>2026-11-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://blakewilliford.com/healthtech.html</loc><lastmod>2026-11-19</lastmod><priority>0.9</priority></url>
+  <url><loc>https://blakewilliford.com/contact.html</loc><lastmod>2026-11-19</lastmod><priority>0.6</priority></url>
+
+  <!-- AI products -->
+  <url><loc>https://blakewilliford.com/projects/kognitos.html</loc><lastmod>2026-11-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://blakewilliford.com/projects/snapfx.html</loc><lastmod>2026-11-19</lastmod><priority>0.7</priority></url>
+
+  <!-- Health and fitness technology -->
+  <url><loc>https://blakewilliford.com/projects/preemptive.html</loc><lastmod>2026-11-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://blakewilliford.com/projects/engagement.html</loc><lastmod>2026-11-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://blakewilliford.com/projects/medicarepathfinder.html</loc><lastmod>2026-11-19</lastmod><priority>0.7</priority></url>
+
+  <!-- Educational technology -->
+  <url><loc>https://blakewilliford.com/projects/chalkcast.html</loc><lastmod>2026-11-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://blakewilliford.com/projects/polygence.html</loc><lastmod>2026-11-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://blakewilliford.com/projects/sketchtivity.html</loc><lastmod>2026-11-19</lastmod><priority>0.8</priority></url>
+  <url><loc>https://blakewilliford.com/projects/mechanix.html</loc><lastmod>2026-11-19</lastmod><priority>0.6</priority></url>
+  <url><loc>https://blakewilliford.com/projects/fossilsketch.html</loc><lastmod>2026-11-19</lastmod><priority>0.6</priority></url>
+  <url><loc>https://blakewilliford.com/projects/zensketch.html</loc><lastmod>2026-11-19</lastmod><priority>0.6</priority></url>
+  <url><loc>https://blakewilliford.com/projects/mysticalpath.html</loc><lastmod>2026-11-19</lastmod><priority>0.6</priority></url>
+</urlset>

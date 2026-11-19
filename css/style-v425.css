@@ -250,7 +250,7 @@ p {
   border-radius: 20px;
 }
 
-#clients {
+.row.clients {
   margin: 128px 0 192px 0;
   padding: 0px 0px;
   background: radial-gradient(circle at 50% 50%, rgba(0, 0, 255, 0.10) 0%, rgba(0, 0, 255, 0) 45%);
@@ -499,25 +499,25 @@ p {
   color: rgba(255,255,255,0.6);
 }
 
-#process img{
+:is(#process, #process-2, #process-3, #process-4) img{
   width: 100%;
   padding-bottom: 8px;
 }
 
-#process .row .col {
+:is(#process, #process-2, #process-3, #process-4) .row .col {
   padding: 0 8px;
 }
 
-#final img{
+:is(#final, #final-2) img{
   width: 100%;
   margin-bottom: 8px;
 }
 
-#final .row .col {
+:is(#final, #final-2) .row .col {
   padding: 0px 4px;
 }
 
-#final a {
+:is(#final, #final-2) a {
   color: #fff;
 }
 

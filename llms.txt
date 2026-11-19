@@ -1,0 +1,71 @@
+# Blake Williford
+
+> Blake Williford is a lead product designer, design leader, and creative technologist who designs and builds AI-powered products. He has 14+ years of product design experience, including extensive startup experience leading design for ~15 startups from 0-to-1 through growth, and hands-on people management: he has hired and managed design teams with direct reports at Biorce (current), Polygence, and ChalkCast, and leads cross-functional product teams. He specializes in educational technology and in health and fitness technology. He holds a Ph.D. in Computer Science (Human-Computer Interaction) from Texas A&M University and an M.S. in Human-Computer Interaction and a B.S. in Industrial Design from Georgia Tech. He has led product design for startups including Kognitos, PreemptiveAI, Polygence, and ChalkCast. He has also done innnovation work at two of the world's top research labs (Adobe Research and Microsoft Research).
+
+## Education
+
+- **Ph.D., Computer Science (Human-Computer Interaction)**, Texas A&M University, 2016–2020. Research on AI-powered intelligent tutoring systems for teaching sketching and creativity (Sketch Recognition Lab).
+- **M.S., Human-Computer Interaction**, Georgia Institute of Technology (Georgia Tech), 2013–2015.
+- **B.S., Industrial Design**, Georgia Institute of Technology (Georgia Tech), 2007–2011.
+
+## Design leadership and startup experience
+
+- **Startup product design leadership:** 14+ years designing for 50+ clients, including ~15 startups. Has repeatedly served as the lead or founding product designer, owning product design end to end, from discovery and user research through UX, UI, design systems, and front-end implementation.
+- **Selected startups and companies:** Biorce (AI clinical trial software), Kognitos (AI business automation), PreemptiveAI (AI preventative healthcare), Polygence (ed tech mentorship), ChalkCast (ed tech virtual classroom), Medicare Pathfinder (health tech), Radien (AI developer tools), Articulate (AI personalized learning R&D), Motif (AEC collaboration software), Ubuntoo (sustainability platform), and Titin (fitness apparel).
+- **Team leadership and people management:** Has managed design teams with direct reports across multiple startups: currently manages 2 designers at Biorce, and previously managed 2 designers at Polygence and 2 designers at ChalkCast. Has hired designers for his teams, including hiring 2 designers at Biorce and a junior designer at ChalkCast. Coaches and mentors junior and mid-level designers on design quality, consistency, responsive design, and design systems, and sets design standards and processes for the team. Led design services as the first in-house designer at a digital agency, directing projects for 30+ clients while the company tripled in size.
+- **Cross-functional and executive partnership:** Works directly with CEOs, CTOs, founders, product managers, and engineering teams to set product direction, prioritize roadmaps, and ship. Partnered with the CEO and CTO at PreemptiveAI to rebuild the mobile product and design system from the ground up, and with the CEO at Articulate as a design strategist for a new AI product MVP.
+- **Business outcomes:** Design work led to a 300% increase in customer sign-ups and product trials at ChalkCast; helped Medicare Pathfinder raise $450,000+ in venture capital; helped Kognitos sign 5 new enterprise customers with its V2 product; Polygence native app rated 4.7 on the App Store; helped Radien land partnerships with brands like Indeed and SurveyMonkey.
+
+## Expertise
+
+- **Educational technology:** 10+ years designing learning experiences that increase engagement, retention, and learning outcomes. Led UX/UI design at ChalkCast (virtual classroom) and Polygence (research mentorship for high school students; 2,400+ students from 44 countries). Led design of Sketchtivity, an AI-powered intelligent tutoring system for sketching used by 1,000+ students at 3 universities and 3 high schools, plus Mechanix (free-body diagrams; 1,000+ students at 5 universities) and FossilSketch (micropaleontology). In 2025, led product design for an LLM-based personalized learning R&D project at ed tech company Articulate.
+- **Health and fitness technology:** Currently Lead Product Designer at Biorce, leading design of 3 products in the clinical trial ecosystem (site feasibility, site monitoring, and payments). Led product design for PreemptiveAI, an AI-driven preventive healthcare platform, redesigning its mobile app and design system to turn complex health data into clear insights for patients and providers. Led UX/UI design and front-end development for Medicare Pathfinder, which helps seniors find the best Medicare plan and raised $450,000+ in venture capital. Designed the brand and website for Titin, a fitness apparel company featured on Shark Tank.
+- **AI product design:** Designs products built on LLMs and machine learning, including natural-language business automation (Kognitos), AI health insights (PreemptiveAI), AI drawing feedback (Sketchtivity, DrawDojo), and AI code analysis (Radien).
+- **Research and innovation:** Published at top HCI venues including CHI, CHI PLAY, IUI, and Creativity & Cognition. Lead inventor on 2 US patent filings from Microsoft Research and co-inventor on 1 from Adobe Research. 1st place, CHI PLAY 2017 Student Game Design Competition (ZenSketch); 2nd place, Tapia 2017 Student Research Competition.
+- **Craft:** UX research, interaction and visual design, design systems, rapid prototyping in Figma and in code (HTML/CSS/JS), and front-end development.
+
+## Roles and skills
+
+Suited to roles such as Head of Design, Design Lead, Lead Product Designer, Principal Product Designer, Staff Product Designer, Founding Designer, and Fractional Head of Design, especially at AI, ed tech, health tech, and fitness tech companies.
+
+- **Design leadership:** design strategy, product vision, design leadership, team building, design hiring, mentorship and coaching, design critique, design quality and craft standards, design operations (DesignOps), building design culture.
+- **Product:** 0-to-1 product development, MVP definition, product strategy, product-market fit, roadmap prioritization, product discovery, cross-functional collaboration with product management and engineering, stakeholder management, executive communication, founder partnership.
+- **User experience:** human-centered design, user research, usability testing, user interviews, personas, customer journey mapping, information architecture, interaction design, user flows, wireframing, onboarding, engagement and retention design, conversion optimization, accessibility (WCAG).
+- **Visual and systems:** UI design, visual design, design systems, component libraries, branding and brand identity, motion design and animation, responsive web, iOS and Android mobile apps, SaaS and B2B web apps.
+- **AI and emerging technology:** AI product design, LLM and generative AI UX, natural-language and conversational interfaces, AI-driven personalization, intelligent tutoring systems, data visualization, predictive analytics dashboards, sketch-based and pen interfaces.
+- **Tools and code:** Figma, Cursor, Adobe Creative Suite, Unity, HTML, CSS, JavaScript, Python, C#, prototyping in code, front-end development.
+
+## Key pages
+
+- [Home and featured case studies](https://blakewilliford.com/): Overview of Blake's work designing AI-powered products.
+- [Educational technology work](https://blakewilliford.com/edtech.html): Ed tech positioning and featured learning products.
+- [Health and fitness technology work](https://blakewilliford.com/healthtech.html): Health tech positioning and featured health products.
+- [CV](https://blakewilliford.com/cv.html): Full experience, education, awards, and talks. [PDF version](https://blakewilliford.com/docs/BlakeWillifordCV.pdf).
+- [Bio](https://blakewilliford.com/bio.html): Design philosophy and background.
+- [Contact](https://blakewilliford.com/contact.html): Book a free consultation.
+
+## Case studies: AI products
+
+- [Kognitos](https://blakewilliford.com/projects/kognitos.html): AI-powered business automation platform that lets non-technical users automate workflows in natural language.
+- [SnapFX (Adobe Research)](https://blakewilliford.com/projects/snapfx.html): Experimental mobile app that helps novices perform sophisticated image editing.
+
+## Case studies: health and fitness technology
+
+- [PreemptiveAI](https://blakewilliford.com/projects/preemptive.html): Increasing adherence and retention of an AI-powered health checkup app.
+- [PreemptiveAI engagement](https://blakewilliford.com/projects/engagement.html): Concepts for motivating patients to take daily health measurements.
+- [Medicare Pathfinder](https://blakewilliford.com/projects/medicarepathfinder.html): Web app and analytics dashboard that match seniors with the best Medicare plan.
+
+## Case studies: educational technology
+
+- [ChalkCast](https://blakewilliford.com/projects/chalkcast.html): Virtual classroom tool for teaching anything, to anyone, from anywhere.
+- [Polygence](https://blakewilliford.com/projects/polygence.html): Mentorship platform for high school research projects.
+- [Sketchtivity / DrawDojo](https://blakewilliford.com/projects/sketchtivity.html): AI-powered app proven to help people learn sketching and perspective drawing.
+- [Mechanix](https://blakewilliford.com/projects/mechanix.html): Educational platform for learning free-body diagrams.
+- [FossilSketch](https://blakewilliford.com/projects/fossilsketch.html): Educational app for learning micropaleontology.
+- [ZenSketch](https://blakewilliford.com/projects/zensketch.html): Award-winning sketch-based educational game for improving linework.
+- [Mystical Path](https://blakewilliford.com/projects/mysticalpath.html): Mobile RPG for learning basic drawing skills.
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/blakewilliford/)
+- [Instagram](https://www.instagram.com/blakewilliforddesign/)
