@@ -89,15 +89,18 @@ window.addEventListener('DOMContentLoaded', function() {
         header.style.display = 'none';
     }
 
-    // Autoplaying videos without native controls get a pause button
+    // Autoplaying videos without native controls get a pause button,
+    // except the linked case-study teasers on the landing pages (owner's call)
     document.querySelectorAll('video[autoplay]:not([controls])').forEach(function(video) {
-        // Buttons can't live inside links, so attach to the link's parent instead
-        const link = video.closest('a');
-        const container = link ? link.parentElement : video.parentElement;
-        if (link) {
+        if (video.closest('a')) {
             video.setAttribute('aria-hidden', 'true');
+            if (reduceMotion) {
+                video.removeAttribute('autoplay');
+                video.pause();
+            }
+            return;
         }
-        addMotionToggle(container, 'video', function() { video.pause(); }, function() { video.play(); });
+        addMotionToggle(video.parentElement, 'video', function() { video.pause(); }, function() { video.play(); });
     });
 
     // Autoplaying videos with native controls just respect reduced motion
